@@ -1,0 +1,70 @@
+eg-1: 
+case 1: other languages addition of two numbers.
+int a=10;
+int b=20;
+int res;
+res = a + b;
+print(res);
+
+case 2: python language addition of two numbers 
+num1 = 10
+num2 = 20
+res = num1 + num2
+print(res)
+
+eg-2: To check the type of the data using type() function 
+val1 = 10
+val2 = 10.4
+val3 = "ratan"
+val4 = True
+print(type(val1))
+print(type(val2))
+print(type(val3))
+print(type(val4))
+
+
+eg-3: Take the three int value perform multiplication 
+Take the three decimal values perform addition 
+case 1 : student code : but it is not recommended
+num1 = 20
+num2 = 30
+num3 = 40
+res = num1*num2*Num3
+print(res)
+
+num1 = 2.7
+num2 = 4.4
+num3 = 3.2
+res=num1+num2+num3
+print(res)
+
+case 2: this code is recommended
+num1,num2,num3 = 20, 30, 40
+res = num1*num2*num3
+print(res)
+
+num1,num2,num3 = 2.7,4.4,3.2
+res=num1+num2+num3
+print(res)
+eid,ename,esal = 111,"ratan",10000.45
+print(eid)
+print(ename)
+print(esal)
+
+
+eg-4: take three int values: print the addition: but taking same  
+
+num1,num2,num3=10,10,10
+res=num1+num2+num3
+print(res)
+num1=num2=num3=10
+res=num1+num2+num3
+print(res)
+
+
+ex 5: if the alignment is not correct we will get Indentation Error
+
+num1 = 10
+num2 = 20 
+res = num1 + num2 
+print(res)

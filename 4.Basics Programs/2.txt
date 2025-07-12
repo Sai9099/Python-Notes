@@ -1,0 +1,61 @@
+Python Program to Read a Number n and Compute n+nn+nnn
+-------------------------------------------------------
+n=int(input("Enter a number n: "))
+temp=str(n)
+t1=temp+temp
+t2=temp+temp+temp
+comp=n+int(t1)+int(t2)
+print("The value is:",comp)
+
+Python Program to Convert Centimeters to Feet and Inches
+---------------------------------------------------------
+cm=int(input("Enter the height in centimeters:"))
+inches=0.394*cm
+feet=0.0328*cm
+print("The length in inches",round(inches,2))
+print("The length in feet",round(feet,2))
+
+Python Program to area of circle
+---------------------------------
+pi=float(input("enter pi value:"))
+r=int(input("enter radius value:"))
+Area=pi*r*r
+
+print("area of circle:{}".format(Area))      
+
+
+Python Program to perimeter of circle
+-------------------------------------
+pi=float(input("enter pi value:"))
+r=int(input("enter radius value:"))
+perimeter=2*pi*r
+
+print("perimeter of circle:{}".format(perimeter))      
+
+
+Python Program to area of parallelogram
+----------------------------------------
+b=int(input("enter pi value:"))
+h=int(input("enter radius value:"))
+area=b*h
+
+print("area of parallelogram:{}".format(area))      
+
+
+python program to area of rhombus
+----------------------------------
+d1=int(input("enter diagonal1:"))
+d2=int(input("enter diagonal2:"))
+area=(d1*d2)/2
+
+print("area of rhombus:{}".format(area))      
+
+program to area of trapezium
+-----------------------------
+a=int(input("enter a value:"))
+b=int(input("enter b value:"))
+h=int(input("enter h value:"))
+area=(a+b)*h/2
+
+print("area of trapezium:{}".format(area))      
+

@@ -1,0 +1,24 @@
+Appraoch-1: python online compilers 
+https://repl.it/languages/python3
+https://glot.io/new/python
+
+Approach-2: python terminals 
+in the installation location we will find python executable file: G:\python36\python.exe
+>>> num1 = 10
+>>> num2 = 20
+>>> res = num1 + num2
+>>> print(res)
+30
+a. it shows errors frequently 
+b. once we written the code we cannot modify.
+Managing code is difficult
+
+Approach-3: IDLE: Here we can do the practical’s in two ways 
+a. terminal approach 
+b. editor approach: 
+File menu ---new file --- write the code ---- save the code(.py) --- run the code(f5)
+once we save the file we can reopen the file we can do the modification.
+
+Approach-4 : Editors Approach 
+sublinetext,notepad++,editplus
+Editplus : https://www.editplus.com/download.html

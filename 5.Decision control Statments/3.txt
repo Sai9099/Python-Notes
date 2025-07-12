@@ -1,0 +1,453 @@
+1.eligible for vote
+-------------------
+age=int(input("enter age:"))
+if age>18:
+ print("eligible for voting")
+else:
+ print("not eligible for voting")
+
+2. check whether a number is divisible by 5 and 11 or not
+---------------------------------------------------------
+num=int(input("enter number:"))
+if((num % 5 == 0) and(num % 11 == 0)):
+   print("Number is divisible by 5 and 11")
+else
+   print("Number is not divisible by 5 and 11")
+    
+3.check alphabet, digit or special character
+---------------------------------------------
+ch=int(input("enter character value:"));
+if((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')):
+        print("alphabet.".format(ch))
+else if(ch >= '0' && ch <= '9'):
+        print("is digit.".format(ch))
+else:
+        print("is special character") 
+
+4.print day name of week
+-----------------------
+week=int(input(enter week number:))
+if(week == 1):
+    print("Monday");
+elif(week == 2):
+    print("Tuesday")
+elif(week == 3):    {
+    print("Wednesday")
+elif(week == 4):
+    print("Thursday")
+elif(week == 5):
+     print("Friday")
+elif(week == 6):
+    print("Saturday")
+elif(week == 7):
+    print("Sunday")
+else
+    print("Invalid Input! Please enter week number between 1-7.")
+
+5.print number of days in month
+-----------------------------
+month=int(input("enter month number:"))
+if(month == 1):
+        print("31 days")
+elif(month == 2):
+        print("28 or 29 days")
+elif(month == 3):
+        print("31 days")
+elif(month == 4):
+        print("30 days")
+elif(month == 5):
+        print("31 days")
+elif(month == 6):
+        print("30 days")
+elif(month == 7):
+        print("31 days")
+elif(month == 8):
+        print("31 days")
+elif(month == 9):
+        print("30 days")
+elif(month == 10):
+        print("31 days")
+elif(month == 11):
+       print("30 days")
+elif(month == 12):
+      print("31 days")
+else:
+     print("Invalid input! Please enter month number between (1-12).")
+    
+
+6.print number of days in month using logical OR operator
+----------------------------------------------------------
+month=int(input("enter month number:"))
+if(month==1 or month==3 or month==5 or month==7 or month==8 or month==10 or month==12)
+   print("31 days")
+elif(month==4 or month==6 or month==9 or month==11)
+   print("30 days")
+elif(month==2):
+   print("28 or 29 days");
+else
+   print("Invalid input! Please enter month number between (1-12).");
+
+7.check whether triangle is equilateral, scalene or isosceles
+--------------------------------------------------------------
+side1=int(input("enter side1:"))
+side2=int(input("enter side2:"))
+side3=int(input("enter side3:"))
+if(side1==side2 and side2==side3):
+        print("Equilateral triangle.")
+elif(side1==side2 or side1==side3 or side2==side3): 
+        print("Isosceles triangle.")
+else: 
+        printf("Scalene triangle.")
+    
+8.find all roots of a quadratic equation
+-----------------------------------------
+import math
+a=int(input("enter a value:"))
+b=int(input("enter b value:"))
+c=int(input("enter c value:"))
+    
+discriminant = (b * b) - (4 * a * c);
+if(discriminant > 0):
+    root1 = (-b + sqrt(discriminant)) / (2*a);
+    root2 = (-b - sqrt(discriminant)) / (2*a);
+    print("Two distinct and real roots exists: %.2f and %.2f", root1, root2);
+elif(discriminant == 0):
+    root1 = root2 = -b / (2 * a);
+    printf("Two equal and real roots exists: %.2f and %.2f", root1, root2);
+elif(discriminant < 0):
+    root1 = root2 = -b / (2 * a);
+    imaginary = sqrt(-discriminant) / (2 * a);
+    print("Two distinct complex roots exists: %.2f + i%.2f and %.2f - i%.2f", 
+                root1, imaginary, root2, imaginary);
+
+
+
+5.calculate profit or loss
+------------------------
+cp=int(input("Enter cost price: "))
+sp=int(input("Enter selling price:"));
+if(sp > cp):
+    amt = sp - cp;
+    print("Profit ={}".format(amt));
+elif(cp > sp):
+        amt =cp - sp;
+        print("Loss = {}".format(amt));
+else:
+        print("No Profit No Loss.");
+
+
+
+6.Program to find percentage and grade
+-------------------------------------
+phy=int(input("enter marks:"))
+chem=int(input("enter marks:"))
+bio=int(input("enter marks:"))
+math=int(input("enter marks:"))
+comp=int(input("enter marks:"))
+
+per = (phy + chem + bio + math + comp) / 5.0
+print("Percentage = {}".format(per))
+if(per >= 90):
+    print("Grade A")
+elif(per >= 80):
+    print("Grade B")
+elif(per >= 70):
+    print("Grade C")
+elif(per >= 60):
+    print("Grade D")
+elif(per >= 40):
+    print("Grade E")
+else:
+    print("Grade F")
+
+7.calculate gross salary of employee
+-----------------------------------
+basic=float(input("enter basic:"))
+if(basic <= 10000):
+        da  = basic * 0.8;
+        hra = basic * 0.2;
+elif(basic <= 20000):
+        da  = basic * 0.9;
+        hra = basic * 0.25;
+else:
+        da  = basic * 0.95;
+        hra = basic * 0.3;
+gross = basic + hra + da;
+print("GROSS SALARY OF EMPLOYEE:{}".format(gross));
+
+
+
+8.calculate electricity bill
+---------------------------
+#include <stdio.h>
+
+int main()
+{
+    int unit;
+    float amt, total_amt, sur_charge;
+
+    printf("Enter total units consumed: ");
+    scanf("%d", &unit);
+
+
+    if(unit <= 50)
+    {
+        amt = unit * 0.50;
+    }
+    else if(unit <= 150)
+    {
+        amt = 25 + ((unit-50) * 0.75);
+    }
+    else if(unit <= 250)
+    {
+        amt = 100 + ((unit-150) * 1.20);
+    }
+    else
+    {
+        amt = 220 + ((unit-250) * 1.50);
+    }
+
+    sur_charge = amt * 0.20;
+    total_amt  = amt + sur_charge;
+
+    printf("Electricity Bill = Rs. %.2f", total_amt);
+
+    return 0;
+}
+
+9.check whether a triangle is valid or not if angles are given
+--------------------------------------------------------------------------
+
+#include <stdio.h>
+
+int main()
+{
+    int angle1, angle2, angle3, sum;
+
+    printf("Enter three angles of triangle: \n");
+    scanf("%d%d%d", &angle1, &angle2, &angle3);
+
+    sum = angle1 + angle2 + angle3; 
+    if(sum == 180 && angle1 > 0 && angle2 > 0 && angle3 > 0) 
+    {
+        printf("Triangle is valid.");
+    }
+    else
+    {
+        printf("Triangle is not valid.");
+    }
+
+    return 0;
+}
+
+10.triangle is valid or not if sides are given
+--------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int side1, side2, side3;
+
+    /* Input three sides of a triangle */
+    printf("Enter three sides of triangle: \n");
+    scanf("%d%d%d", &side1, &side2, &side3);
+    
+    if((side1 + side2) > side3)
+    {
+        if((side2 + side3) > side1)
+        {
+            if((side1 + side3) > side2) 
+            {
+                printf("Triangle is valid.");
+            }
+            else
+            {
+                printf("Triangle is not valid.");
+            }
+        }
+        else
+        {
+            printf("Triangle is not valid.");
+        }
+    }
+    else
+    {
+        printf("Triangle is not valid.");
+    }
+
+    return 0;
+}
+using logical operator
+----------------------
+#include <stdio.h>
+
+int main()
+{
+    int side1, side2, side3;
+
+    printf("Enter three sides of triangle: \n");
+    scanf("%d%d%d", &side1, &side2, &side3);
+
+    if((side1 + side2 > side3) && (side1 + side3 > side2) && (side2 + side3 > side1))
+    {
+        printf("Triangle is valid.");
+    }
+    else
+    {
+        printf("Triangle is not valid.");
+    }
+
+    return 0;
+}
+
+C Program to Calculate Monthly Newspaper bill
+----------------------------------------------
+#include<stdio.h>
+int main()
+{
+    int no_of_days;
+    float paper_per_day_cost, total_bill, service_charge;
+    char service;
+
+    printf("Enter the number of days paper delivered:");
+    scanf("%d", &no_of_days);
+    if(no_of_days <= 0 || no_of_days > 31 )
+    {
+        printf("No paper bill for the month or wrong data entered.");
+    }
+    else
+    {
+        printf("Enter the paper cost per day:");
+        scanf("%f", &paper_per_day_cost);
+
+        if(paper_per_day_cost<=0)
+        {
+            printf("Your paper bill is 0.");
+        }
+        else
+        {
+            printf("Do you have service charge? Enter Y or N :");
+            scanf("%s", &service);
+
+            if(service=='Y' || service=='y')
+            {
+                printf("Enter Service Charge : ");
+                scanf("%f", &service_charge);
+                total_bill = service_charge + no_of_days * paper_per_day_cost;
+            }
+            else
+            {
+                total_bill = no_of_days * paper_per_day_cost;
+            }
+            printf("Total bill is : $%0.2f", total_bill);
+        }
+    }
+    return 0;
+}
+
+
+What is FizzBuzz program?
+
+The program prints the numbers from 1 to n, 
+where, for a given input number (n), for each integer i in the range from 1 to n
+
+1. If i is a multiple of both 3 and 5 prints "FizzBuzz" instead of number
+2. If i is a multiple of 3 but not 5 prints "Fizz" instead of number
+3. If i is a multiple of 5 but not 3 prints "Buzz" instead of number
+4. If i is a not multiple of 3 or 5 prints i value as usual.
+
+#include <stdio.h>
+int main()
+{
+    int i, n ;
+    printf("Enter the number :");
+    scanf("%d", &n);
+    for (i=1; i<=n; i++)
+    {
+// number divisible by 3 and 5 will always be divisible by 15, print 'FizzBuzz' in place of the number
+        if (i%15 == 0)
+            printf ("FizzBuzz\t");
+
+// number divisible by 3, print 'Fizz' in place of the number
+        else if ((i%3) == 0)
+            printf("Fizz\t");
+
+// number divisible by 5, print 'Buzz' in place of the number
+        else if ((i%5) == 0)
+            printf("Buzz\t");
+
+        else // print the number
+            printf("%d\t", i);
+    }
+    return 0;
+}
+
+//C program to count minimum number of notes in an amount
+#include <stdio.h>
+int main()
+{
+    int amount;
+    int note500, note100, note50, note20, note10, note5, note2, note1;
+    
+    note500 = note100 = note50 = note20 = note10 = note5 = note2 = note1 = 0;
+
+
+    /* Input amount from user */
+    printf("Enter amount: ");
+    scanf("%d", &amount);
+
+
+    if(amount >= 500)
+    {
+        note500 = amount/500;
+        amount -= note500 * 500;
+    }
+    if(amount >= 100)
+    {
+        note100 = amount/100;
+        amount -= note100 * 100;
+    }
+    if(amount >= 50)
+    {
+        note50 = amount/50;
+        amount -= note50 * 50;
+    }
+    if(amount >= 20)
+    {
+        note20 = amount/20;
+        amount -= note20 * 20;
+    }
+    if(amount >= 10)
+    {
+        note10 = amount/10;
+        amount -= note10 * 10;
+    }
+    if(amount >= 5)
+    {
+        note5 = amount/5;
+        amount -= note5 * 5;
+    }
+    if(amount >= 2)
+    {
+        note2 = amount /2;
+        amount -= note2 * 2;
+    }
+    if(amount >= 1)
+    {
+        note1 = amount;
+    }
+
+    /* Print required notes */
+    printf("Total number of notes = \n");
+    printf("500 = %d\n", note500);
+    printf("100 = %d\n", note100);
+    printf("50 = %d\n", note50);
+    printf("20 = %d\n", note20);
+    printf("10 = %d\n", note10);
+    printf("5 = %d\n", note5);
+    printf("2 = %d\n", note2);
+    printf("1 = %d\n", note1);
+
+    return 0;
+}
+

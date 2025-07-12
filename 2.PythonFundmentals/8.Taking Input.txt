@@ -1,0 +1,48 @@
+Getting input from the end-user in python 2.7: 
+
+In python 2.7 There are two ways to get the input from end-user,
+1. Input() function : It takes any type of data 
+2. raw_input() function : It takes data only String format 
+
+In python 3.x it is possible to take the input from end-user only one way
+1. input() function : it takes only String data just like raw_input()
+
+python 2.7 Taking data from end-user by using input function.
+✓ If the user gives an integer value, the input function returns integer value
+✓ If the user gives float value, the input function returns float value
+✓ If the user gives string value, the input function returns string value
+
+num1 = input("enter first num:")
+num2 = input("enter second number:")
+add = num1+num2
+print "Addition=",add
+
+
+
+num1 = raw_input('Enter first number: ')
+num2 = raw_input('Enter second number: ')
+# Add two numbers
+sum=num1+num2
+# Display the sum
+print "Addition=",sum
+
+note:
+-----
+✓ We entered 10 to raw_input : it will take string format.
+✓ We entered 12.32 to raw_input : it will take string format.
+✓ We entered “ratan” to raw_input : it will takes string format data.
+
+
+num1 = int(raw_input('Enter first number: '))
+num2 = int(raw_input('Enter second number: '))
+# Add two numbers
+sum=num1+num2
+# Display the sum
+print "Addition=",sum
+
+Taking data from user by using raw_input() in the form of String then converting after taking data .
+num1 = raw_input("Enter first Number :")
+num2 = raw_input("Enter Second Number :")
+add= float(num1)+int(num2)
+print "addition=",add
+

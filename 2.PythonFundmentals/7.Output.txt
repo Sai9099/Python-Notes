@@ -1,0 +1,61 @@
+Parameter Values and Their Use
+------------------------------
+Following are some parameter values in print() method:
+
+Objects: object(s) to be printed on the output screen. It is possible to print more than one object
+
+Sep: It stands for separator. It specifies the separating method for objects
+
+End: To specify the output that needs to be printed at the end linefeed /n I the default
+
+File: Any object having a write method by default it is sys.stdout
+
+Flush: It is a Boolean to specify whether the output needs to be flushed or buffered- represented by values true and false respectively. By default it is false
+
+eg:
+print("I love Python.")
+
+a=2
+print('a =', a, '= b')
+
+
+eg:
+a = 5
+
+print("a =", a, sep='00000', end='\n\n\n')
+
+print("a =", a, sep='0', end='')
+
+How to Prevent Line Breaks
+--------------------------
+print ("Hello, Friend!", end='')
+
+print ("It is awesome to see you!")
+
+
+Interpolating Variables Into F-Strings
+---------------------------------------
+eg:
+
+value="python world"
+
+print(f"Welcome to {value}!")
+
+
+eg:
+quantity = 6
+item = "bananas"
+price = 1.74
+
+print(f"{quantity} {item} cost ${price * quantity}"
+'6 bananas cost $10.44')
+
+
+Using the .format() Method for String Interpolation
+----------------------------------------------------
+
+print("{0} {1} cost ${2}".format(6, "bananas", 1.74 * 6))
+
+
+print("{quantity} {item} cost ${cost}".format(quantity=6,item="bananas",cost=1.74 * 6))
+

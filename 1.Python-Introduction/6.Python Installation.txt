@@ -1,0 +1,31 @@
+Before you start working in python, you need to install Python on your computers. There is multiple Python distribution available today.We can install Python from www.python.org this is called ad CPython installation and comes with python interpreter, Python IDLE (Python GUI) and Pip (Package Installer).
+
+There are many other Python distribution are available. Anaconda Python distribution is one such highly recommended distribution that comes preloaded with many packages and libraries (e.g., NumPy, SciPy, Panda libraries etc..).Many popular IDEs are also available e.g., Spyder IDE, PyCharm, Notepad++ etc. In Anaconda Python distribution Spyder IDE is already available.
+
+
+The CPython comes with Python interpreter, Python IDLE (GUI based) and PIP (Package Installer). We can work with both Interactive Mode and Script Mode by using Python IDLE.
+
+Once you have Python installed on your computer, you are ready to do work on it, you can work in Python in following different ways.
+
+Interactive Mode
+Script Mode
+
+Installing CPython Distribution
+Interactive Mode
+
+The Interactive interpreter of python is also called as Python Shell. Interactive mode provides very useful for testing code you can type the commands one by one and get the result.
+
+To work in interactive mode, follow the process given below. Click start → search for Python →; Click Python (command line).
+It will open Python Shell where you will see the Python prompt (three ‘>’ sign i.e., >>>)
+Type commands in front of this Python prompt and Python will immediately give you the result.
+
+
+Script Mode
+Interactive mode does not save the commands entered by you in the form of program. The solution for this problem is the Script Mode. To work in a Script Mode, you need to do the following.
+
+First you have to create and save a program as filename.py.
+Go to Search → Type IDLE → Click and open the IDLE window.
+Click File→New in IDLE Python Shell.
+In the new window that opens ,Type the commands you want to save in the form of a program.
+Click File → Save and then Save the file with an extension.py. The Python program has .py extension.
+Then click run menu → Run Module and it will execute all the command in the open file or you can press F5 key to run this script.

@@ -1,0 +1,52 @@
+Arthematic operators:
+---------------------
++ addition
+- substraction
+* multiplication
+/ division
+% modulo operator
+// floor division operator
+**  exponent operator or power operator
+
+Relational operators:
+----------------------
+> greater than
+< lessthan
+>= greaterthan equalto
+<= lessthan equalto
+
+Equality operators:
+-------------------
+== equal to
+!= not equal
+
+logical operators:
+-------------------
+and
+or
+not
+
+Bitwise operators:
+------------------
+& 
+|
+^
+<<
+>>
+~
+
+Assignment operators:
+---------------------
++=
+-=
+*=
+/=
+%=
+
+
+Special operators:
+------------------
+identity operators: is, is not
+
+Membership operators:in,not in
+

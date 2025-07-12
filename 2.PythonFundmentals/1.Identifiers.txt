@@ -1,0 +1,26 @@
+Identifiers in python:
+----------------------
+Any name in python like function-name, class-name, variable-name…etc is called 
+identifier. The identifier must obey fallowing rules.
+
+• The identifier contains a-z , A-Z, 0-9, _ but should not start with numeric’s & does 
+not allows special symbols.
+class MyClass123: valid
+class 123MyClass: invalid
+class MyClass_123: valid
+class _MyClass: valid
+• We cannot use special symbols like !, @, #, $, % etc. in our identifier.
+name@one=”ram” invalid 
+var$123=”santhosh” invalid 
+• Identifier can be of any length.
+• The identifiers are case sensitive.
+Name="ratan"
+NAME="durga"
+• Keywords are not allowed as identifier. (global, del are keywords)
+class del: 
+global=100
+• Is it possible to use predefined class-name & data types names as a identifier but not recommended. (here ABC is predefined abstract class)
+class ABC:
+ def m1(self):
+ print("possile")
+ABC().m1(

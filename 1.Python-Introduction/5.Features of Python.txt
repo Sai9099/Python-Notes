@@ -1,0 +1,133 @@
+Features of python:
+-------------------
+✓ Easy to Use
+o It is a programmer friendly; it contains syntaxes just like English commands.
+o Uses an elegant syntax, making the programs you write easier to read.
+✓ High Level Language
+o Python is a clear and powerful object-oriented programming language, comparable 
+to Perl, Ruby, Scheme, or Java.
+✓ Expressive Language
+o The code is easily understandable.
+✓ Interpreted
+o The execution done in line by line format.
+✓ Platform Independent
+o We can run this python code in all operating systems.
+✓ Open Source
+o Python is free of cost, source code also available.
+✓ Object-Oriented language
+o Python supports object-oriented programming with classes and multiple inheritance
+✓ Huge Standard Library
+o Code can be grouped into modules and packages.
+✓ GUI Programming
+o Graphical user interfaces can be developed using Python.
+✓ Integrated
+o It can be easily integrated with languages like C, C++, JAVA etc.
+✓ Extensible 
+o Is easily extended by adding new modules implemented in a compiled language such 
+as C or C++
+
+Python has significant advantages in terms of:
+
+✓ Pyramid, Flask, Bottle and Django are among the well-known frameworks of Python.
+✓ Pyramid is a small framework which makes real-world Web applications productive.
+✓ Django is more mature and is one among the largest Web-based frameworks for Python
+But Django is very hard to customise and troubleshoot, in some situations, due to its allencompassing nature. This is one of its drawbacks.
+✓ Tornado is lighter in weight and has a few more features than Django. As I said earlier, 
+Tornado is known for its high performance
+✓ Building API services for Mobile ( Flask )
+✓ Doing Scientific computations ( Numpy, Scipy )
+✓ PlotLib would enable you to create data visualizations.
+✓ Dealing with Data ( Pandas ) 
+✓ Numerous other things like scripting/ text processing/ machine learning/Natural 
+Language Processing/ Text mining/ Web mining/ OpinionMining/ Sentiment analysis/ 
+Big data system
+
+
+1. other languages more about the coding less about analysis (when compare to python).
+python less about coding more about the analysis.
+
+Note: python is simple but need analysis.
+To check the popularity of python programming language use below command.
+http://pypl.github.io/PYPL.html
+
+2. python performance good because python is less coding.
+
+3. To run the code in online use python online coompilers 
+https://repl.it/languages/python3
+https://glot.io/
+
+4. The top websites written using python 
+In google search just type : top website written in python 
+https://www.quickstart.com/blog/10-famous-websites-built-with-python/
+Google, YouTube, Quora,Dropbox.Yahoo!,Reddit,Instagram,Spotify , NSA ,DRDO...etc 
+
+5. Technologies are using python 
+AI , ML , DS , Image process , Deep learning....etc 
+IOT , chip level designing 
+selenium, Hadoop......etc 
+
+6. Developer practices: we can do the practical’s in different ways. 
+
+Terminals Approach 
+command prompts
+Editors 
+Edit plus 
+notepad++ 
+subline text 
+vs editor 
+IDE : Integrated development environment.
+spyder
+pycharam
+Note books 
+Jupyter 
+Tools 
+Anaconda
+
+7. Python is an interpreted, high-level, general-purpose programming language.
+C, CPP : performance is very good 
+not for internet application 
+platform dependent languages
+ 
+C : procedure based : deals with functions
+java : object oriented : deals with classes & object 
+Python : Both procedure & object : deals with functions & classes.
+
+
+python: 
+-------
+we can develop internet application(client-server)
+platform independent language
+python : function based : we can declare the functions we can write the code 
+
+Object based : deals with classes & objects 
+
+script based : directly write code 
+
+1. directly write the code 
+num1 = 10
+num2 = 20
+result = num1 + num2 
+print(result)
+
+2. write the code with funtions 
+def wish():
+ print("Good Morning")
+wish()
+
+3. oops : deals with classes & objects 
+class MyClass:
+ def wish(self):
+print("Good Morning ratan")
+c = MyClass()
+c.wish() 
+
+8. The programming languages are two types 
+
+1. Low level languages : These are closer to machine 
+ex: assembly 
+2. high level languages : These are closer to human 
+ex: java, python,js
+Note: Programming languages give instruction to computers then computer will do some action. 
+without programming languages computer unable to do any task.
+
+

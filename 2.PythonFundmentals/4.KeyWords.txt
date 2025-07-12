@@ -1,0 +1,42 @@
+Python Keywords :( 33 keywords in python) 
+The keywords are altered in different versions of python so some extra keywords are added or some might be removed. So, it is possible to get the current version of keywords by typing following code in the prompt.
+
+To check the keyword use kwlist variable.kwlist is a variable present in keyword module so import the module using import statement.
+
+python 2.7 : 31 keywords 
+
+import keyword
+print(keyword.kwlist)
+
+['and', 'as', 'assert', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'exec', 'finally', 'for', 
+'from', 'global','if', 'import', 'in','is', 'lambda', 'not', 'or', 'pass', 'print','raise', 'return', 'try', 
+'while','with', 'yield']
+
+In python 2.7 prints is a keyword to print the data, so parenthesis not required 
+print "Ram World"
+
+python 3.7 : 33 keywords 
+
+import keyword
+print(keyword.kwlist)
+
+['False', 'None', 'True', 'and', 'as', 'assert', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 
+'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is','lambda', 'nonlocal', 'not', 'or', 'pass', 
+'raise', 'return', 'try', 'while', 'with', 'yield']
+
+In python 3.x print is not a keyword it is a function used to print the data so parenthesis mandatory.
+
+print ("World")
+keywords removed from 3.7 : print, exec 
+keywords are added in 3.7 : False True None async await nonlocal
+
+To check the given data is keyword or not use below code:
+
+case 1: python 2.7 : True
+import keyword
+print(keyword.iskeyword("print"))
+
+case 2: python 3.x : False
+import keyword
+print(keyword.iskeyword("print")
+

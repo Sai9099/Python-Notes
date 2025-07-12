@@ -1,0 +1,159 @@
+1.Take the number from end user print that is even or odd 
+--------------------------------------------------------
+num = int(input("enter a number:"))
+if num%2==0:
+print("number is even")
+else:
+print("number is odd")
+
+2.Take the two numbers from end user print the bigger number.
+------------------------------------------------------------
+num1 = int(input("enter first number:"))
+num2 = int(input("enter second number:"))
+if(num1>num2):
+print("num1 is max")
+else:
+print("num2 is max")
+
+3.Take number from end-user check it is positive or negative or zero.
+--------------------------------------------------------------------
+num = int(input("Enter a num:"))
+if num==0:
+print("Zero")
+elif num>0:
+print("Your number is positive")
+else:
+print("your number Negative")
+
+4.max of 3 numbers
+------------------
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+c = int(input("Enter third number: "))
+
+if (a>=b)and(a>=c):
+   largest =a
+elif (b>=a)and(b>=c):
+   largest =b
+else:
+   largest =c
+print("The largest number is", largest)
+
+5.Program to Check Leap Year
+---------------------------------
+model 1:
+
+year=int(input("Enter year to be checked:"))
+if(year%4==0 and year%100!=0 or year%400==0):
+    print("The year is a leap year!")
+else:
+    print("The year isn't a leap year!")
+
+
+
+model 2:
+year = int(input("Enter year to be checked: "))
+ 
+if year % 4 == 0:
+    if year % 100 == 0:
+        if year % 400 == 0:
+            print("The year is a leap year!")
+        else:
+            print("The year is not a leap year!")
+    else:
+        print("The year is a leap year!")
+else:
+    print("The year is not a leap year!")
+
+6.Python Program to Calculate Grade of a Student
+----------------------------------------------
+
+sub1=int(input("Enter marks of the first subject: "))
+sub2=int(input("Enter marks of the second subject: "))
+sub3=int(input("Enter marks of the third subject: "))
+sub4=int(input("Enter marks of the fourth subject: "))
+sub5=int(input("Enter marks of the fifth subject: "))
+avg=(sub1+sub2+sub3+sub4+sub5)/5
+if(avg>=90):
+    print("Grade: A")
+elif(avg>=80&avg<90):
+    print("Grade: B")
+elif(avg>=70&avg<80):
+    print("Grade: C")
+elif(avg>=60&avg<70):
+    print("Grade: D")
+else:
+    print("Grade: F")
+
+7.Check if a Date is Valid and Print the Incremented Date 
+--------------------------------------------------------
+date=input("Enter the date: ")
+dd,mm,yy=date.split('/')
+dd=int(dd)
+mm=int(mm)
+yy=int(yy)
+if(mm==1 or mm==3 or mm==5 or mm==7 or mm==8 or mm==10 or mm==12):
+    max1=31
+elif(mm==4 or mm==6 or mm==9 or mm==11):
+    max1=30
+elif(yy%4==0 and yy%100!=0 or yy%400==0):
+    max1=29
+else:
+    max1=28
+if(mm<1 or mm>12):
+    print("Date is invalid.")
+elif(dd<1 or dd>max1):
+    print("Date is invalid.")
+elif(dd==max1 and mm!=12):
+    dd=1
+    mm=mm+1
+    print("The incremented date is: ",dd,mm,yy)
+elif(dd==31 and mm==12):
+    dd=1
+    mm=1
+    yy=yy+1
+    print("The incremented date is: ",dd,mm,yy)
+else:
+    dd=dd+1
+    print("The incremented date is: ",dd,mm,yy)
+
+8.Whether character is alphabet or not
+--------------------------------------
+ch=str(input("enter character:"))
+if((ch >= 'a'and ch <= 'z')or(ch >= 'A' and ch <= 'Z')):
+    print("Character is an ALPHABET.")
+else:
+    print("Character is NOT ALPHABET.")
+    
+9.Whether character is vowel or consonant
+---------------------------------------
+ch=input("enter character:")
+if(ch=='a' or ch=='e' or ch=='i' or ch=='o' or ch=='u' or 
+       ch=='A' or ch=='E' or ch=='I' or ch=='O' or ch=='U'):
+    print("'%c' is Vowel.".format(ch))
+elif((ch >= 'a' and ch <= 'z') or (ch >= 'A' and ch <= 'Z')):
+        print("'%c' is Consonant.".format(ch))
+else: 
+    print("'%c' is not an alphabet.".format(ch))
+
+10.Whether character is upper or lowercase
+---------------------------------------
+ch=input("enter character:")
+if(ch >= 'A' and ch <= 'Z'):
+        print("'%c' is uppercase alphabet.".format(ch));
+elif(ch >= 'a' and ch <= 'z'):
+        printf("'%c' is lowercase alphabet.".format(ch));
+else:
+        printf("'%c' is not an alphabet.".format(ch));
+
+11.check whether triangle is equilateral, scalene or isosceles
+-----------------------------------------------------------
+side1=int(input("enter side:"))
+side2=int(input("enter side:"))
+side3=int(input("enter side:"))
+if(side1==side2 and side2==side3):
+   print("Equilateral triangle.")
+elif(side1==side2 or side1==side3 or side2==side3): 
+        print("Isosceles triangle.")
+else: 
+        print("Scalene triangle.")

@@ -1,0 +1,91 @@
+Computer Language - A Way to Talk to a Computer!
+
+Humans need a language like Hindi, Telugu, English, or any other regional language or just a body gesture to tell things, express feelings and to communicate with others. Have you ever wondered how we talk to computers?
+
+A computer cannot understand human languages directly. So, we need a language  to communicate with a computer. We developed several languages as a method of computer communications. Simply, the languages which are used to communicate with a computer are called computer languages. 
+
+
+Definition of a Computer Language
+---------------------------------
+A computer language is a group of instructions that are used to create computer programs. This is the brief of computer languages. The main goal is to achieve human-computer interaction. 
+
+Types of Computer Languages:
+
+Different types of Computer languages are given below.
+
+1.Low Level Language: A Low-level computer language includes only 1’s and 0’s. This language was used in first and second generation computers. A Low level language is very easily understood by a computer but hard to understand for Humans. 
+
+
+Low level languages are designed to interact with computer hardware, which are categorized into two types: Machine level language and Assembly level language.
+
+
+2.Machine Language: As discussed above, Machine level language is a type of Low level language. Machine language is considered to be the oldest computer language. Machine language is developed by only using binary numbers i.e., 0 and 1. So, the instructions or the statements in this language use a sequence of 0’s and 1’s.
+
+
+3.Assembly Language: Assembly level language in computer programming has evolved with the advancements in the machine language. Assembly language uses symbols, which are popularly known as mnemonics in computer terminology to write the instructions. So, comparatively writing a program in Assembly language is more understandable to the Human than Machine Language.
+
+The Assembly language code will be converted into a Machine language code with the help of an Assembler so that the computer can understand the binary converted Assembly Language. 
+
+4.High Level Language: High Level computer languages are the advanced development languages in the evolution of computer languages. These languages are designed to make the programming easier and less error-free.
+
+High level language uses words and commands along with symbols and numbers.
+
+ 
+The keywords used in High level languages are similar to English words and can be easily understood by Humans when compared to a Low level language. 
+
+
+Types of programming languages in High level languages are:
+
+C,C++,Java,Java Script,Python,C#,PHP
+
+TYPES OF TRANSLATORS:
+--------------------
+A translator is a program that takes as input a program written in one language and produces as output a program in another language. 
+Beside program translation, the translator performs another very important role, the error-detection. 
+Any violation of d HLL (High Level Language) specification would be detected and reported to the programmers.
+
+Important Role of Translator are: 
+Translating the HLL program input into an equivalent ml program. 
+Providing diagnostic messages wherever the programmer violates specification of the HLL
+
+A translator or language processor is a program that translates an input program written in a programming language into an equivalent program in another language.
+
+Types of Translators: 
+
+Interpreter 
+Assembler 
+Compiler
+
+Interpreter
+-----------
+An interpreter is a program that appears to execute a source program as if it were machine language. It is one of the translators that translate high level language to low level language
+
+During execution, it checks line by line for errors. Languages such as BASIC, SNOBOL, LISP can be translated using interpreters. JAVA also uses interpreter. The process of interpretation can be carried out in 
+following phases.
+ 
+Lexical analysis 
+Syntax analysis 
+Semantic analysis 
+Direct Execution
+
+Example: BASIC, Lower Version of Pascal, SNOBOL, LISP & JAVA
+
+Advantages: 
+Modification of user program can be easily made and implemented as execution proceeds. 
+Type of object that denotes various may change dynamically
+Debugging a program and finding errors is simplified task for a program used for interpretation. 
+The interpreter for the language makes it machine independent. 
+
+Disadvantages: 
+The execution of the program is slower
+Memory consumption is more
+
+Assembler 
+---------
+Programmers found it difficult to write or read programs in machine language. They begin to use a mnemonic (symbols) for each machine instruction, which they would subsequently translate into 
+machine language. Such a mnemonic machine language is now called an assembly language. 
+Programs known as assembler were written to automate the translation of assembly language in to machine language. The input to an assembler program is called source program, the output is a machine 
+language translation (object program).
+
+It translates assembly level language to machine code
+

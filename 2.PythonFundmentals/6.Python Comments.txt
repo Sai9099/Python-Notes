@@ -1,0 +1,13 @@
+Python Comments:
+✓ Comments are used to write description about application logics to understand the logics easily.
+✓ The main objective comments the code maintenance will become easy. 
+✓ The comments are non-executable code.
+
+
+There are two types of comments in python.
+
+1. Single line comments : write the description in single line & it starts with #
+Syntax: # statement
+2. Multiline comments: 
+• write the description in more than one line starts with “”” ends with : “”””(triple quotes)
+• in python while writing the comments we can write double quote or single quote (“) or (‘)

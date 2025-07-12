@@ -1,0 +1,33 @@
+Number system: We can represent numeric values in the following ways
+Types Base value Representation Values
+ 
+1. Binary form : Base 2 : 0b 0B : 0 1 
+2. Octal form : Base 8 : 0o 0O : 0 1 2 3 4 5 6 7 
+3. Decimal form : Base 10 : By default : 0 1 2 3 4 5 6 7 8 9
+4. Hexadecimal form : base 16 : 0x 0X : 0-9 a-f 
+ [here a=10 b =11 c=12 d=13 e=14 f=15]
+
+1.Binary form (Base-2): The allowed digits are: 0 & 1, value should be prefixed with 0b or 0B 
+b1 = 0b1010
+print(b1)
+b2 = 0B1111
+print(b2)
+
+2.Octal Form(Base-8): The allowed digits are : 0 to 7 Literal value should be prefixed with 0o or 0O.
+d1 = 0o123
+print(d1)
+d2 = 0O111
+print(d2)
+
+3.Decimal form(base-10): It is the default number system in Python The allowed digits are: 0 to 9 
+val = 123
+print(val)
+
+4.Hexadecimal System: check the above octal diagram to get the calculations. Just replace 8 with 16.
+Hexadecimal is base 16 number system[0-9 a-f]. prefixed with 0x or 0X.
+d1 = 0x123
+print(d1)
+d2 = 0X111
+print(d2)
+d3 = 0X1af
+print(d3)

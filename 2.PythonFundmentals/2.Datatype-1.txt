@@ -1,0 +1,27 @@
+python basic data types : 
+
+Numeric data ---> int ---> 10 ,20, 30 ,40
+Decimal data ---> float ---> 10.5 20.5 30.6 
+String ---> str ---> "ram" 'anu'
+Boolean ---> bool ---> True-1 False-0 (starts with capital)
+
+
+Note: 
+1. In other languages must declare the data types. But in python data types declarations are not required because python is dynamically typed. 
+2. In other languages every line must ends with semicolon But in python semicolon not required.
+
+
+Built-in Data Types in Python
+------------------------------
+The categories of built-in data types in Python are:
+
+Binary Types – bytes, memory view, bytearray
+Mapping Type – dict
+Numeric Type – int, float, complex
+Text Type – str
+Boolean Type – bool
+Set Types – set, frozenset
+Sequence Types – list, range, tuple
+
+
+

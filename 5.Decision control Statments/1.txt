@@ -1,0 +1,58 @@
+There are three types of flow control statements:
+a. Conditional statement
+If
+If-else 
+elif 
+
+b. Iteration statements / looping statements 
+for
+while
+
+c. Transfer statements 
+break
+continue 
+return 
+try
+
+if statement: 
+-------------
+Takes only one option. (if the condition is then only it will execute)
+if(condition):
+statement(s)
+statement (s)
+
+
+eg:
+x,y = 62,22
+if (x > y):
+print("Hi students Good Morning")
+
+If-else statement: 
+------------------
+Takes two options.
+✓ if the condition true if block executed.
+✓ if the condition false else block executed.
+
+Syntax: if(condition): 
+	 statement(s)
+ 	else:
+	 statement(s)
+
+
+elif statement :
+---------------- 
+✓ The keyword ‘elif’ is short for ‘else if’
+✓ An elif sequence is a substitute for the switch or case statements found in other languages
+
+Syntax:
+	if expression:
+ 	statement(s)
+	elif expression:
+ 	statement(s)
+	elif expression:
+ 	statement(s)
+	...
+	else:
+ 	statement(s)
+
+

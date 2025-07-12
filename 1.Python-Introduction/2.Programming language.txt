@@ -1,0 +1,81 @@
+1.What is a Programming Language?
+-------------------------------
+In general, the word language refers to the mode of communication used amongst a group of individuals or entities to exchange ideas, give commands, etc. Similarly in the world of programming, the language that software programmers, software engineers, coders, developers, etc. use to communicate with a computer or software is referred to as a programming language.
+
+Definition of programming language: It is a tool programmers use to communicate with and control the behavior of a machine, more often a computer.
+
+There are thousands of programming languages in use today with many new and upcoming features. So let's move on to discussing the various types of programming languages and discuss some prominent features.
+
+2.Features of Programming language:
+---------------------------------
+Syntax: 
+The specific guidelines and arrangement that computer languages employ to produce code.
+
+Data Types: the several types of values that may be kept in a program, including strings, integers, etc.
+
+Variables: 
+Named memory locations that can store values.
+Control Structures: loops and conditional statements are examples of statements that regulate how a program executes.
+
+Functions/Methods: 
+Blocks of code that can be called from other parts of a program to perform specific tasks.
+
+Abstraction: 
+The ability to hide complex details and provide a simplified interface for users.
+
+Memory Management: 
+The process of allocating and deallocating memory for variables and data structures.
+
+Parsing: 
+The process of analyzing code to determine its structure and meaning.
+Markup and Control Language: The ability to add comments and other annotations to code to make it more readable and maintainable.
+
+3.Types of Programming Language
+-------------------------------
+1. Low-level languages
+Low-level programming languages are languages that provide little to no abstraction between the language itself and the processor's instructions. In other words, these low-level languages closely resemble the machine code and are hence referred to as 'close to hardware'. The advantage here is that the processors can run low-level programs directly, without the need for an interpreter or compiler. This is why programs written in low-level programming languages are extremely fast to run.
+
+Examples of low-level programming languages are- Binary code, Machine language, and Assembly language.
+
+2. Middle-level language (MLL)
+As the name suggests, a mid-level language refers to all the languages that lie between high and low-level programming languages. An MLL acts as a bridge between raw hardware and programs by interacting with the abstraction layer. This is why they are often referred to as pseudo or intermediate-level programming languages.
+
+Examples of mid-level languages are- C, Java, and C++.
+
+3. High-level languages (HLL)
+The high-level programming languages allow for the greatest amount of abstraction between machine code and the language itself. So much so, that they appear close to human languages rather than machine languages. For computers to then understand and execute the commands we use compilers that first convert the HLL into computer languages. The primary benefit of high-level programming languages is that it's simple to learn and write in, as well as maintain.
+
+Examples of high-level programming languages are Python, Java, JavaScript, Pascal, PHP, Swift, etc.
+
+Other Types of Programming Language
+--------------------------------------
+There are many other ways to define categories of programming languages:
+
+1. Procedural languages
+Procedural Programming languages are the ones that follow a step-wise/sequential format of writing commands and executing them. A sequence of commands is referred to as a procedure and these languages are also referred to as procedural-oriented languages (POP). A primary advantage of POP language is its simplicity of use. Some examples of these POP languages are- Java, Pascal, BASIC, etc.
+
+2. Functional programming languages
+This refers to those languages wherein a program is written based on mathematical functions and they are useful in performing computation. There are two types of these languages- pure functional languages and impure functional languages. Examples- Scala, Haskell, F#, etc.
+
+3. Object-oriented programming languages
+The languages that consider a program as a set of objects are referred to as object-oriented languages. In other words, in such languages, programs contain objects, which further contain data or code. Some common object-oriented programming (OOP) languages are Python, Ruby, C++, etc.
+
+4. Scripting languages
+A scripting language is where the commands/ instructions are written for and interpreted in the runtime environment. There is no need to compile these languages since they are interpreted. Some common scripting languages are Python, Perl, PHP, Bash, etc.
+
+5. Logic languages
+In such languages, programs are written as a set of logical relations instead of rigid/ technical commands or instructions. Examples of logic languages are Prolong, Alma-0, Absys, etc.
+
+6. Front-end languages
+Front-end programming languages as the name suggests, pertain to the user side or front-end web development side. In other words, they are used to create what the users see in their browsers, i.e. images, text, colors, etc. A front-end developer uses these languages to create a seamless user experience for the visitors/ users. Some examples of front-end development languages are- CSS (Cascading Style Sheets), JavaScript, React, etc.
+
+7. Back-end languages
+Back-end programming languages are used in the back-end development end of a website, app, program, etc. These languages are used to address the server-side requests that ultimately produce what the user sees on the front end. Some common languages used by back-end developers are PHP, JavaScript, PHP, Python, etc.
+
+8. Compiled languages
+As we've mentioned before, for some languages we use a compiler to convert programming language code into machine language which the processor then implements/ executes. These are referred to as compiled programming languages. Some common programming languages in this category are- C, C++, Rust, etc.
+
+9. Interpreted languages
+These are those languages that skip the compiler step and instead are interpreted at the time of execution/ at runtime, by an interpreter (think back to the explanation of scripting languages). Some friendly languages in this category are Python, JavaScript, PHP, etc.
+
+Now that we know about the basics of what is a programming language, as well as various categorizations for the same, let's have a look at some of the most popular programming languages and their advantages.
