@@ -1,0 +1,158 @@
+dictionary
+----------
+A Python dictionary is a collection of key-value pairs where each key is associated with a value.
+
+A value in the key-value pair can be a number, a string, a list, a tuple, or even another dictionary. In fact, you can use a value of any valid type in Python as the value in the key-value pair.
+
+A key in the key-value pair must be immutable. In other words, the key cannot be changed
+
+Python uses curly braces {} to define a dictionary. Inside the curly braces, you can place zero, one, or many key-value pairs.
+
+
+eg:
+
+empty_dict = {}
+
+student = {"Name": "Kiran", "Age": 22, "Regno":562,"Branch":"CSE"} 
+ 
+print(student)
+
+person = {
+    'first_name': 'John',
+    'last_name': 'Doe',
+    'age': 25,
+    'favorite_colors': ['blue', 'green'],
+    'active': True
+}
+print(person.items())
+
+phone_book = {
+    "Ajay": "123-456-7890",
+    "Bob": "987-654-3210",
+    "Charlie": "555-555-5555"
+}
+
+car = {
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1964
+}
+
+
+Accessing the dictionary values
+--------------------------------
+To access a value by key from a dictionary, you can use the square bracket notation or the get() method.
+
+
+student = {"Name": "Kiran", "Age": 22, "Regno":562,"Branch":"CSE"} 
+ 
+print("Name : ",student["Name"])  
+print("Age : ",student["Age"])  
+print("RegNo : ",student["Regno"])  
+print("Branch : ",student["Branch"])
+
+person = {
+    'first_name': 'John',
+    'last_name': 'Doe',
+    'age': 25,
+    'favorite_colors': ['blue', 'green'],
+    'active': True
+}
+
+ssn = person.get('favorite_colors')
+print(ssn)
+
+
+Updating dictionary values
+--------------------------
+student = {"Name": "Kiran", "Age": 22, "Regno":562,"Branch":"CSE"}
+print(student)
+
+student["Name"]="Kishore"
+print(student)
+
+Deleting dictionary values
+--------------------------
+student = {"Name": "Kiran", "Age": 22, "Regno":562,"Branch":"CSE"}
+print(student)
+
+del student["Branch"]
+print(student)
+
+Accessing the dictionary values using loops
+--------------------------------------------
+student = {"Name": "Kiran", "Age": 22, "Regno":562,"Branch":"CSE"}
+print("Keys are :")
+for x in student:
+	print(x)
+
+print all the values of a dictionary
+------------------------------------
+student = {"Name": "Kiran", "Age": 22, "Regno":562,"Branch":"CSE"}
+print("values are :")
+for x in student:
+	print(student[x])
+
+print all the Keys & values of a dictionary
+-------------------------------------------
+student = {"Name": "Kiran", "Age": 22, "Regno":562,"Branch":"CSE"}
+print("Key and values are :")
+for x,y in student.items():
+	print(x,y)
+
+----
+person = {
+    'first_name': 'John',
+    'last_name': 'Doe',
+    'age': 25,
+    'favorite_colors': ['blue', 'green'],
+    'active': True
+}
+
+for key, value in person.items():
+    print(f"{key}: {value}")
+
+------
+person = {
+    'first_name': 'John',
+    'last_name': 'Doe',
+    'age': 25,
+    'favorite_colors': ['blue', 'green'],
+    'active': True
+}
+
+for key in person.keys():
+    print(key)
+----
+person = {
+    'first_name': 'John',
+    'last_name': 'Doe',
+    'age': 25,
+    'favorite_colors': ['blue', 'green'],
+    'active': True
+}
+
+for key in person:
+    print(key)
+-----
+person = {
+    'first_name': 'John',
+    'last_name': 'Doe',
+    'age': 25,
+    'favorite_colors': ['blue', 'green'],
+    'active': True
+}
+
+for value in person.values():
+    print(value)
+
+
+
+-----
+nested dictionary
+
+d = {1: 'Geeks', 2: 'For',
+        3: {'A': 'Welcome', 'B': 'To', 'C': 'Geeks'}}
+
+print(d)
+

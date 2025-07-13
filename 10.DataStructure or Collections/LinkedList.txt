@@ -1,0 +1,360 @@
+Python Program to Create and Display Linked List
+-------------------------------------------------
+class Node:
+    def __init__(self, data):
+       self.data = data
+       self.next = None
+ 
+class LinkedList:
+    def __init__(self):
+        self.head = None
+        self.last_node = None
+ 
+    def append(self, data):
+        if self.last_node is None:
+            self.head = Node(data)
+            self.last_node = self.head
+        else:
+            self.last_node.next = Node(data)
+            self.last_node = self.last_node.next
+ 
+    def display(self):
+        current = self.head
+        while current is not None:
+            print(current.data, end = ' ')
+            current = current.next
+ 
+a_llist = LinkedList()
+n = int(input('How many elements would you like to add? '))
+for i in range(n):
+    data = int(input('Enter data item: '))
+    a_llist.append(data)
+print('The linked list: ', end = '')
+a_llist.display()
+
+Python Program to Remove Duplicates from a Linked List
+-------------------------------------------------------
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+ 
+ 
+class LinkedList:
+    def __init__(self):
+        self.head = None
+        self.last_node = None
+ 
+    def append(self, data):
+        if self.last_node is None:
+            self.head = Node(data)
+            self.last_node = self.head
+        else:
+            self.last_node.next = Node(data)
+            self.last_node = self.last_node.next
+ 
+    def get_prev_node(self, ref_node):
+        current = self.head
+        while (current and current.next != ref_node):
+            current = current.next
+        return current
+ 
+    def remove(self, node):
+        prev_node = self.get_prev_node(node)
+        if prev_node is None:
+            self.head = self.head.next
+        else:
+            prev_node.next = node.next
+ 
+    def display(self):
+        current = self.head
+        while current:
+            print(current.data, end = ' ')
+            current = current.next
+ 
+ 
+def remove_duplicates(llist):
+    current1 = llist.head
+    while current1:
+        data = current1.data
+        current2 = current1.next
+        while current2:
+            if current2.data == data:
+                llist.remove(current2)
+            current2 = current2.next
+        current1 = current1.next
+ 
+ 
+a_llist = LinkedList()
+ 
+data_list = input('Please enter the elements in the linked list: ').split()
+for data in data_list:
+    a_llist.append(int(data))
+ 
+remove_duplicates(a_llist)
+ 
+print('The list with duplicates removed: ')
+a_llist.display()
+
+Python Program to Check if Two Lists are Equal
+----------------------------------------------
+class Node:
+    def __init__(self, data):
+       self.data = data
+       self.next = None
+ 
+ 
+class LinkedList:
+    def __init__(self):
+        self.head = None
+        self.last_node = None
+ 
+    def append(self, data):
+        if self.last_node is None:
+            self.head = Node(data)
+            self.last_node = self.head
+        else:
+            self.last_node.next = Node(data)
+            self.last_node = self.last_node.next
+ 
+ 
+def is_equal(llist1, llist2):
+    current1 = llist1.head
+    current2 = llist2.head
+    while (current1 and current2):
+        if current1.data != current2.data:
+            return False
+        current1 = current1.next
+        current2 = current2.next
+    if current1 is None and current2 is None:
+        return True
+    else:
+        return False
+ 
+ 
+llist1 = LinkedList()
+llist2 = LinkedList()
+ 
+data_list = input('Please enter the elements in the first linked list: ').split()
+for data in data_list:
+    llist1.append(int(data))
+ 
+data_list = input('Please enter the elements in the second linked list: ').split()
+for data in data_list:
+    llist2.append(int(data))
+ 
+if is_equal(llist1, llist2):
+    print('The two linked lists are the same.')
+else:
+    print('The two linked list are not the same.', end = '')
+
+
+Python Program to Solve Josephus Problem using Linked List
+----------------------------------------------------------
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+ 
+ 
+class CircularLinkedList:
+    def __init__(self):
+        self.head = None
+ 
+    def append(self, data):
+        node = Node(data)
+        self.insert_at_end(node)
+ 
+    def get_node(self, index, start):
+        if self.head is None:
+            return None
+        current = start
+        for i in range(index):
+            current = current.next
+        return current
+ 
+    def get_prev_node(self, ref_node):
+        if self.head is None:
+            return None
+        current = self.head
+        while current.next != ref_node:
+            current = current.next
+        return current
+ 
+    def insert_after(self, ref_node, new_node):
+        new_node.next = ref_node.next
+        ref_node.next = new_node
+ 
+    def insert_before(self, ref_node, new_node):
+        prev_node = self.get_prev_node(ref_node)
+        self.insert_after(prev_node, new_node)
+ 
+    def insert_at_end(self, new_node):
+        if self.head is None:
+            self.head = new_node
+            new_node.next = new_node
+        else:
+            self.insert_before(self.head, new_node)
+ 
+    def remove(self, node):
+        if self.head.next == self.head:
+            self.head = None
+        else:
+            prev_node = self.get_prev_node(node)
+            prev_node.next = node.next
+            if self.head == node:
+                self.head = node.next
+ 
+ 
+def has_one_node(cllist):
+    if cllist.head.next == cllist.head:
+        return True
+    else:
+        return False
+ 
+ 
+def get_josephus_solution(cllist, k):
+    if cllist.head is None:
+        return None
+    start = cllist.head
+    while not has_one_node(cllist):
+        to_remove = cllist.get_node(k - 1, start)
+        start = to_remove.next
+        cllist.remove(to_remove)
+    return cllist.head.data
+ 
+ 
+a_cllist = CircularLinkedList()
+n = int(input('Input number of people: '))
+k = int(input('The kth person will be executed. Input k: '))
+for i in range(1, n + 1):
+    a_cllist.append(i)
+ 
+ans = get_josephus_solution(a_cllist, k)
+print('The person at position {} won\'t be killed.'.format(ans))
+
+Python Program to Find Nth Node from End of Linked List
+--------------------------------------------------------
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+ 
+ 
+class LinkedList:
+    def __init__(self):
+        self.head = None
+        self.last_node = None
+ 
+    def append(self, data):
+        if self.last_node is None:
+            self.head = Node(data)
+            self.last_node = self.head
+        else:
+            self.last_node.next = Node(data)
+            self.last_node = self.last_node.next
+ 
+ 
+def length_llist(llist):
+    length = 0
+    current = llist.head
+    while current:
+        current = current.next
+        length = length + 1
+    return length
+ 
+ 
+def return_n_from_last(llist, n):
+    l = length_llist(llist)
+    current = llist.head
+    for i in range(l - n):
+        current = current.next
+    return current.data
+ 
+ 
+a_llist = LinkedList()
+ 
+data_list = input('Please enter the elements in the linked list: ').split()
+for data in data_list:
+    a_llist.append(int(data))
+ 
+n = int(input('The nth element from the end will be printed. Please enter n: '))
+value = return_n_from_last(a_llist, n)
+ 
+print('The nth element from the end: {}'.format(value))
+
+Python Program to Swap Two Elements of the List without Key Field
+------------------------------------------------------------------
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+ 
+ 
+class LinkedList:
+    def __init__(self):
+        self.head = None
+        self.last_node = None
+ 
+    def append(self, data):
+        if self.last_node is None:
+            self.head = Node(data)
+            self.last_node = self.head
+        else:
+            self.last_node.next = Node(data)
+            self.last_node = self.last_node.next
+ 
+    def display(self):
+        current = self.head
+        while current:
+            print(current.data, end = ' ')
+            current = current.next
+ 
+    def get_node(self, index):
+        current = self.head
+        for i in range(index):
+            if current is None:
+                return None
+            current = current.next
+        return current
+ 
+    def get_prev_node(self, ref_node):
+        current = self.head
+        while (current and current.next != ref_node):
+            current = current.next
+        return current
+ 
+ 
+def interchange(llist, n, m):
+    node1 = llist.get_node(n)
+    node2 = llist.get_node(m)
+    prev_node1 = llist.get_prev_node(node1)
+    prev_node2 = llist.get_prev_node(node2)
+    if prev_node1 is not None:
+        prev_node1.next = node2
+    else:
+        llist.head = node2
+    if prev_node2 is not None:
+        prev_node2.next = node1
+    else:
+        llist.head = node1
+    temp = node2.next
+    node2.next = node1.next
+    node1.next = temp
+ 
+ 
+a_llist = LinkedList()
+ 
+data_list = input('Please enter the elements in the linked list: ').split()
+for data in data_list:
+    a_llist.append(int(data))
+ 
+ans = input('Please enter the two indices of the two elements that'
+            ' you want to exchange: ').split()
+n = int(ans[0])
+m = int(ans[1])
+ 
+interchange(a_llist, n, m)
+ 
+print('The new list: ')
+a_llist.display()

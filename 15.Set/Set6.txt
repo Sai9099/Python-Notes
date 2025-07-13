@@ -1,0 +1,150 @@
+Find and group all anagrams in a list
+-------------------------------------
+def group_anagrams(strs):
+    result = {}
+    
+    for s in strs:
+        sorted_string = ''.join(sorted(s))
+        
+        if sorted_string in result:
+            result[sorted_string].append(s)
+        else:
+            result[sorted_string] = [s]
+    
+    return list(result.values())
+
+strs = ['eat', 'cba', 'tae', 'abc', 'xyz']
+print("Original list of strings:")
+print(strs)
+
+print("Find and group all anagrams in the said list:")
+print(group_anagrams(strs))
+
+strs = ['restful', 'forty five', 'evil', 'over fifty', 'vile', 'fluster']
+print("\nOriginal list of strings:")
+print(strs)
+
+print("Find and group all anagrams in the said list:")
+print(group_anagrams(strs)) 
+
+Find and group all the anagrams in the given list
+--------------------------------------------------
+def group_anagrams(strs):
+    result = {}
+    
+    for s in strs:
+        sorted_string = ''.join(sorted(s))
+        
+        if sorted_string in result:
+            result[sorted_string].append(s)
+        else:
+            result[sorted_string] = [s]
+    
+    return list(result.values())
+
+strs = ['eat', 'cba', 'tae', 'abc', 'xyz']
+print("Original list of strings:")
+print(strs)
+
+print("Find and group all anagrams in the said list:")
+print(group_anagrams(strs))
+
+print("\nOriginal list of strings:")
+print(strs)
+
+print("Find and group all anagrams in the said list:")
+print(group_anagrams(strs)) 
+
+
+Combine three numbers to get the target number
+----------------------------------------------
+def find_combinations_of_three(nums, target_val):
+    nums = list(set(nums))
+    
+    result = set()
+    
+    for i in range(len(nums)):
+        for j in range(i+1, len(nums)):
+            complement = target_val - nums[i] - nums[j]
+            
+            if complement in nums[:i] + nums[j+1:]:
+                result.add(tuple(sorted((nums[i], nums[j], complement))))
+    
+    return list(result)
+
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+target_val = 12
+print("Original list of numbers:")
+print(nums)
+print("Target value:", target_val)
+
+print("Combine three numbers whose sum equals the target number:")
+print(find_combinations_of_three(nums, target_val))
+
+print("\nOriginal list of numbers:")
+print(nums)
+print("Target value:", target_val)
+
+print("Combine three numbers whose sum equals the target number:")
+print(find_combinations_of_three(nums, target_val))
+
+Third largest number from a list of numbers using set
+-----------------------------------------------------
+def third_largest(nums):
+    nums = set(nums)
+    
+    if len(nums) < 3:
+        return None
+    
+    nums = list(nums)
+    nums.sort(reverse=True)
+    
+    return nums[2]
+
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print("Original list of numbers:")
+print(nums)
+
+print("Third largest number of the said list of numbers:")
+print(third_largest(nums))
+
+nums = [1, 2, 3, 4, 5, 5, 6, 7, 7, 8, 8, 9, 10]
+print("\nOriginal list of numbers:")
+print(nums)
+print("Third largest number of the said list of numbers:")
+print(third_largest(nums))
+
+nums = [1, 2, 3]
+print("\nOriginal list of numbers:")
+print(nums)
+print("Third largest number of the said list of numbers:")
+print(third_largest(nums))
+
+nums = [1, 2, 2]
+print("\nOriginal list of numbers:")
+print(nums)
+print("Third largest number of the said list of numbers:")
+print(third_largest(nums))
+
+nums = [1, 2]
+print("\nOriginal list of numbers:")
+print(nums)
+print("Third largest number of the said list of numbers:")
+print(third_largest(nums))
+
+Return unique strings from a list of strings
+---------------------------------------------
+def remove_duplicates(strings):
+    return list(set(strings))
+
+strs = ['foo', 'bar', 'abc', 'foo', 'qux', 'bar', 'baz']
+print("Original list of strings:")
+print(strs)
+print("List of strings after removing duplicates:")
+print(remove_duplicates(strs))
+
+strs = ["Python", "Exercises", "Practice", "Solution", "Exercises"]
+print("\nOriginal list of strings:")
+print(strs)
+print("List of strings after removing duplicates:")
+print(remove_duplicates(strs))   

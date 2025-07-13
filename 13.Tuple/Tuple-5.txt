@@ -1,0 +1,610 @@
+Find the size of a Tuple in Python
+-----------------------------------
+import sys
+ 
+# sample Tuples
+Tuple1 = ("A", 1, "B", 2, "C", 3)
+Tuple2 = ("Geek1", "Raju", "Geek2", "Nikhil", "Geek3", "Deepanshu")
+Tuple3 = ((1, "Lion"), ( 2, "Tiger"), (3, "Fox"), (4, "Wolf"))
+ 
+# print the sizes of sample Tuples
+print("Size of Tuple1: " + str(sys.getsizeof(Tuple1)) + "bytes")
+print("Size of Tuple2: " + str(sys.getsizeof(Tuple2)) + "bytes")
+print("Size of Tuple3: " + str(sys.getsizeof(Tuple3)) + "bytes")
+
+
+Python – Maximum and Minimum K elements in Tuple
+------------------------------------------------
+test_tup = (5, 20, 3, 7, 6, 8,11,29)
+ 
+print("The original tuple is : " + str(test_tup))
+K = 3
+test_tup = list(test_tup)
+temp = sorted(test_tup)
+res = tuple(temp[:K] + temp[-K:])
+print("The extracted values : " + str(res)) 
+
+create a list of tuples from given list having number and its cube in each tuple
+-------------------------------------------------------------------------
+list1 = [1, 2, 5, 6]
+res = [(val, pow(val, 3)) for val in list1]
+print(res)
+
+
+list1 = [1, 2, 5, 6]
+res = [(val, val**3) for val in list1]
+print(res)
+
+Adding Tuple to List and vice 
+-----------------------------
+method 1
+--------
+test_list = [5, 6, 7]
+print("The original list is : " + str(test_list))
+test_tup = (9, 10)
+test_list += test_tup
+
+print("The container after addition : " + str(test_list))
+
+method 2
+--------
+test_list = [5, 6, 7]
+test_tup = (9,10)
+print("The original list is : " + str(test_list))
+test_list.extend(list(test_tup))
+print("The container after addition : " + str(test_list))
+test_list = [1,2,3,4]
+test_tup=(5,6)
+print("The original tuple is : " + str(test_tup))
+test_tup=list(test_tup)
+test_tup.extend(test_list)
+test_tup=tuple(test_tup)
+print("The container after addition : " + str(test_tup))
+
+Sum of tuple elements
+----------------------
+method 1
+--------
+test_tup = (7, 8, 9, 1, 10, 7)
+print("The original tuple is : " + str(test_tup))
+res = 0
+for i in test_tup:
+    res += i
+print("The summation of tuple elements are : " + str(res))
+
+method 2
+-------
+import math
+test_tup = (7, 8, 9, 1, 10, 7)
+res = math.fsum(test_tup)
+print("The summation of tuple elements are : " + str(res))
+
+method 3 (using zip function)
+---------
+tuple1 = (1, 2, 3)
+tuple2 = (4, 5, 6)
+tuple3 = (7, 8, 9)
+ 
+combined = zip(tuple1, tuple2, tuple3)
+result = tuple(map(sum, combined))
+print(result)  
+
+method 4 (using reduce ,operator.add)
+--------
+import operator
+from functools import reduce
+ 
+def summation(test_tup):
+  return reduce(operator.add, test_tup)
+test_tup = (5, 20, 3, 7, 6, 8)
+print(summation(test_tup))
+
+Modulo of tuple elements
+------------------------
+method 1
+--------
+test_tup1 = (10, 4, 5, 6)
+test_tup2 = (5, 6, 7, 5)
+ 
+# Printing original tuples
+print("The original tuple 1 : " + str(test_tup1))
+print("The original tuple 2 : " + str(test_tup2))
+
+
+method 2
+--------
+from operator import mod
+test_tup1 = (10, 4, 5, 6)
+test_tup2 = (5, 6, 7, 5)
+print("The original tuple 1 : " + str(test_tup1))
+print("The original tuple 2 : " + str(test_tup2))
+ 
+res = tuple(map(mod, test_tup1, test_tup2))
+ 
+print("The modulus tuple : " + str(res))
+
+
+method 3
+--------
+import numpy as np
+ 
+# initialize tuples
+test_tup1 = (10, 4, 5, 6)
+test_tup2 = (5, 6, 7, 5)
+ 
+# printing original tuples
+print("The original tuple 1 : " + str(test_tup1))
+print("The original tuple 2 : " + str(test_tup2))
+ 
+# Tuple modulo using numpy
+res = tuple(np.mod(test_tup1, test_tup2))
+ 
+# printing result
+print("The modulus tuple : " + str(res))
+
+method 4
+--------
+def modulo_tuple(t1, t2, result=()):
+    if not t1:
+        return result
+    return modulo_tuple(t1[1:], t2[1:], result + (t1[0] % t2[0],))
+ 
+# initialize tuples
+test_tup1 = (10, 4, 5, 6)
+test_tup2 = (5, 6, 7, 5)
+ 
+# printing original tuples
+print("The original tuple 1 : " + str(test_tup1))
+print("The original tuple 2 : " + str(test_tup2))
+ 
+# Tuple modulo
+result = modulo_tuple(test_tup1, test_tup2)
+ 
+# printing result
+print("The modulus tuple : " + str(result))
+
+method 5
+---------
+import itertools
+ 
+# Initializing list
+test_tup1 = (10, 4, 5, 6)
+test_tup2 = (5, 6, 7, 5)
+ 
+# Printing original tuples
+print("The original tuple 1 : " + str(test_tup1))
+print("The original tuple 2 : " + str(test_tup2))
+ 
+result = tuple(itertools.starmap(lambda x, y: x %
+                                 y, zip(test_tup1, test_tup2)))
+ 
+# Printing the result 
+print("The modulus tuple : " + str(result))
+
+Time complexity: O(n)
+Auxiliary Space: O(n)
+
+method 6
+--------
+import heapq
+ 
+test_tup1 = (10, 4, 5, 6)
+test_tup2 = (5, 6, 7, 5)
+ 
+modulus_tup = tuple(heapq.nlargest(len(test_tup1), (x % y for x, y in zip(test_tup1, test_tup2))))
+ 
+print("The original tuple 1 : " + str(test_tup1))
+print("The original tuple 2 : " + str(test_tup2))
+print("The modulus tuple : " + str(modulus_tup))
+
+
+Python – Row-wise element Addition in Tuple Matrix
+---------------------------------------------------
+test_list = [[('Gfg', 3)], [('best', 1)]]
+cus_eles = [1, 2]
+result_list = []
+for i, row in enumerate(test_list):
+    result_list.append(list(map(lambda x: x+(cus_eles[i],), row)))
+print(result_list)
+
+Update each element in tuple list(update each element in the Tuple List using List Comprehension)
+---------------------------------
+test_list = [(1, 3, 4), (2, 4, 6), (3, 8, 1)]
+add_ele = 4
+res = [tuple(j + add_ele for j in sub ) for sub in test_list]
+print("List after bulk update : " + str(res))
+
+
+using Map() + Lambda + List Comprehension
+-----------------------------------------
+test_list = [(1, 3, 4), (2, 4, 6), (3, 8, 1)]
+add_ele = 4
+res = [tuple(map(lambda ele : ele + add_ele, sub)) for sub in test_list]
+print("List after bulk update :" + str(res))
+
+
+update each element in the Tuple List using the Extend() Method
+----------------------------------------------------------------
+test_list = [(1, 3, 4), (2, 4, 6), (3, 8, 1)]
+new_elements = [(5, 7, 2), (6, 9, 3)]
+test_list.extend(new_elements)
+print("List after using extend() method : " + str(test_list))
+
+Update a value in a list of Tuples using Slicing and Concatenation
+-------------------------------------------------------------------
+test_list = [(1, 3, 4), (2, 4, 6), (3, 8, 1)]
+new_elements = (5, 7, 2)
+index_to_update = 1
+test_list = test_list[:index_to_update] + [new_elements] + test_list[index_to_update + 1:]
+print("List after using slicing and concatenation : " + str(test_list))
+
+Update List in Python Using enumerate() Method
+-----------------------------------------------
+test_list = [(1, 3, 4), (2, 4, 6), (3, 8, 1)]
+updated_list = [(a + 1, b + 1, c + 1) for idx, (a, b, c) in enumerate(test_list)]
+print("The updated list using Enumerate() and Tuple Unpacking: " + str(updated_list))
+
+Update List in Python using For Loop
+-------------------------------------
+test_list = [(1, 3, 4), (2, 4, 6), (3, 8, 1)]
+index = 1
+value = 5
+ 
+new_list = []
+for tup in test_list:
+    temp_list = list(tup)
+    temp_list[index] = value
+    new_tup = tuple(temp_list)
+    new_list.append(new_tup)
+ 
+print("Updated list:", new_list)
+
+element of a Tuple using zip() Function
+---------------------------------------
+test_list = [(1, 3, 4), (2, 4, 6), (3, 8, 1)]
+
+updated_list = [tuple(x + 1 for x in t) for t in zip(*test_list)]
+ 
+print("The updated list using Zip() function: " + str(updated_list))
+
+
+Access each element in a list in Python using a Loop And Tuple Unpacking
+------------------------------------------------------------------------
+def update_tuples(tuples, new_val):
+    for i in range(len(tuples)):
+        x, y, z = tuples[i]
+        tuples[i] = (new_val, y, z)
+    return tuples
+ 
+tuples = [(1, 56, 'M'), (1, 14, 'F'), (2, 43, 'F'), (2, 10, 'M')]
+new_val = 5
+ 
+updated_tuples = update_tuples(tuples, new_val)
+print(updated_tuples)
+
+---------------------------------------------------
+test_list = [(1, 3, 4), (2, 4, 6), (3, 8, 1)]
+index = 1
+value = 5
+ 
+new_list = []
+for tup in test_list:
+    temp_list = list(tup)
+    temp_list[index] = value
+    new_tup = tuple(temp_list)
+    new_list.append(new_tup)
+ 
+print("Updated list:", new_list)
+
+Multiply Adjacent elements
+--------------------------
+test_tup = (1, 5, 7, 8, 10) 
+print("The original tuple : " + str(test_tup)) 
+res = tuple(i * j for i, j in zip(test_tup, test_tup[1:])) 
+print("Resultant tuple after multiplication : " + str(res)) 
+---
+test_tup = (1, 5, 7, 8, 10) 
+print("The original tuple : " + str(test_tup)) 
+res = tuple(map(lambda i, j : i * j, test_tup[1:], test_tup[:-1])) 
+print("Resultant tuple after multiplication : " + str(res)) 
+
+---
+import numpy as np
+# initialize tuple
+test_tup = (1, 5, 7, 8, 10)
+# printing original tuple
+print("The original tuple : " + str(test_tup))
+# Adjacent element multiplication using numpy
+res = np.multiply(test_tup[1:], test_tup[:-1])
+# printing result
+print("Resultant tuple after multiplication : " + str(tuple(res)))
+----
+test_tup = (1, 5, 7, 8, 10) 
+print("The original tuple : " + str(test_tup)) 
+res = []
+for i in range(len(test_tup) - 1):
+    res.append(test_tup[i] * test_tup[i+1])
+res = tuple(res)
+print("Resultant tuple after multiplication : " + str(res)) 
+
+
+Python – Join Tuples if similar initial element
+------------------------------------------------
+test_list = [(5, 6), (5, 7), (6, 8), (6, 10), (7, 13)]
+print("The original list is : " + str(test_list))
+res = []
+for sub in test_list:
+    if res and res[-1][0] == sub[0]:
+        res[-1].extend(sub[1:])
+    else:
+        res.append([ele for ele in sub])
+res = list(map(tuple, res))
+print("The extracted elements : " + str(res))
+
+------
+from collections import defaultdict
+test_list = [(5, 6), (5, 7), (6, 8), (6, 10), (7, 13)]
+print("The original list is : " + str(test_list))
+mapp = defaultdict(list)
+for key, val in test_list:
+    mapp[key].append(val)
+res = [(key, *val) for key, val in mapp.items()]
+ 
+print("The extracted elements : " + str(res))
+----
+test_list = [(5, 6), (5, 7), (6, 8), (6, 10), (7, 13)]
+print("The original list is : " + str(test_list))
+res = []
+x = []
+for i in test_list:
+    if i[0] not in x:
+        x.append(i[0])
+for i in x:
+    p = []
+    p.append(i)
+    for j in test_list:
+        if i == j[0]:
+            p.append(j[1])
+    res.append(p)
+print("The extracted elements : " + str(res))
+---
+test_list = [(5, 6), (5, 7), (6, 8), (6, 10), (7, 13)]
+print("The original list is : " + str(test_list))
+temp_dict = {}
+for x in test_list:
+    temp_dict[x[0]] = temp_dict.get(x[0], []) + list(x[1:])
+res = [(k,) + tuple(v) for k, v in temp_dict.items()]
+print("The extracted elements : " + str(res))
+---
+from itertools import groupby
+test_list = [(5, 6), (5, 7), (6, 8), (6, 10), (7, 13)]
+print("The original list is : " + str(test_list))
+res = []
+for k, g in groupby(test_list, key=lambda x: x[0]):
+    values = [v for _, v in g]
+    res.append((k, *values))
+ 
+# printing result
+print("The extracted elements : " + str(res))
+
+
+
+program to sort a list of tuples by second Item
+------------------------------------------------
+a = [(1, 3), (4, 1), (2, 2)]
+sorted_list = sorted(a, key=lambda x: x[1])
+print("Sorted List:", sorted_list)
+
+----
+
+a = [(5, 2), (1, 6), (3, 4)]
+a.sort(key=lambda x: x[1])
+print("Sorted List:", a)
+
+----
+
+from operator import itemgetter
+a = [(7, 5), (3, 8), (2, 6)]
+sorted_list = sorted(a, key=itemgetter(1))
+print("Sorted List:", sorted_list)
+
+All pair combinations of 2 tuples
+---------------------------------
+test_tuple1 = (4, 5)
+test_tuple2 = (7, 8)
+ 
+print("The original tuple 1 : " + str(test_tuple1))
+print("The original tuple 2 : " + str(test_tuple2))
+ 
+res =  [(a, b) for a in test_tuple1 for b in test_tuple2]
+res = res +  [(a, b) for a in test_tuple2 for b in test_tuple1]
+ 
+# printing result 
+print("The filtered tuple : " + str(res))
+
+-----------------
+from itertools import chain, product
+test_tuple1 = (4, 5)
+test_tuple2 = (7, 8)
+ 
+print("The original tuple 1 : " + str(test_tuple1))
+print("The original tuple 2 : " + str(test_tuple2))
+ 
+res = list(chain(product(test_tuple1, test_tuple2), product(test_tuple2, test_tuple1)))
+ 
+# printing result 
+print("The filtered tuple : " + str(res))
+
+------------
+import itertools
+ 
+# initializing tuples
+test_tuple1 = (4, 5)
+test_tuple2 = (7, 8)
+ 
+# printing original tuples
+print("The original tuple 1 : " + str(test_tuple1))
+print("The original tuple 2 : " + str(test_tuple2))
+ 
+# generating all pair combinations of 2 tuples using list comprehension
+res = [(a, b) for a in test_tuple1 for b in test_tuple2] + [(a, b) for a in test_tuple2 for b in test_tuple1]
+ 
+# printing result
+print("All pair combinations of 2 tuples : " + str(res))
+------------
+tuple1 = (4, 5)
+tuple2 = (7, 8)
+filtered_tuples = []
+for element1 in tuple1:
+    for element2 in tuple2:
+        filtered_tuples.append((element1, element2))
+        filtered_tuples.append((element2, element1)) 
+print(filtered_tuples)
+
+
+Remove Tuples of Length K
+-------------------------
+test_list = [(4, 5), (4, ), (8, 6, 7), (1, ), (3, 4, 6, 7)]
+print("The original list : " + str(test_list))
+K = 1
+res = [ele for ele in test_list if len(ele) != K]
+print("Filtered list : " + str(res))
+----------
+test_list = [(4, 5), (4, ), (8, 6, 7), (1, ), (3, 4, 6, 7)]
+print("The original list : " + str(test_list))
+K = 1
+res = list(filter(lambda x : len(x) != K, test_list))
+print("Filtered list : " + str(res))
+-----------
+original_list = [(4, 5), (4, ), (8, 6, 7), (1, ), (3, 4, 6, 7)]
+k = 1
+filtered_list =list(map(lambda x: x, filter(lambda x: len(x) != k, original_list)))
+ 
+print(filtered_list)
+-----------
+import heapq
+test_list = [(4, 5), (4, ), (8, 6, 7), (1, ), (3, 4, 6, 7)]
+print("The original list : " + str(test_list))
+K = 1
+res = list(filter(lambda x: len(x) != K, test_list))
+print("Filtered list : " + str(res))
+-----------
+
+
+Remove Tuples from the List having every element as None
+---------------------------------------------------------
+test_list = [(None, 2), (None, None), (3, 4), (12, 3), (None, )]
+print("The original list is : " + str(test_list))
+res = [sub for sub in test_list if not all(ele == None for ele in sub)]
+print("Removed None Tuples : " + str(res))
+--------
+test_list = [(None, 2), (None, None), (3, 4), (12, 3), (None, )]
+print("The original list is : " + str(test_list))
+res = list(filter(lambda sub : not all(ele == None for ele in sub), test_list))
+print("Removed None Tuples : " + str(res))
+-------
+test_list = [(None, None), (None, None), (3, 4), (12, 3), (None, )] 
+print("The original list is : " + str(test_list))
+res=[]
+for i in test_list:
+    if not(i.count(None)== len(i)):
+        res.append(i)
+print("Removed None Tuples : " + str(res))
+-------
+test_list = [(None, None), (None, None), (3, 4), (12, 3), (None, )]
+print("The original list is : " + str(test_list))
+res=[]
+import operator
+for i in test_list:
+    if not(operator.countOf(i,None)== len(i)):
+        res.append(i)
+print("Removed None Tuples : " + str(res))
+------
+test_list = [(None, None), (None, None), (3, 4), (12, 3), (None, )] 
+print("The original list is : " + str(test_list))
+res = []
+for i in range(len(test_list)):
+    if None not in test_list[i]:
+        res.append(test_list[i])
+print("Removed None Tuples : " + str(res))
+------
+test_list = [(None, None), (None, None), (3, 4), (12, 3), (None, )]
+def remove_none_tuples(lst, res):
+    if not lst:
+        return res
+    elif None in lst[0]:
+        return remove_none_tuples(lst[1:], res)
+    else:
+        res.append(lst[0])
+        return remove_none_tuples(lst[1:], res)
+new_list = remove_none_tuples(test_list, [])
+print("Removed None Tuples : " + str(new_list))
+--------
+
+
+Remove tuples having duplicate first value from given list of tuples
+--------------------------------------------------------------------
+Input = [(12.121, 'Genius is best'),
+         (19212.22, 'India is best'),
+         (12.121, 'Cyware is best.'),
+         (923232.2323, 'Jiit is best')]
+visited = set()
+Output = []
+for a, b in Input:
+    if not a in visited:
+        visited.add(a)
+        Output.append((a, b))
+print("Initial list of tuple is \n", Input)
+print("List of tuple after removing duplicates:\n ", Output)
+
+--------
+
+Input = [(12.121, 'Geeksforgeeks is best'),
+         (19212.22, 'India is best'),
+         (19212.22, 'Cyware is best.'),
+         (923232.2323, 'Jiit is best')]
+seen = set()
+Output = [(a, b) for a, b in Input
+          if not (a in seen or seen.add(a))]
+print("Initial list of tuple is\n", Input)
+print("\nList of tuple after removing duplicates \n", Output)
+
+-----
+import itertools
+Input = [(12.121, 'Geeksforgeeks is best'),
+         (19212.22, 'India is best'),
+         (923232.2323, 'Cyware is best.'),
+         (923232.2323, 'Jiit is best')]
+Output = ([next(b) for a, b in itertools.groupby(
+    Input, lambda y: y[0])])
+print("Initial list of tuple is\n", Input)
+print("\nList of tuple after removing duplicates\n", Output)
+
+-----
+from collections import OrderedDict
+Input = [(12.121, 'Geeksforgeeks is best'),
+         (19212.22, 'India is best'),
+         (19212.22, 'Cyware is best.'),
+         (923232.2323, 'Jiit is best')]
+Output = OrderedDict(Input).items()
+print("Initial list of tuple is\n", Input)
+print("\nList of tuple after removing duplicates\n", Output)
+-----
+Input = [(12.121, 'Geeksforgeeks is best'),
+         (19212.22, 'India is best'),
+         (12.121, 'Cyware is best.'),
+         (923232.2323, 'Jiit is best')]
+visited = {}
+Output = []
+for a, b in Input:
+    if a not in visited:
+        visited[a] = True
+        Output.append((a, b))
+print("Initial list of tuple is\n", Input)
+print("List of tuple after removing duplicates:\n", Output)
+------
+
+
+
+
+

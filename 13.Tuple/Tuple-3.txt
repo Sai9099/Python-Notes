@@ -1,0 +1,333 @@
+Get Tuple Items
+---------------
+intTuple = (10, 20, 30, 40, 50, 60, 70, 80, 90)
+print("Tuple Items = ", intTuple)
+
+fourthItem = intTuple[3]
+print("Tuple Fourth Item = ", fourthItem)
+
+firstItem = intTuple[0]
+print("Tuple First Item = ", firstItem)
+
+fourthItemfromLast = intTuple[-4]
+print("Tuple Fourth Item from Last = ", fourthItemfromLast)
+
+sixthItemfromLast = intTuple[-6]
+print("Tuple Sixth Item from Last  = ", sixthItemfromLast)
+
+Print Tuple using string formatting
+-----------------------------------
+numTuple = (20, 40, 60, 80, 100, 120, 140)
+print(numTuple)
+
+print("Tuple Items are = {0}".format(numTuple))
+
+print("Tuple Items are = %s" %(numTuple,))
+
+print("Tuple Items are = %s" %(numTuple))
+
+Print Even Numbers in Tuple
+---------------------------
+evTuple = (3, 78, 67, 34, 88, 11, 23, 19)
+print("Tuple Items = ", evTuple)
+
+print("\nThe Even Numbers in this evTuple Tuple are:")
+for i in range(len(evTuple)):
+    if(evTuple[i] % 2 == 0):
+        print(evTuple[i], end = "  ")
+
+--
+evTuple = (19, 25, 32, 44, 17, 66, 11, 98)
+print("Tuple Items = ", evTuple)
+
+print("\nThe Even Numbers in this evTuple Tuple are:")
+for tup in evTuple:
+    if(tup % 2 == 0):
+        print(tup, end = "  ")
+--
+evTuple = (25, 12, 19, 44, 66, 79, 89, 22, 46) 
+print("Tuple Items = ", evTuple)
+
+i = 0
+
+print("\nThe Even Numbers in this evTuple Tuple are:")
+while (i < len(evTuple)):
+    if(evTuple[i] % 2 == 0):
+        print(evTuple[i], end = "  ")
+    i = i + 1
+--
+def tupleEvenNumbers(evTuple):
+    for tup in evTuple:
+        if(tup % 2 == 0):
+            print(tup, end = "  ")
+
+
+evTuple = (19, 32, 25, 77, 44, 56, 89, 45, 98, 122, 55, 12) 
+print("Tuple Items = ", evTuple)
+
+print("\nThe Even Numbers in this evTuple Tuple are:")
+tupleEvenNumbers(evTuple)
+
+--
+Print Negative Numbers in Tuple
+-------------------------------
+negTuple = (3, -8, -22, 4, -98, 14, -33, -78, 11)
+print("Negative Tuple Items = ", negTuple)
+
+print("\nThe Negative Numbers in negTuple Tuple are:")
+for i in range(len(negTuple)):
+    if(negTuple[i] < 0):
+        print(negTuple[i], end = "  ")
+
+--
+negTuple = (25, -14, -28, 17, -61, -21, 89, 17, -48, 0)
+print("Negative Tuple Items = ", negTuple)
+
+print("\nThe Negative Numbers in this negTuple Tuple are:")
+for ngtup in negTuple:
+    if(ngtup < 0):
+        print(ngtup, end = "  ")
+
+--
+negTuple = (11, -22, -45, 67, -98, -87, 0, 16, -120) 
+print("Negative Tuple Items = ", negTuple)
+
+i = 0
+
+print("\nThe Negative Numbers in negTuple Tuple are:")
+while (i < len(negTuple)):
+    if(negTuple[i] < 0):
+        print(negTuple[i], end = "  ")
+    i = i + 1
+--
+def tupleNegativeNumbers(negTuple):
+    for potup in negTuple:
+        if(potup < 0):
+            print(potup, end = "  ")
+
+
+negTuple = (9, -23, -17, 98, 66, -12, -77, 0, -2, 15) 
+print("Negative Tuple Items = ", negTuple)
+
+print("\nThe Negative Numbers in negTuple Tuple are:")
+tupleNegativeNumbers(negTuple)
+--
+Print Positive Numbers in Tuple
+----------------------------------
+posTuple = (3, -8, 6, 4, -88, -11, 13, 19)
+print("Positive Tuple Items = ", posTuple)
+
+print("\nThe Positive Numbers in posTuple Tuple are:")
+for i in range(len(posTuple)):
+    if(posTuple[i] >= 0):
+        print(posTuple[i], end = "  ")
+
+--
+posTuple = (25, 32, -14, 17, -6, -1, 98, 11, -9, 0)
+print("Positive Tuple Items = ", posTuple)
+
+print("\nThe Positive Numbers in this posTuple Tuple are:")
+for potup in posTuple:
+    if(potup >= 0):
+        print(potup, end = "  ")
+--
+posTuple = (25, -11, -22, 17, 0, -9, 43, 17, -10) 
+print("Positive Tuple Items = ", posTuple)
+
+i = 0
+
+print("\nThe Positive Numbers in posTuple Tuple are:")
+while (i < len(posTuple)):
+    if(posTuple[i] >= 0):
+        print(posTuple[i], end = "  ")
+    i = i + 1
+--
+def tuplePositiveNumbers(posTuple):
+    for potup in posTuple:
+        if(potup >= 0):
+            print(potup, end = "  ")
+
+
+posTuple = (19, -32, -17, 98, 44, -12, 0, 78, -2, 4, -5) 
+print("Positive Tuple Items = ", posTuple)
+
+print("\nThe Positive Numbers in this posTuple Tuple are:")
+tuplePositiveNumbers(posTuple)
+
+Print Odd Numbers in Tuple
+---------------------------
+oddTuple = (9, 22, 33, 45, 56, 77, 89, 90)
+print("Odd Tuple Items = ", oddTuple)
+
+print("\nThe Odd Numbers in oddTuple Tuple are:")
+for i in range(len(oddTuple)):
+    if(oddTuple[i] % 2 != 0):
+        print(oddTuple[i], end = "  ")
+
+--
+oddTuple = (19, 98, 17, 23, 56, 77, 88, 99, 111)
+print("Tuple Items = ", oddTuple)
+
+print("\nThe Odd Numbers in this oddTuple Tuple are:")
+for tup in oddTuple:
+    if(tup % 2 != 0):
+        print(tup, end = "  ")
+--
+oddTuple = (25, 19, 44, 53, 66, 79, 89, 22, 67) 
+print("Odd Tuple Items = ", oddTuple)
+
+i = 0
+
+print("\nThe Odd Numbers in oddTuple Tuple are:")
+while (i < len(oddTuple)):
+    if(oddTuple[i] % 2 != 0):
+        print(oddTuple[i], end = "  ")
+    i = i + 1
+--
+def tupleOddNumbers(oddTuple):
+    for tup in oddTuple:
+        if(tup % 2 != 0):
+            print(tup, end = "  ")
+
+
+oddTuple = (122, 55, 12, 11, 67, 88, 42, 99, 17, 64) 
+print("Tuple Items = ", oddTuple)
+
+print("\nThe Odd Numbers in oddTuple Tuple are:")
+tupleOddNumbers(oddTuple)
+
+Find Smallest Item in a Tuple
+------------------------------
+smTuple = (9, 11, 22, 45, 33, 5, 17, 30)
+print("Tuple Items = ", smTuple)
+
+print("Smallest Item in smTuple Tuple = ", min(smTuple))
+
+--
+smTuple = (14, 19, 11, 25, 7, 22, 30) 
+print("Tuple Items = ", smTuple)
+
+smTuple = sorted(smTuple)
+print("Smallest Item in smTuple Tuple = ", smTuple[0])
+
+--
+smTuple = (25, 33, 55, 17, 2, 40, 30, 65, 29) 
+print("Tuple Items = ", smTuple)
+
+tupSmallest = smTuple[0]
+for i in range(len(smTuple)):
+    if(tupSmallest > smTuple[i]):
+        tupSmallest = smTuple[i]
+        tupSmallestPos = i
+
+print("Smallest Item in smTuple Tuple     = ", tupSmallest)
+print("Smallest Tuple Item index Position = ", tupSmallestPos)
+--
+
+def tupleSmallest(smTuple):
+    tupSmallest = smTuple[0]
+    for i in smTuple:
+        if(tupSmallest > i):
+            tupSmallest = i
+    return tupSmallest
+
+smTuple = (19, 77, 13, 87, 33, 6, 17, 45, 66) 
+print("Tuple Items = ", smTuple)
+
+smt = tupleSmallest(smTuple)
+print("Smallest Item in smTuple Tuple = ", smt)
+
+
+Largest Item in a Tuple
+------------------------
+mxTuple = (3, 78, 67, 34, 88, 11, 23, 19)
+print("Tuple Items = ", mxTuple)
+
+print("Largest Item in mxTuple Tuple = ", max(mxTuple))
+
+--
+mxTuple = (2, 14, 11, 19, 25, 17, 33, 22, 30) 
+print("Tuple Items = ", mxTuple)
+
+mxTuple = sorted(mxTuple)
+print("Largest Item in mxTuple Tuple = ", mxTuple[len(mxTuple) - 1])
+
+--
+mxTuple = (25, 17, 19, 33, 55, 22, 40, 30, 50, 29) 
+print("Tuple Items = ", mxTuple)
+
+tupLargest = mxTuple[0]
+for i in range(1, len(mxTuple)):
+    if(tupLargest < mxTuple[i]):
+        tupLargest = mxTuple[i]
+        tupLargestPos = i
+
+print("Largest Item in mxTuple Tuple     = ", tupLargest)
+print("Largest Tuple Item index Position = ", tupLargestPos)
+--
+def tupleLargest(mxTuple):
+    tupLargest = mxTuple[0]
+    for i in mxTuple:
+        if(tupLargest < i):
+            tupLargest = i
+    return tupLargest
+
+mxTuple = (19, 25, 77, 56, 89, 45, 55, 12) 
+print("Tuple Items = ", mxTuple)
+
+lar = tupleLargest(mxTuple)
+print("Largest Item in mxTuple Tuple = ", lar)
+
+
+Find Largest and Smallest Item in a Tuple
+-----------------------------------------
+lgsmTuple = (15, 76, 34, 79, 89, 33, 14, 10, 65, 55) 
+print("Tuple Items = ", lgsmTuple)
+
+lgsmTuple = sorted(lgsmTuple)
+
+print("Largest  Item in lgsmTuple Tuple = ", lgsmTuple[len(lgsmTuple) - 1])
+print("Smallest Item in lgsmTuple Tuple = ", lgsmTuple[0])
+--
+lgsmTuple = (25, 17, 33, 89, 77, 10, 64, 11, 55) 
+print("Tuple Items = ", lgsmTuple)
+
+tupLargest = lgsmTuple[0]
+tupSmallest = lgsmTuple[0]
+for i in range(len(lgsmTuple)):
+    if(tupLargest < lgsmTuple[i]):
+        tupLargest = lgsmTuple[i]
+        tupLargestPos = i
+    if(tupSmallest > lgsmTuple[i]):
+        tupSmallest = lgsmTuple[i]
+        tupSmallestPos = i
+
+print("Largest  Item in lgsmTuple Tuple     = ", tupLargest)
+print("Largest  Tuple Item index Position = ", tupLargestPos)
+
+print("Smallest Item in lgsmTuple Tuple     = ", tupSmallest)
+print("Smallest Tuple Item index Position = ", tupSmallestPos)
+--
+def tupleLargest(lgsmTuple):
+    tupLargest = lgsmTuple[0]
+    for i in lgsmTuple:
+        if(tupLargest < i):
+            tupLargest = i
+    return tupLargest
+
+def tupleSmallest(lgsmTuple):
+    tupSmallest = lgsmTuple[0]
+    for i in lgsmTuple:
+        if(tupSmallest > i):
+            tupSmallest = i
+    return tupSmallest
+
+lgsmTuple = (33, 56, 22, 18, 2, 76, 45, 95, 77, 15) 
+print("Tuple Items = ", lgsmTuple)
+
+lar = tupleLargest(lgsmTuple)
+print("Largest  Item in lgsmTuple Tuple = ", lar)
+
+smt = tupleSmallest(lgsmTuple)
+print("Smallest Item in lgsmTuple Tuple = ", smt)
+

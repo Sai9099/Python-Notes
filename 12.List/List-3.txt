@@ -1,0 +1,315 @@
+Program to Find Largest Number in a List
+----------------------------------------
+a=[]
+n=int(input("Enter number of elements:"))
+for i in range(1,n+1):
+    b=int(input("Enter element:"))
+    a.append(b)
+a.sort()
+print("Largest element is:",a[n-1])
+
+Program to Sort a List of Tuples in Increasing Order by the Last Element 
+------------------------------------------------------------------------
+def last(n):
+    return n[-1]  
+ 
+def sort(tuples):
+    return sorted(tuples, key=last)
+ 
+a=input("Enter a list of tuples:")
+print("Sorted:")
+print(sort(a))
+
+Program to Find Second Largest Number in a List
+-----------------------------------------------
+a=[]
+n=int(input("Enter number of elements:"))
+for i in range(1,n+1):
+    b=int(input("Enter element:"))
+    a.append(b)
+a.sort()
+print("Second largest element is:",a[n-2])
+
+Program to Print Largest Even and Largest Odd Number in a List
+---------------------------------------------------------------
+n=int(input("Enter the number of elements to be in the list:"))
+b=[]
+for i in range(0,n):
+    a=int(input("Element: "))
+    b.append(a)
+c=[]
+d=[]
+for i in b:
+    if(i%2==0):
+        c.append(i)
+    else:
+        d.append(i)
+c.sort()
+d.sort()
+count1=0
+count2=0
+for k in c:
+    count1=count1+1
+for j in d:
+    count2=count2+1
+print("Largest even number:",c[count1-1])
+print("Largest odd number",d[count2-1])
+
+Program to Split Even and Odd Elements into Two Lists
+------------------------------------------------------
+a=[]
+n=int(input("Enter number of elements:"))
+for i in range(1,n+1):
+    b=int(input("Enter element:"))
+    a.append(b)
+even=[]
+odd=[]
+for j in a:
+    if(j%2==0):
+        even.append(j)
+    else:
+        odd.append(j)
+print("The even list",even)
+print("The odd list",odd)
+
+Program to Find Average of a List
+----------------------------------
+n=int(input("Enter the number of elements to be inserted: "))
+a=[]
+for i in range(0,n):
+    elem=int(input("Enter element: "))
+    a.append(elem)
+avg=sum(a)/n
+print("Average of elements in the list",round(avg,2))
+
+Print Sum of Negative Numbers, Positive Even Numbers and Positive Odd numbers in a List
+----------------------------------------------------------------------
+n=int(input("Enter the number of elements to be in the list:"))
+b=[]
+for i in range(0,n):
+    a=int(input("Element: "))
+    b.append(a)
+sum1=0
+sum2=0
+sum3=0
+for j in b:
+    if(j>0):
+        if(j%2==0):
+            sum1=sum1+j
+        else:
+            sum2=sum2+j
+    else:
+        sum3=sum3+j
+print("Sum of all positive even numbers:",sum1)
+print("Sum of all positive odd numbers:",sum2)
+print("Sum of all negative numbers:",sum3)
+
+Program to Count Occurrences of Element in List
+-----------------------------------------------
+a=[]
+n=int(input("Enter number of elements:"))
+for i in range(1,n+1):
+    b=int(input("Enter element:"))
+    a.append(b)
+k=0
+num=int(input("Enter the number to be counted:"))
+for j in a:
+    if(j==num):
+        k=k+1
+print("Number of times",num,"appears is",k)
+
+Program to Merge Two Lists and Sort it
+---------------------------------------
+a=[]
+c=[]
+n1=int(input("Enter number of elements:"))
+for i in range(1,n1+1):
+    b=int(input("Enter element:"))
+    a.append(b)
+n2=int(input("Enter number of elements:"))
+for i in range(1,n2+1):
+    d=int(input("Enter element:"))
+    c.append(d)
+new=a+c
+new.sort()
+print("Sorted list is:",new)
+
+Program to Remove Duplicates from a List
+-----------------------------------------
+a=[]
+n= int(input("Enter the number of elements in list:"))
+for x in range(0,n):
+    element=int(input("Enter element" + str(x+1) + ":"))
+    a.append(element)
+b = set()
+unique = []
+for x in a:
+    if x not in b:
+        unique.append(x)
+        b.add(x)
+print("Non-duplicate items:")
+print(unique)
+
+Program to Swap the First and Last Element in a List
+-----------------------------------------------------
+a=[]
+n= int(input("Enter the number of elements in list:"))
+for x in range(0,n):
+    element=int(input("Enter element" + str(x+1) + ":"))
+    a.append(element)
+temp=a[0]
+a[0]=a[n-1]
+a[n-1]=temp
+print("New list is:")
+print(a)
+
+Program to Sort a List According to the Second Element in Sublist
+------------------------------------------------------------------
+a=[['A',34],['B',21],['C',26]]
+for i in range(0,len(a)):
+    for j in range(0,len(a)-i-1):
+        if(a[j][1]>a[j+1][1]):
+            temp=a[j]
+            a[j]=a[j+1]
+            a[j+1]=temp
+ 
+print(a)
+
+Program to Return the Length of the Longest Word from the List of Words
+-----------------------------------------------------------------------
+a=[]
+n= int(input("Enter the number of elements in list:"))
+for x in range(0,n):
+    element=input("Enter element" + str(x+1) + ":")
+    a.append(element)
+max1=len(a[0])
+temp=a[0]
+for i in a:
+    if(len(i)>max1):
+       max1=len(i)
+       temp=i
+print("The word with the longest length is:")
+print(temp)
+
+Program to Find the Number Occurring Odd Number of Times in a List
+------------------------------------------------------------------
+def find_odd_occurring(alist):
+    """Return the element that occurs odd number of times in alist.
+ 
+    alist is a list in which all elements except one element occurs an even
+    number of times.
+    """
+    ans = 0
+ 
+    for element in alist:
+        ans ^= element
+ 
+    return ans
+alist = input('Enter the list: ').split()
+alist = [int(i) for i in alist]
+ans = find_odd_occurring(alist)
+print('The element that occurs odd number of times:', ans)
+
+Generate Random Numbers from 1 to 20 and Append Them to the List
+----------------------------------------------------------------
+import random
+a=[]
+n=int(input("Enter number of elements:"))
+for j in range(n):
+    a.append(random.randint(1,20))
+print('Randomised list is: ',a)
+
+Program to Remove the ith Occurrence of the Given Word in a List
+-----------------------------------------------------------------
+a=[]
+n= int(input("Enter the number of elements in list:"))
+for x in range(0,n):
+    element=input("Enter element" + str(x+1) + ":")
+    a.append(element)
+print(a)
+c=[]
+count=0
+b=input("Enter word to remove: ")
+n=int(input("Enter the occurrence to remove: "))
+for i in a:
+    if(i==b):
+        count=count+1
+        if(count!=n):
+            c.append(i)
+    else:
+        c.append(i)
+if(count==0):
+    print("Item not found ")
+else: 
+    print("The number of repetitions is: ",count)
+    print("Updated list is: ",c)
+    print("The distinct elements are: ",set(a))
+
+Program to Find the Cumulative Sum of a List
+--------------------------------------------
+a=[]
+n= int(input("Enter the number of elements in list:"))
+for x in range(0,n):
+    element=int(input("Enter element" + str(x+1) + ":"))
+    a.append(element)
+b=[sum(a[0:x+1]) for x in range(0,len(a))]
+print("The original list is: ",a)
+print("The new list is: ",b)
+
+Program to Find the Union of Two Lists
+--------------------------------------
+l1 = []
+num1 = int(input('Enter size of list 1: '))
+for n in range(num1):
+    numbers1 = int(input('Enter any number:'))
+    l1.append(numbers1)
+ 
+l2 = []
+num2 = int(input('Enter size of list 2:'))
+for n in range(num2):
+    numbers2 = int(input('Enter any number:'))
+    l2.append(numbers2)
+ 
+union = list(set().union(l1,l2))
+ 
+print('The Union of two lists is:',union)
+
+Program to Find the Intersection of Two Lists
+----------------------------------------------
+def intersection(a, b):
+    return list(set(a) & set(b))
+ 
+def main():
+    alist=[]
+    blist=[]
+    n1=int(input("Enter number of elements for list1:"))
+    n2=int(input("Enter number of elements for list2:"))
+    print("For list1:")
+    for x in range(0,n1):
+        element=int(input("Enter element" + str(x+1) + ":"))
+        alist.append(element)
+    print("For list2:")
+    for x in range(0,n2):
+        element=int(input("Enter element" + str(x+1) + ":"))
+        blist.append(element)
+    print("The intersection is :")
+    print(intersection(alist, blist))
+main()
+
+
+Program to Flatten a List without using Recursion
+--------------------------------------------------
+a=[[1,[[2]],[[[3]]]],[[4],5]]
+flatten=lambda l: sum(map(flatten,l),[]) if isinstance(l,list) else [l]
+print(flatten(a))
+
+Program to Flatten a Nested List using Recursion
+------------------------------------------------
+def flatten(S):
+    if S == []:
+        return S
+    if isinstance(S[0], list):
+        return flatten(S[0]) + flatten(S[1:])
+    return S[:1] + flatten(S[1:])
+s=[[1,2],[3,4]]
+print("Flattened list is: ",flatten(s))

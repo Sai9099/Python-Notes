@@ -1,0 +1,223 @@
+Sort a list alphabetically in a dictionary
+------------------------------------------
+num = {'n1': [2, 3, 1], 'n2': [5, 1, 2], 'n3': [3, 2, 4]}
+
+numbers ('y') for each key ('x').
+sorted_dict = {x: sorted(y) for x, y in num.items()}
+
+print(sorted_dict)
+
+Remove spaces from dictionary keys
+----------------------------------
+student_list = {'S  001': ['Math', 'Science'], 'S    002': ['Math', 'English']}
+print("Original dictionary: ", student_list)
+student_dict = {x.translate({32: None}): y for x, y in student_list.items()}
+print("New dictionary: ", student_dict)
+
+
+Get the top three items in a shop
+----------------------------------
+from heapq import nlargest
+from operator import itemgetter
+
+items = {'item1': 45.50, 'item2': 35, 'item3': 41.30, 'item4': 55, 'item5': 24}
+for name, value in nlargest(3, items.items(), key=itemgetter(1)):
+    # Print the name and price of the three items with the largest prices.
+    print(name, value)  
+
+Get the key, value and item in a dictionary
+--------------------------------------------
+dict_num = {1: 10, 2: 20, 3: 30, 4: 40, 5: 50, 6: 60}
+
+print("key  value  count")
+
+for count, (key, value) in enumerate(dict_num.items(), 1):
+    print(key, '   ', value, '    ', count) 
+
+
+Print a dictionary line by line
+--------------------------------
+students = {'Aex': {'class': 'V', 'roll_id': 2}, 'Puja': {'class': 'V', 'roll_id': 3}}
+
+for a in students:
+    print(a)
+    
+    for b in students[a]:
+        print(b, ':', students[a][b])
+
+
+Check multiple keys exists in a dictionary
+------------------------------------------
+student = {
+  'name': 'Alex',
+  'class': 'V',
+  'roll_id': '2'
+}
+
+print(student.keys() >= {'class', 'name'})
+
+print(student.keys() >= {'name', 'Alex'})
+
+print(student.keys() >= {'roll_id', 'name'}) 
+
+
+Count number of items in a dictionary value that is a list
+----------------------------------------------------------
+dict =  {'Alex': ['subj1', 'subj2', 'subj3'], 'David': ['subj1', 'subj2']}
+
+ctr = sum(map(len, dict.values()))
+
+print(ctr) 
+
+
+Sort Counter by value
+----------------------
+from collections import Counter
+
+x = Counter({'Math': 81, 'Physics': 83, 'Chemistry': 87})
+
+print(x.most_common())
+
+
+Replace dictionary values with their average
+---------------------------------------------
+def sum_math_v_vi_average(list_of_dicts):
+    for d in list_of_dicts:
+        n1 = d.pop('V')
+        n2 = d.pop('VI')
+        d['V+VI'] = (n1 + n2) / 2
+    return list_of_dicts
+
+student_details = [
+  {'id': 1, 'subject': 'math', 'V': 70, 'VI': 82},
+  {'id': 2, 'subject': 'math', 'V': 73, 'VI': 74},
+  {'id': 3, 'subject': 'math', 'V': 75, 'VI': 86}
+]
+
+print(sum_math_v_vi_average(student_details)) 
+
+
+Match key values in two dictionaries
+-------------------------------------
+x = {'key1': 1, 'key2': 3, 'key3': 2}
+y = {'key1': 1, 'key2': 2}
+	
+for (key, value) in set(x.items()) & set(y.items()):
+    print('%s: %s is present in both x and y' % (key, value))
+
+
+Store a given dictionary in a json file
+---------------------------------------
+d = {
+    "students": [
+        {"firstName": "Nikki", "lastName": "Roysden"},
+        {"firstName": "Mervin", "lastName": "Friedland"},
+        {"firstName": "Aron", "lastName": "Wilkins"}
+    ],
+    "teachers": [
+        {"firstName": "Amberly", "lastName": "Calico"},
+        {"firstName": "Regine", "lastName": "Agtarap"}
+    ]
+}
+
+print("Original dictionary:")
+print(d)
+
+print(type(d))
+
+import json
+with open("dictionary", "w") as f:
+    json.dump(d, f, indent=4, sort_keys=True)
+
+print("\nJson file to dictionary:")
+
+with open('dictionary') as f:
+    data = json.load(f)
+
+print(data)
+
+
+Create a dictionary of keys x, y, and z
+----------------------------------------
+from pprint import pprint
+
+dict_nums = dict(x=list(range(11, 20)), y=list(range(21, 30)), z=list(range(31, 40)))
+
+
+print(dict_nums["x"][4])
+print(dict_nums["y"][4])
+print(dict_nums["z"][4])
+
+for k, v in dict_nums.items():
+    print(k, "has value", v)
+
+
+Drop empty Items from a given Dictionary
+-----------------------------------------
+dict1 = {'c1': 'Red', 'c2': 'Green', 'c3': None}
+
+print("Original Dictionary:")
+print(dict1)
+
+print("New Dictionary after dropping empty items:")
+
+dict1 = {key: value for (key, value) in dict1.items() if value is not None}
+
+print(dict1)
+
+
+Filter a dictionary based on values
+------------------------------------
+marks = {'Cierra Vega': 175, 'Alden Cantrell': 180, 'Kierra Gentry': 165, 'Pierre Cox': 190}
+
+print("Original Dictionary:")
+print(marks)
+
+print("Marks greater than 170:")
+
+result = {key: value for (key, value) in marks.items() if value >= 170}
+
+print(result)   
+
+Convert more than one list to nested dictionary
+-----------------------------------------------
+def nested_dictionary(l1, l2, l3):
+     result = [{x: {y: z}} for (x, y, z) in zip(l1, l2, l3)]
+     return result
+
+student_id = ["S001", "S002", "S003", "S004"] 
+student_name = ["Adina Park", "Leyton Marsh", "Duncan Boyle", "Saim Richards"] 
+student_grade = [85, 98, 89, 92]
+
+print("Original strings:")
+print(student_id)
+print(student_name)
+print(student_grade)
+
+print("\nNested dictionary:")
+
+ch = 'a'
+print(nested_dictionary(student_id, student_name, student_grade)) 
+
+Filter the height and width of students which are stored in a dictionary
+-------------------------------------------------------------------------
+def filter_data(students):
+    result = {k: s for k, s in students.items() if s[0] >= 6.0 and s[1] >= 70}
+    return result
+	
+students = {
+    'Cierra Vega': (6.2, 70),
+    'Alden Cantrell': (5.9, 65),
+    'Kierra Gentry': (6.0, 68),
+    'Pierre Cox': (5.8, 66)
+}
+
+print("Original Dictionary:")
+print(students)
+
+print("\nHeight > 6ft and Weight > 70kg:")
+
+print(filter_data(students))
+
+
+ 

@@ -1,0 +1,54 @@
+What is a Data Structure? 
+--------------------------
+Organizing, managing and storing data is important as it enables easier access and efficient modifications. Data Structures allows you to organize your data in such a way that enables you to store collections of data, relate them and perform operations on them accordingly.
+
+exams:
+PCEP, PCAP, PCPP.
+
+Types of Data Structures in Python
+-----------------------------------
+Python has implicit support for Data Structures which enable you to store and access data. These structures are called List, Dictionary, Tuple and Set.
+
+Python allows its users to create their own Data Structures enabling them to have full control over their functionality. The most prominent Data Structures are Stack, Queue, Tree, Linked List and so on which are also available to you in other programming languages. So now that you know what are the types available to you, why don’t we move ahead to the Data Structures and implement them using Python. 
+
+
+Advantages of Data Structures:
+-----------------------------
+Data structure is a secure way of storing the data on our system.
+
+Data structures help us to process the data easily.
+
+Data structures also help us to store the data on the disks very efficiently so that we can easily retrieve the data.
+
+Data structures are very important for designing algorithms.
+As we know that data structures are a way to arrange data into a certain form. Now the program execution speed is highly dependent on the type of data structure used.
+
+Data structures provide us with the reusability of the data. We can create some data in certain formats and store it in libraries so that can be used by different clients.
+
+Data structures like Graphs help us to visualize, process, and model real-life problems.
+
+Data structures like Trees help us to visualize, implement and work with hierarchal data sets. For example, if the user has searched a then he/she will search b, so it is widely used in searching related fields.
+
+Data structures provide us with data abstraction so that the user need not be worried about how the data is being stored on the system.
+
+Data structures provided by various programming languages come with various built-in functions (or methods) that help us to utilize the particular database more efficiently.
+
+If a program is working with huge data sets, then the efficient working of such a program depends widely on the type of data structure used. So, an adequate selection of data structure is very important.
+
+Data structures are also used in the database management system (DBMS) field for creating an index, storing the data using B and B+ trees, etc.
+
+Data structures have many practical uses such as dynamic memory allocation, process scheduling, file system organization, dictionary, etc.  
+
+What are the Disadvantages of Data Structure?
+----------------------------------------------
+We have earlier discussed the advantages of a data structure but data structures have some disadvantages as well. Let us now discuss some of the disadvantages of data structures.
+
+Some of the data structures are complex to handle for a new programmer.
+Some of the data structures provide slower access to data due to the complex structure.
+
+In case of complex problems or issues, we may require experts to handle the situation.
+
+The designing of data structures from scratch is quite complex and may require complex algorithms and a lot of time along with tests (quality testing).
+
+Larger applications require the data structures to be used within one another like the node of a graph is composed of an array or list. So, in such scenarios, the maintenance is quite complex and costlier.
+

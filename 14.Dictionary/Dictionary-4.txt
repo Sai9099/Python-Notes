@@ -1,0 +1,152 @@
+# Python Program to Add Key-Value Pair to a Dictionary
+------------------------------------------------------
+key = input("Please enter the Key : ")
+value = input("Please enter the Value : ")
+
+myDict = {}
+
+myDict.update({key:value})
+print("\nUpdated Dictionary = ", myDict)
+
+# Check Whether the Given key exists in a Dictionary or Not
+-----------------------------------------------------------
+myDict = {'a': 'apple', 'b': 'Banana' , 'o': 'Orange', 'm': 'Mango'}
+print("Dictionary : ", myDict)
+
+key = input("Please enter the Key you want to search for: ")
+if key in myDict.keys():
+    print("Key = ", key, " and Value = ", myDict[key])
+else:
+    print("\nKey Does not Exists in this Dictionary")
+
+#Program to Count words in a String using Dictionary
+----------------------------------------------------
+string = input("Please enter any String : ")
+words = []
+
+words = string.split()
+frequency = [words.count(i) for i in words]
+
+myDict = dict(zip(words, frequency))
+print("Dictionary Items  :  ",  myDict)
+
+
+# Python Program to Count words in a String using Dictionary
+------------------------------------------------------------
+string = input("Please enter any String : ")
+words = []
+
+words = string.split() # or string.lower().split()
+myDict = {}
+for key in words:
+    myDict[key] = words.count(key)
+
+print("Dictionary Items  :  ",  myDict)
+
+# Python Program to Create Dictionary of keys and values are square of keys
+------------------------------------------------------------------------
+number = int(input("Please enter the Maximum Number : "))
+myDict = {}
+
+for x in range(1, number + 1):
+    myDict[x] = x ** 2
+    
+print("\nDictionary = ", myDict)
+-------------------------------------------------------------------------
+# Python Program to Create Dictionary of Numbers 1 to n in (x, x*x) form
+number = int(input("Please enter the Maximum Number : "))
+myDict = {}
+
+for x in range(1, number + 1):
+    myDict[x] = x * x
+    
+print("\nDictionary = ", myDict)
+-------------------------------------------------------------------------
+#Python Program to Map two lists into a Dictionary
+
+keys = ['name', 'age', 'job']
+values = ['John', 25, 'Developer']
+
+myDict = {k: v for k, v in zip(keys, values)}
+print("Dictionary Items  :  ",  myDict)
+
+---
+keys = ['name', 'age', 'job']
+values = ['John', 25, 'Developer']
+
+myDict = dict(zip(keys, values))
+print("Dictionary Items  :  ",  myDict)
+---
+keys = []
+values = []
+num = int(input("Please enter the Number of elements for this Dictionary : "))
+print("Integer Values for Keys")
+for i in range(0, num):
+    x = int(input("Enter Key " + str(i + 1) + " = "))
+    keys.append(x)
+    
+print("Integer Values for Values")
+for i in range(0, num):
+    x = int(input("Enter Value " + str(i + 1) + " = "))
+    values.append(x)
+    
+myDict = dict(zip(keys, values))
+print("Dictionary Items  :  ",  myDict)
+----
+first_Dict = {1: 'apple', 2: 'Banana' , 3: 'Orange'}
+second_Dict = { 4: 'Kiwi', 5: 'Mango'}
+print("First : ", first_Dict)
+print("Second : ", second_Dict)
+
+first_Dict.update(second_Dict)
+    
+print("\nAfter Concatenating : ")
+print(first_Dict)
+---
+Merge two Dictionaries using **
+--------------------------------
+first_Dict = {'a': 'apple', 'b': 'Banana' , 'o': 'Orange'}
+second_Dict = { 'k': 'Kiwi', 'm': 'Mango'}
+print("First : ", first_Dict)
+print("Second : ", second_Dict)
+
+print("\nAfter Concatenating : ")
+print(dict(first_Dict, **second_Dict) )
+
+Concatenate Two Dictionaries using functions
+---------------------------------------------
+def Merge_Dictionaries(first, second):
+    result = {**first_Dict, **second_Dict}
+    return result
+
+first_Dict = {'a': 'apple', 'b': 'Banana' , 'o': 'Orange'}
+second_Dict = { 'k': 'Kiwi', 'm': 'Mango'}
+print("First Dictionary: ", first_Dict)
+print("Second Dictionary: ", second_Dict)
+
+third_Dict = Merge_Dictionaries(first_Dict, second_Dict)
+
+print("\nAfter Concatenating two Dictionaries : ")
+print(third_Dict)
+
+Python Program to Multiply All Items in a Dictionary
+-----------------------------------------------------
+myDict = {'x': 20, 'y':5, 'z':60}
+print("Dictionary: ", myDict)
+
+total = 1
+for key in myDict:
+    total = total * myDict[key]
+    
+print("\nAfter Multiplying Items in this Dictionary: ", total)
+
+
+myDict = {'x': 2, 'y':50, 'z':70}
+print("Dictionary: ", myDict)
+
+total = 1
+for i in myDict.values():
+    total = total * i
+    
+print("\nAfter Multiplying Items in this Dictionary: ", total)
+

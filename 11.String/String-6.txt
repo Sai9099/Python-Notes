@@ -1,0 +1,67 @@
+Program to Check if a String is a Pangram or Not
+------------------------------------------------
+from string import ascii_lowercase as asc_lower
+def check(s):
+    return set(asc_lower) - set(s.lower()) == set([])
+strng=raw_input("Enter string:")
+if(check(strng)==True):
+      print("The string is a pangram")
+else:
+      print("The string isn't a pangram")
+
+
+Case 1:
+Enter string:The quick brown fox jumps over the lazy dog
+The string is a pangram
+ 
+Case 2:
+Enter string:Hello world
+The string isn't a pangram
+
+
+Program to Remove Odd Indexed Characters in a string
+----------------------------------------------------
+def modify(string):  
+  final = ""   
+  for i in range(len(string)):  
+    if i % 2 == 0:  
+      final = final + string[i]  
+  return final
+string=raw_input("Enter string:")
+print("Modified string is:")
+print(modify(string))
+
+Case 1:
+Enter string:hello
+Modified string is:
+hlo
+ 
+Case 2:
+Enter string:checking
+Modified string is:
+cekn
+
+Program to Remove the nth Index Character from a Non-Empty String
+------------------------------------------------------------------
+def remove(string, n):  
+      first = string[:n]   
+      last = string[n+1:]  
+      return first + last
+string=raw_input("Enter the sring:")
+n=int(input("Enter the index of the character to remove:"))
+print("Modified string:")
+print(remove(string, n))
+
+Case 1:
+Enter the sring:Hello
+Enter the index of the character to remove:3
+Modified string:
+Helo
+ 
+Case 2:
+Enter the sring:Checking
+Enter the index of the character to remove:4
+Modified string:
+Checing
+
+

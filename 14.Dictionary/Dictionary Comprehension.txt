@@ -1,0 +1,61 @@
+Dictionary Comprehension
+------------------------
+In Python, dictionaries are the data types in which the users can store the data in a pair of key/value.
+
+Dictionary comprehension is the method used for transferring one dictionary into another dictionary. Throughout the process of transferring the dictionary into another, the user can also include the data of the original dictionary into the new dictionary, and each data can be transferred as per need.
+
+
+The dictionary comprehension is created in the following form:
+
+{key: 'value' (value for (key, value) in iterable form)  
+
+
+eg:(method 1)
+--
+key = ['p', 'q', 'r', 's', 't']  
+value = [56, 67, 43, 12, 6]    
+user_Dict = { X:Y for (X,Y) in zip(key, value)}     
+print ("user_Dict: ", user_Dict)  
+
+
+eg:(method 2)
+
+key_1 = ['j', 'k', 'l', 'm', 'n', 'o']  
+value_1 = [34, 54, 13, 76, 98, 74]  
+user_Dict_1 = dict (zip (key_1, value_1))  
+print ("user_Dict_1: ", user_Dict_1)   
+
+eg:(method 3)
+
+user_Dict2 = {q: q**2 for q in [56, 67, 43, 12, 6]}  
+print ("user_Dict2: ", user_Dict2)  
+
+eg:(method 4)
+
+user_Dict3 = {q.upper(): q*3 for q in 'Java is the Best'}  
+print ("user_Dict: ", user_Dict3)  
+
+eg:(method 5)
+
+user_dict4 = {q: q**3 for q in range (30) if q**3 % 4 == 0}  
+print ("user_dict4: ", user_dict4)  
+
+eg:(method 6)
+
+user_dict5 = dict()  
+for numm in range(3, 20):  
+    user_dict5 [numm] = numm*numm  
+print("user_dict5: ", user_dict5) 
+
+
+eg:
+#food_item price are in dollars
+
+old_price_1 = {'milk per litter': 2.12, 'coffee per cup': 3.60, 'bread per packet': 1.51}  
+print ("old_price_1: ", old_price_1)  
+
+convert_dollar_to_pound = 0.71  
+
+new_price_1 = {food_item: values*convert_dollar_to_pound for (food_item, values) in old_price_1.items()}  
+print ("new_price_1: ", new_price_1)  
+ 

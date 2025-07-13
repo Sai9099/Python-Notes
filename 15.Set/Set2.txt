@@ -1,0 +1,231 @@
+Program to Print Negative Numbers in Set
+----------------------------------------
+NegativeSet = {6, -22, -33, 78, -88, 15, -55, -66, 17}
+print("Negative Set Items = ", NegativeSet)
+
+print("\nThe Negative Numbers in this NegativeSet Set are:")
+for negaVal in NegativeSet:
+    if(negaVal < 0):
+        print(negaVal, end = "  ")
+
+--
+negativeSet = set()
+
+number = int(input("Enter the Total Negative Set Items = "))
+for i in range(1, number + 1):
+    value = int(input("Enter the %d Set Item = " %i))
+    negativeSet.add(value)
+
+print("Negative Set Items = ", negativeSet)
+
+print("\nThe Negative Numbers in this negativeSet Set are:")
+for negaVal in negativeSet:
+    if(negaVal < 0):
+        print(negaVal, end = "  ")
+--
+def setnegativeNumbers(negativeSet):
+    for negVal in negativeSet:
+        if(negVal < 0):
+            print(negVal, end = "  ")
+
+
+negativeSet = set()
+
+number = int(input("Enter the Total Negative Set Items = "))
+for i in range(1, number + 1):
+    value = int(input("Enter the %d Set Item = " %i))
+    negativeSet.add(value)
+
+print("Negative Set Items = ", negativeSet)
+
+print("\nThe Negative Numbers in this negativeSet Set are:")
+setnegativeNumbers(negativeSet)
+--
+Print Odd Numbers in Set
+------------------------
+oddSet = {26, 33, 19, 8, 41, 35, 12, 17}
+print("Odd Set Items = ", oddSet)
+
+print("\nThe Odd Numbers in this oddSet Set are:")
+for odval in oddSet:
+    if(odval % 2 != 0):
+        print(odval, end = "  ")
+--
+
+oddSet = set()
+
+number = int(input("Enter the Total Odd Set Items = "))
+for i in range(1, number + 1):
+    value = int(input("Enter the %d Set Item = " %i))
+    oddSet.add(value)
+
+print("Odd Set Items = ", oddSet)
+
+print("\nThe Odd Numbers in this oddSet Set are:")
+for odval in oddSet:
+    if(odval % 2 != 0):
+        print(odval, end = "  ")
+
+--
+def setOddNumbers(oddSet):
+    for odval in oddSet:
+        if(odval % 2 != 0):
+            print(odval, end = "  ")
+
+
+oddSet = set()
+
+number = int(input("Enter the Total Odd Set Items = "))
+for i in range(1, number + 1):
+    value = int(input("Enter the %d Set Item = " %i))
+    oddSet.add(value)
+
+print("Odd Set Items = ", oddSet)
+
+print("\nThe Odd Numbers in this oddSet Set are:")
+setOddNumbers(oddSet)
+
+Print Positive Numbers in Set
+-----------------------------
+PositiveSet = {7, -8, -11, 4, -85, 14, -22, 78, 11}
+print("Positive Set Items = ", PositiveSet)
+
+print("\nThe Positive Numbers in this PositiveSet Set are:")
+for posVal in PositiveSet:
+    if(posVal >= 0):
+        print(posVal, end = "  ")
+
+--
+positiveSet = set()
+
+number = int(input("Enter the Total Positive Set Items = "))
+for i in range(1, number + 1):
+    value = int(input("Enter the %d Set Item = " %i))
+    positiveSet.add(value)
+
+print("Positive Set Items = ", positiveSet)
+
+print("\nThe Positive Numbers in this positiveSet Set are:")
+for posVal in positiveSet:
+    if(posVal >= 0):
+        print(posVal, end = "  ")
+
+--
+def setPositiveNumbers(positiveSet):
+    for posVal in positiveSet:
+        if(posVal >= 0):
+            print(posVal, end = "  ")
+
+
+positiveSet = set()
+
+number = int(input("Enter the Total Positive Set Items = "))
+for i in range(1, number + 1):
+    value = int(input("Enter the %d Set Item = " %i))
+    positiveSet.add(value)
+
+print("Positive Set Items = ", positiveSet)
+
+print("\nThe Positive Numbers in this positiveSet Set are:")
+setPositiveNumbers(positiveSet)
+
+Find Sum of Even and Odd Numbers in Set
+---------------------------------------
+evenoddSet = {78, 64, 11, 95, 36, 66, 77, 151}
+print("Even and Odd Set Items = ", evenoddSet)
+
+sEvenSum = sOddSum = 0
+
+for eoVal in evenoddSet:
+    if(eoVal % 2 == 0):
+        sEvenSum = sEvenSum + eoVal
+    else:
+        sOddSum = sOddSum + eoVal
+
+print("The Sum of Even Numbers in evenoddSet = ", sEvenSum)
+print("The Sum of Odd  Numbers in evenoddSet = ", sOddSum)
+--
+evenoddSet = set()
+
+number = int(input("Enter the Total Even Odd Set Items = "))
+for i in range(1, number + 1):
+    value = int(input("Enter the %d Set Item = " %i))
+    evenoddSet.add(value)
+
+print("Even and Odd Set Items = ", evenoddSet)
+
+sEvenSum = sOddSum = 0
+
+for eoVal in evenoddSet:
+    if(eoVal % 2 == 0):
+        sEvenSum = sEvenSum + eoVal
+    else:
+        sOddSum = sOddSum + eoVal
+
+print("The Sum of Even Numbers in evenoddSet = ", sEvenSum)
+print("The Sum of Odd  Numbers in evenoddSet = ", sOddSum)
+--
+def sumOfSetEvenandOddNumbers(evenoddSet):
+    sEvenSum = sOddSum = 0
+
+    for eoVal in evenoddSet:
+        if(eoVal % 2 == 0):
+            sEvenSum = sEvenSum + eoVal
+        else:
+            sOddSum = sOddSum + eoVal
+    return sEvenSum, sOddSum
+
+
+evenoddSet = set()
+
+number = int(input("Enter the Total Even Odd Set Items = "))
+for i in range(1, number + 1):
+    value = int(input("Enter the %d Set Item = " %i))
+    evenoddSet.add(value)
+
+print("Even and Odd Set Items = ", evenoddSet)
+
+sESum, sOSum = sumOfSetEvenandOddNumbers(evenoddSet)
+print("The Sum of Even Numbers in evenoddSet = ", sESum)
+print("The Sum of Odd  Numbers in evenoddSet = ", sOSum)
+
+Find Smallest Set Item
+-----------------------
+smtSet = {98, 11, 44, 32, 7, 19, 65, 80, 91}
+print("Set Items = ", smtSet)
+
+print("Smallest Item in mxSet Set = ", min(smtSet))
+
+--
+smtSet = set()
+
+number = int(input("Enter the Total Set Items = "))
+for i in range(1, number + 1):
+    value = int(input("Enter the %d Set Item = " %i))
+    smtSet.add(value)
+
+print("Set Items = ", smtSet)
+
+sortVals = sorted(smtSet)
+print("Smallest Item in smtSet Set = ", sortVals[0])
+print("Data Type of sortVals = ", type(sortVals))
+
+--
+def SetSmallest(smtSet, setSmallest):
+    for i in smtSet:
+        if(setSmallest > i):
+            setSmallest = i
+    return setSmallest
+
+smtSet = set()
+
+number = int(input("Enter the Total Set Items = "))
+for i in range(1, number + 1):
+    value = int(input("Enter the %d Set Item = " %i))
+    smtSet.add(value)
+
+setSmallest = value
+print("Set Items = ", smtSet)
+
+lar = SetSmallest(smtSet, setSmallest)
+print("Smallest Item in smtSet Set = ", lar)

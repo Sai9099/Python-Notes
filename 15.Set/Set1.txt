@@ -1,0 +1,331 @@
+# Create an Empty Set
+s1 = {}
+print(s1)
+
+s2 = set()
+print(s2)
+--
+s1 = {2, 4, 6, 8, 10}
+print(s1)
+print(type(s1))
+
+s2 = set(['USA', 'China', 'UK', 'Russia', 'India', 'France'])
+print(s2)
+print(type(s2))
+
+s3 = set("Gateway of python")
+print(s3)
+print(type(s3))
+
+s4 = {('U1', 'C1', 'UK', 'Russia', 'India', 'France')}
+print(s4)
+print(type(s4))
+--
+Program to Count Even and Odd Numbers in Set
+---------------------------------------------
+evodSet = {78, 11, 54, 95, 16, 36, 61, 77, 150, 122}
+print("Even and Odd Set Items = ", evodSet)
+
+sEvenCount = sOddCount = 0
+
+for eoVal in evodSet:
+    if(eoVal % 2 == 0):
+        sEvenCount = sEvenCount + 1
+    else:
+        sOddCount = sOddCount + 1
+
+print("The Count of Even Numbers in evodSet = ", sEvenCount)
+print("The Count of Odd  Numbers in evodSet = ", sOddCount)
+
+--
+evodSet = set()
+
+number = int(input("Enter the Total Even Odd Set Items = "))
+for i in range(1, number + 1):
+    value = int(input("Enter the %d Set Item = " %i))
+    evodSet.add(value)
+
+print("Even and Odd Set Items = ", evodSet)
+
+sEvenCount = sOddCount = 0
+
+for eoVal in evodSet:
+    if(eoVal % 2 == 0):
+        sEvenCount = sEvenCount + 1
+    else:
+        sOddCount = sOddCount + 1
+
+print("The Count of Even Numbers in evodSet = ", sEvenCount)
+print("The Count of Odd  Numbers in evodSet = ", sOddCount)
+
+--
+def CountOfSetEvenandOddNumbers(evodSet):
+    sEvenCount = sOddCount = 0
+
+    for eoVal in evodSet:
+        if(eoVal % 2 == 0):
+            sEvenCount = sEvenCount + 1
+        else:
+            sOddCount = sOddCount + 1
+    return sEvenCount, sOddCount
+
+
+evodSet = set()
+
+number = int(input("Enter the Total Even Odd Set Items = "))
+for i in range(1, number + 1):
+    value = int(input("Enter the %d Set Item = " %i))
+    evodSet.add(value)
+
+print("Even and Odd Set Items = ", evodSet)
+
+sECount, sOCount = CountOfSetEvenandOddNumbers(evodSet)
+print("The Count of Even Numbers in evodSet = ", sECount)
+print("The Count of Odd  Numbers in evodSet = ", sOCount)
+
+Count Positive and Negative Numbers in Set
+------------------------------------------
+pongtSet = {6, -33, 99, -28, -56, 11, -45, -43}
+print("Positive and Negative Set Items = ", pongtSet)
+
+sPositiveCount = sNegativeCount = 0
+
+for eoVal in pongtSet:
+    if(eoVal >= 0):
+        sPositiveCount = sPositiveCount + 1
+    else:
+        sNegativeCount = sNegativeCount + 1
+
+print("The Count of Positive Numbers in pongtSet = ", sPositiveCount)
+print("The Count of Negative Numbers in pongtSet = ", sNegativeCount)
+--
+pongtSet = set()
+
+number = int(input("Enter the Total Positive Negative Set Items = "))
+for i in range(1, number + 1):
+    value = int(input("Enter the %d Set Item = " %i))
+    pongtSet.add(value)
+
+print("Positive and Negative Set Items = ", pongtSet)
+
+sPositiveCount = sNegativeCount = 0
+
+for eoVal in pongtSet:
+    if(eoVal >= 0):
+        sPositiveCount = sPositiveCount + 1
+    else:
+        sNegativeCount = sNegativeCount + 1
+
+print("The Count of Positive Numbers in pongtSet = ", sPositiveCount)
+print("The Count of Negative  Numbers in pongtSet = ", sNegativeCount)
+--
+def CountOfSetPositiveandNegativeNumbers(pongtSet):
+    sPositiveCount = sNegativeCount = 0
+
+    for eoVal in pongtSet:
+        if(eoVal >= 0):
+            sPositiveCount = sPositiveCount + 1
+        else:
+            sNegativeCount = sNegativeCount + 1
+    return sPositiveCount, sNegativeCount
+
+
+pongtSet = set()
+
+number = int(input("Enter the Total Positive Negative Set Items = "))
+for i in range(1, number + 1):
+    value = int(input("Enter the %d Set Item = " %i))
+    pongtSet.add(value)
+
+print("Positive and Negative Set Items = ", pongtSet)
+
+sECount, sOCount = CountOfSetPositiveandNegativeNumbers(pongtSet)
+print("The Count of Positive Numbers in pongtSet = ", sECount)
+print("The Count of Negative  Numbers in pongtSet = ", sOCount)
+
+Program to Iterate Set Items
+----------------------------
+set1 = {10, 20, 30, 40, 50, 60}
+
+print("The Total Items in this Set = ")
+for val in set1:
+    print(val, end = ' ')
+
+
+set2 = set("Tutorial Gateway")
+
+print("The Total Items in this Set = ")
+for char in set2:
+    print(char, end = ' ')
+
+--
+set1 = {11, 33, 55, 77, 99, 111}
+
+list1 = list(set1)
+
+print("The Total Items in this Set = ")
+for i in range(len(list1)):
+    print(list1[i], end = ' ')
+
+
+set2 = set("TutorialGateway")
+list2 = list(set2)
+
+print("\n\nThe Total Items in this Set = ")
+for i in range(len(list2)):
+    print(list2[i], end = ' ')
+
+--
+set1 = {11, 33, 55, 77, 99, 111}
+
+print("The Total Items in this Set = ")
+for i, value in enumerate(set1):
+    print(i, value)
+
+set2 = set("Python")
+
+print("\nThe Total Items in this Set = ")
+for i, value in enumerate(set2):
+     print(i, value)
+
+
+print("\nThe Total Items in this Set = ")
+for _, value in enumerate(set1):
+    print(value, end = '  ')
+
+print("\nThe Total Items in this Set = ")
+for _, value in enumerate(set2):
+     print(value, end = '  ')
+
+--
+set1 = {5, 10, 20, 25, 30, 35, 40}
+
+print("The Total Items in this Set = ")
+x = [print(val, end = ' ') for val in set1]
+
+set2 = set("Python")
+
+print("The Total Items in this Set = ")
+x = list(val for val in set2)
+print(x)
+print(*x)
+--
+Find Largest Set Item
+---------------------
+mxSet = {25, 67, 36, 98, 11, 32, 19, 80, 91}
+print("Set Items = ", mxSet)
+
+print("Largest Item in mxSet Set = ", max(mxSet))
+
+--
+mxSet = set()
+
+number = int(input("Enter the Total Set Items = "))
+for i in range(1, number + 1):
+    value = int(input("Enter the %d Set Item = " %i))
+    mxSet.add(value)
+
+print("Set Items = ", mxSet)
+
+sortedVal = sorted(mxSet)
+print("Largest Item in mxSet Set = ", sortedVal[len(mxSet) - 1])
+print("Data Type of sortedVal = ", type(sortedVal))
+
+--
+def SetLargest(mxSet, setLargest):
+    for i in mxSet:
+        if(setLargest < i):
+            setLargest = i
+    return setLargest
+
+mxSet = set()
+
+number = int(input("Enter the Total Set Items = "))
+for i in range(1, number + 1):
+    value = int(input("Enter the %d Set Item = " %i))
+    mxSet.add(value)
+
+setLargest = value
+print("Set Items = ", mxSet)
+
+lar = SetLargest(mxSet, setLargest)
+print("Largest Item in mxSet Set = ", lar)
+
+Program to Find Set Length
+---------------------------
+intSet = {10, 25, 136, 44, 150}
+print("Items = ", intSet)
+
+intSetLength = len(intSet)
+print("Set Length = ", intSetLength)
+
+strSet = {'apple', 'banana', 'Mango', 'kiwi'}
+print("String Items = ", strSet)
+
+strSetLength = len(strSet)
+print("String Length = ", strSetLength)
+
+mSet = {'Apple', 2.46, 45, 'Banana', (2, 4, 6, 8), 1}
+print("Mixed Items = ", mSet)
+
+mSetLength = len(mSet)
+print("Mixed Set Length = ", mSetLength)
+
+--
+intSet = set()
+number = int(input("Enter the Total Set Items = "))
+for i in range(1, number + 1):
+    value = int(input("Enter the %d Set value = " %i))
+    intSet.add(value)
+    
+print("Set Items = ", intSet)
+
+intSetLength = len(intSet)
+print("Set Length = ", intSetLength)
+
+
+Program to Print Even Numbers in Set
+------------------------------------
+evSet = {15, 26, 19, 78, 64, 35, 66}
+print("Even Set Items = ", evSet)
+
+print("\nThe Even Numbers in this evSet Set are:")
+for val in evSet:
+    if(val % 2 == 0):
+        print(val, end = "  ")
+
+
+--
+evSet = set()
+
+number = int(input("Enter the Total Even Set Items = "))
+for i in range(1, number + 1):
+    value = int(input("Enter the %d Set Item = " %i))
+    evSet.add(value)
+
+print("Even Set Items = ", evSet)
+
+print("\nThe Even Numbers in this evSet Set are:")
+for val in evSet:
+    if(val % 2 == 0):
+        print(val, end = "  ")
+
+--
+def setEvenNumbers(evset):
+    for val in evSet:
+        if(val % 2 == 0):
+            print(val, end = "  ")
+
+
+evSet = set()
+
+number = int(input("Enter the Total Even Set Items = "))
+for i in range(1, number + 1):
+    value = int(input("Enter the %d Set Item = " %i))
+    evSet.add(value)
+
+print("Even Set Items = ", evSet)
+
+print("\nThe Even Numbers in this evSet Set are:")
+setEvenNumbers(evSet)
+

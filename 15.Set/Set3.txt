@@ -1,0 +1,192 @@
+2.Iteration over sets
+--------------------
+num_set = set([0, 1, 2, 3, 4, 5])
+
+for n in num_set:
+    print(n, end=' ')
+
+print("\n\nCreating a set using string:")
+
+char_set = set("windows os")
+
+for val in char_set:
+    print(val, end=' ') 
+--
+Iterating over a set as indexed list:
+-------------------------------------
+char_set = set("resources of set")
+
+char_set = list(char_set)
+
+for id in range(len(char_set)):
+    print(char_set[id], end=' ')
+
+Using the enumerate type:
+-------------------------
+num_set = {0, 1, 2, 3, 4, 5}
+
+for value, char in enumerate(num_set):
+    print(char, end=' ') 
+
+
+3.Remove items from Python set
+-----------------------------------
+num_set = set([0, 1, 3, 4, 5])
+
+print("Original set:")
+
+print(num_set)
+
+num_set.pop()
+
+print("\nAfter removing the first element from the said set:")
+
+print(num_set) 
+
+--
+def remove_all_elements(num_set):
+    while num_set:
+        num_set.pop()
+    return num_set
+
+num_set = set([0, 1, 3, 4, 5])
+
+print("Original set:")
+
+print(num_set)
+
+print("\nAfter removing all elements from the said set:")
+
+print(remove_all_elements(num_set)) 
+--
+4.Add member in a set
+---------------------
+color_set = set()
+
+print(color_set)
+
+print("\nAdd single element:")
+
+color_set.add("Red")
+
+print(color_set)
+
+print("\nAdd multiple items:")
+
+color_set.update(["Blue", "Green"])
+
+print(color_set)
+
+5.Remove an item from a set if it is present in the set
+--------------------------------------------------------
+num_set = set([0, 1, 2, 3, 4, 5])
+
+print(num_set)
+
+num_set.discard(4)
+
+print(num_set)
+
+num_set.discard(5)
+
+print(num_set)
+
+num_set.discard(5)
+
+print(num_set)
+
+num_set.discard(15)
+
+print(num_set)   
+
+6.Intersection of sets
+-----------------------
+setx = set(["green", "blue"])
+sety = set(["blue", "yellow"])
+print("Original set elements:")
+print(setx)
+print(sety)
+print("\nIntersection of two said sets:")
+setz = setx & sety
+print(setz)
+
+--
+def intersection_of_sets(sc1, sc2):
+    result = []
+    
+    for i in sc1:
+        if i in sc2:
+            result.append(i)
+    
+    return result
+
+sc1 = {"green", "blue"}
+sc2 = {"blue", "yellow"}
+print("Original set elements:")
+print(sc1)
+print(sc2)
+print("\nIntersection of two said sets:")
+print(intersection_of_sets(sc1, sc2)) 
+--
+setx = set(["green", "blue"])
+sety = set(["blue", "yellow"])
+print("Original set elements:")
+print(setx)
+print(sety)
+print("\nIntersection of two said sets:")
+result = setx.intersection(sety)
+print(result) 
+
+7.Union of sets
+----------------
+setc1 = set(["green", "blue"])
+setc2 = set(["blue", "yellow"])
+print("Original sets:")
+print(setc1)
+print(setc2)
+setc = setc1.union(setc2)
+print("\nUnion of above sets:")
+print(setc)
+setn1 = set([1, 1, 2, 3, 4, 5])
+setn2 = set([1, 5, 6, 7, 8, 9])
+print("\nOriginal sets:")
+print(setn1)
+print(setn2)
+print("\nUnion of above sets:")
+setn = setn1.union(setn2)
+print(setn) 
+--
+setc1 = set(["green", "blue"])
+setc2 = set(["blue", "yellow"])
+print("Original sets:")
+print(setc1)
+print(setc2)
+setc = setc1 | setc2
+print("\nUnion of above sets:")
+print(setc)
+setn1 = set([1, 1, 2, 3, 4, 5])
+setn2 = set([1, 5, 6, 7, 8, 9])
+print("\nOriginal sets:")
+print(setn1)
+print(setn2)
+print("\nUnion of above sets:")
+setn = setn1 | setn2
+print(setn) 
+--
+setn1 = set([1, 1, 2, 3, 4, 5])
+setn2 = set([1, 5, 6, 7, 8, 9])
+setn3 = set([3, 4, 5, 3, 9, 10])
+setn4 = set([5, 7, 9, 10, 12, 14])
+print("\nOriginal sets:")
+print(setn1)
+print(setn2)
+print(setn3)
+print(setn4)
+print("\nUnion of first three sets:")
+setn = setn1.union(setn2, setn3)
+print(setn)
+print("\nUnion of above four sets:")
+setn = setn1.union(setn2, setn3, setn4)
+print(setn)
+
+-----------------------------------

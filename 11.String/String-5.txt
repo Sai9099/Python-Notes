@@ -1,0 +1,153 @@
+Program to Find the Larger String without using Built-in Functions
+------------------------------------------------------------------
+string1=input("Enter first string:")
+string2=input("Enter second string:")
+count1=0
+count2=0
+for i in string1:
+      count1=count1+1
+for j in string2:
+      count2=count2+1
+if(count1<count2):
+      print("Larger string is:")
+      print(string2)
+elif(count1==count2):
+      print("Both strings are equal.")
+else:
+      print("Larger string is:")
+      print(string1)
+
+Program to Sort Hyphen Separated Sequence of Words in Alphabetical Order
+-------------------------------------------------------------------------
+def change(string):
+      return string[-1:] + string[1:-1] + string[:1]
+string=input("Enter string:")
+print("Modified string:")
+print(change(string))
+
+Program to Count the Occurrences of Each Word in a String
+---------------------------------------------------------
+print("Enter a hyphen separated sequence of words:")
+lst=[n for n in raw_input().split('-')]  
+lst.sort()
+print("Sorted:")
+print('-'.join(lst))
+
+Program to Count the Occurrences of Each Word in a Given String Sentence
+-------------------------------------------------------------------------
+string=raw_input("Enter string:")
+word=raw_input("Enter word:")
+a=[]
+count=0
+a=string.split(" ")
+for i in range(0,len(a)):
+      if(word==a[i]):
+            count=count+1
+print("Count of the word is:")
+print(count)
+
+Program to Count Number of Vowels in a String using Sets
+--------------------------------------------------------
+s=input("Enter string:")
+count = 0
+vowels = set("aeiou")
+for letter in s:
+    if letter in vowels:
+        count += 1
+print("Count of the vowels is:")
+print(count)
+
+String Palindrome Program 
+--------------------------
+string=input("Enter string:")
+if(string==string[::-1]):
+      print("The string is a palindrome")
+else:
+      print("The string isn't a palindrome")
+
+Program to Check if Two Strings are Anagram
+-------------------------------------------
+method 1:
+---------
+s1=input("Enter first string:")
+s2=raw_input("Enter second string:")
+if(sorted(s1)==sorted(s2)):
+      print("The strings are anagrams.")
+else:
+      print("The strings aren't anagrams.")
+
+method 2:
+
+from collections import Counter
+ 
+def is_anagram(str1, str2):
+    # Create Counter objects for both strings
+    counter1 = Counter(str1)
+    counter2 = Counter(str2)
+ 
+    # Compare the counters
+    return counter1 == counter2
+ 
+# Test the function
+string1 = input("Enter the first string: ")
+string2 = input("Enter the second string: ")
+ 
+if is_anagram(string1, string2):
+    print("The strings are anagrams.")
+else:
+    print("The strings are not anagrams.")
+
+method 3:(recursion)
+def is_anagram(str1, str2):
+    if len(str1) != len(str2):
+        return False
+ 
+    if len(str1) == 1:
+        return str1 == str2
+ 
+    for i in range(len(str1)):
+        if str1[i] in str2:
+            remaining_chars = str2[:str2.index(str1[i])] + str2[str2.index(str1[i]) + 1:]
+            if is_anagram(str1[:i] + str1[i+1:], remaining_chars):
+                return True
+ 
+    return False
+ 
+# Test the function
+string1 = input("Enter the first string: ")
+string2 = input("Enter the second string: ")
+ 
+if is_anagram(string1, string2):
+    print("The strings are anagrams.")
+else:
+    print("The strings are not anagrams.")
+
+Enter the first string: teacher
+Enter the second string: hectare
+The strings are anagrams.
+
+Program to Check whether a String is Palindrome or not using Recursion
+-----------------------------------------------------------------------
+def is_palindrome(s):
+    if len(s) < 1:
+        return True
+    else:
+        if s[0] == s[-1]:
+            return is_palindrome(s[1:-1])
+        else:
+            return False
+a=str(input("Enter string:"))
+if(is_palindrome(a)==True):
+    print("String is a palindrome!")
+else:
+    print("String isn't a palindrome!")
+
+Program to Find All Odd Palindrome Numbers in a Range without using Recursion
+-------------------------------------------------------------------
+a=[]
+l=int(input("Enter lower limit: "))
+u=int(input("Enter upper limit: "))
+a=[x for x in range(l,u+1) if x%2!=0 and str(x)==str(x)[::-1]]
+print("The numbers are: ",a)
+
+

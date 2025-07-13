@@ -1,0 +1,150 @@
+list operators
+
+num=[1,2,3,4,5]
+lang=['python','c','java','php']
+print(num+lang)
+print(num*2)
+print(lang[2])
+print(lang[1:4])
+print('cpp' in lang)
+print(6 not in num)
+
+add or change element
+----------------------
+num=[1,2,3,4,5]
+print(num)
+num[2]=30
+print(num)
+num[1:3]=[25,36]
+print(num)
+num[4]="Python"
+print(num)
+
+delete elements
+-----------------
+num=[1,2,3,4,5]
+print(num)
+del num[1]
+print(num)
+del num[1:3]
+print(num)
+
+list Functions
+--------------
+☞ len()
+num=[1,2,3,4,5,6]
+print(“length of list :”,len(num))
+
+☞ max()
+num=[1,2,3,4,5,6]
+lang=['java','c','python','cpp']
+print("Max of list :",max(num))
+print("Max of list :",max(lang))
+
+☞ min()
+num=[1,2,3,4,5,6]
+lang=['java','c','python','cpp']
+print("Min of list :",min(num))
+print("Min of list :",min(lang))
+
+☞ sum()
+num=[1,2,3,4,5,6]
+print(“sum of list items :”,sum(num))
+
+☞ sorted()
+
+num=[1,3,2,4,6,5]
+lang=['java','c','python','cpp']
+print(sorted(num))
+print(sorted(lang))
+
+☞ list()
+
+str="python"
+list1=list(str)
+print(list1)
+
+☞ append()
+
+num=[1,2,3,4,5]
+lang=['python','c','java','php']
+num.append(6)
+print(num)
+lang.append("cpp")
+print(lang)
+
+☞ remove()
+
+num=[1,2,3,4,5]
+lang=['python','c','java','php','c']
+num.remove(2)
+print(num)
+lang.remove("c") # first occurence will remove
+print(lang)
+lang.remove("cpp")
+print(lang)
+
+☞ sort()
+
+lang = ['p', 'y', 't', 'h', 'o','n'] # Char list  
+even = [6,8,2,4,10] # int list  
+print(lang)  
+print(even)  
+lang.sort()  
+even.sort()  
+print("\nAfter Sorting:\n")
+print(lang)  
+print(even) 
+print("In Descending Order :\n")
+even.sort(reverse=True)
+print(even) 
+
+☞ reverse()
+
+lang = ['p', 'y', 't', 'h', 'o','n']
+lang = ['p', 'y', 't', 'h', 'o','n'] 
+print("After reverse")
+lang.reverse()
+print(lang) 
+
+☞ count()
+
+num=[1,2,3,4,3,2,2,1,3,4,5,7,8]
+cnt=num.count(2)	
+print("Count of 2 is:",cnt)
+cnt=num.count(10)	
+print("Count of 10 is:",cnt) 
+
+☞ index()
+
+lang = ['p', 'y', 't', 'h', 'o', 'n', 'p','r','o','g','r','a','m'] 
+print("index of t is:",lang.index('t'))
+print("index of p is:",lang.index('p'))
+print("index of p is:",lang.index('p',3,10))
+print("index of p is:",lang.index('z'))
+
+
+☞ insert()
+
+num=[10,20,30,40,50]
+num.insert(4,60)
+print("updated list is :",num)
+num.insert(7,70)
+print("updated list is :",num)
+
+
+☞ pop()
+
+num=[10,20,30,40,50]
+num.pop()
+print("updated list is :",num)
+num.pop(2)
+print("updated list is :",num)
+num.pop(7)
+print("updated list is :",num)
+
+☞ clear()
+
+num=[10,20,30,40,50]
+num.clear()
+print("After clearing ",num)

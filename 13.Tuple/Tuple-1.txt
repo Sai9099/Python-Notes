@@ -1,0 +1,159 @@
+add an Item to tuple
+--------------------
+a = (10, 20, 30, 40, 50)
+print("Tuple Items = ", a)
+
+a = a + (70,)
+print("Tuple Items = ", a)
+
+intTuple = intTuple + (80, 90)
+print("Tuple Items = ", intTuple)
+
+intTuple = intTuple[2:5] + (11, 22, 33, 44) + intTuple[7:]
+print("Tuple Items = ", intTuple)
+
+Create a Tuple
+--------------
+x = (10, 20, 30, 40, 50)
+print(x)
+print("Datatype of y      = ", type(x))
+
+fruits = ['Kiwi', 'Banana', 'Apple', 'Orange']
+y = tuple(fruits)
+
+print(y)
+print("Datatype of Fruits = ", type(fruits))
+print("Datatype of y      = ", type(y))
+
+Create Tuple of Different Types
+--------------------------------
+numericTuple = (10, 20, 30, 40, 50)
+print("Numeric Tuple Items = ", numericTuple )
+ 
+floatTuple = (10.25, 11.20, 19.37, 41.598)
+print("Float Tuple Items = ", floatTuple )
+ 
+stringTuple = ('orange', 'Mango', 'Grape', 'Apple')
+print("String Tuple Items = ", stringTuple )
+ 
+booleanTuple = (True, False, False, True, True)
+print("Boolean Tuple Items = ", booleanTuple )
+ 
+mixedTuple = ('orange', 25, 'Mango', 36.75, False, 10)
+print("Mixed Tuple Items = ", mixedTuple )
+ 
+nestedTuple = (10, 20, ('orange', 'Mango'), 30)
+print("Nested Tuple Items = ", nestedTuple )
+ 
+listTuple = (10, 20, ['Grape', 'Apple'], 70)
+print("List Tuple Items = ", listTuple )
+
+Find Tuple Length
+-----------------
+intTuple = (10, 20, 30, 40, 50)
+print("Tuple Items = ", intTuple)
+
+inttupleLength = len(intTuple)
+print("Tuple Length = ", inttupleLength)
+
+strTuple = ('apple', 'Mango', 'kiwi')
+print("String Tuple Items = ", strTuple)
+
+strtupleLength = len(strTuple)
+print("String Tuple Length = ", strtupleLength)
+
+--
+mTuple = ('Apple', 22, 'Kiwi', 45.6, (1, 2, 3, 4), 16, [10, 30, 70])
+print("Mixed Tuple Items = ", mTuple)
+
+mtupleLength = len(mTuple)
+print("Mixed Tuple Length = ", mtupleLength)
+
+nestedtupleLength = len(mTuple[4])
+print("Nested Tuple Length = ", nestedtupleLength)
+
+nestedlistLength = len(mTuple[6])
+print("List Nested inside a Tuple Length = ", nestedlistLength)
+
+--
+intTuple = ()
+number = int(input("Enter the Total Tuple Items = "))
+for i in range(1, number + 1):
+    value = int(input("Enter the %d value = " %i))
+    intTuple += (value,)
+    
+print("Tuple Items = ", intTuple)
+
+inttupleLength = len(intTuple)
+print("Tuple Length = ", inttupleLength)
+
+
+Remove an Item from Tuple
+-------------------------
+numTuple = (9, 11, 22, 45, 67, 89, 15, 25, 19)
+print("Tuple Items = ", numTuple)
+
+numTuple = numTuple[:3] + numTuple[4:]
+print("After Removing 4th Tuple Item = ", numTuple)
+
+numTuple = numTuple[:5] + numTuple[7:]
+print("After Removing 5th and 6th Tuple Item = ", numTuple)
+
+--
+numTuple = (2, 22, 33, 44, 5, 66, 77)
+print("Tuple Items = ", numTuple)
+
+numList = list(numTuple)
+numList.remove(44)
+
+numTuple1 = tuple(numList)
+print("After Removing 3rd Tuple Item = ", numTuple1)
+
+Slice a Tuple
+--------------
+numTuple = (11, 22, 33, 44, 55, 66, 77, 88, 99, 100)
+print("Tuple Items = ", numTuple)
+
+slice1 = numTuple[2:6]
+print("Tuple Items from 3 to 5 = ", slice1)
+
+slice2 = numTuple[3:]
+print("Tuple Items from 4 to End = ", slice2)
+
+slice3 = numTuple[:7]
+print("Tuple Items from Start to 6 = ", slice3)
+
+slice4 = numTuple[:]
+print("Tuple Items from Start to End = ", slice4)
+
+--
+numTuple = (11, 22, 33, 44, 55, 66, 77, 88, 99, 100)
+print("Tuple Items = ", numTuple)
+
+slice1 = numTuple[-5:-2]
+print("Tuple Items = ", slice1)
+
+slice2 = numTuple[-4:]
+print("Last Four Tuple Items = ", slice2)
+
+slice3 = numTuple[:-5]
+print("Tuple Items upto 5 = ", slice3)
+
+slice4 = numTuple[1:7:2]
+print("Tuple Items from 1 to 7 step 2 = ", slice4)
+
+--
+strTuple = tuple("Gateway to python")
+print("Tuple Items = ", strTuple)
+
+slice1 = strTuple[2:10]
+print("Tuple Items from 3 to 9 = ", slice1)
+
+slice2 = strTuple[-4:]
+print("Last Four Tuple Items = ", slice2)
+
+slice3 = strTuple[2:12:2]
+print("Tuple Items from 3 to 9 step 2 = ", slice3)
+
+slice4 = strTuple[::2]
+print("Every second Tuple Item = ", slice4)

@@ -1,0 +1,144 @@
+Unique words and frequency from a given list of strings
+--------------------------------------------------------
+def word_count(words):
+    word_set = set(words)
+   
+    word_counts = {}
+    
+    for word in word_set:
+        word_counts[word] = words.count(word)
+    
+    return word_counts
+
+words = ['Red', 'Green', 'Red', 'Blue', 'Red', 'Red', 'Green']
+
+print(word_count(words)) 
+
+
+Find all pairs in a list whose sum is equal to a target value
+--------------------------------------------------------------
+def find_pairs(nums, target_val):
+    nums_set = set(nums)
+    pairs = []
+    for n in nums_set:
+        complement = target_val - n
+        if complement in nums_set:
+            pairs.append({n, complement})
+    return pairs
+nums = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+print("Original list of numbers:")
+print(nums)
+target_val = 35
+print("Target value:",target_val)
+print("Find all pairs in the said list whose sum is equal to a target value:")
+print(find_pairs(nums, target_val))
+
+nums = [1, 2, 3, 4, 5]
+print("\nOriginal list of numbers:")
+print(nums)
+target_val = 5
+print("Target value:",target_val)
+print("Find all pairs in the said list whose sum is equal to a target value:")
+print(find_pairs(nums, target_val))
+
+Longest common prefix of all the strings
+----------------------------------------
+def longest_Common_Prefix(strs):
+    if not strs:
+        return ""
+    
+    min_length = min([len(word) for word in strs])
+    
+    for i in range(min_length):
+        chars = set([word[i] for word in strs])
+        
+        if len(chars) > 1:
+            return strs[0][:i]
+    
+    return strs[0][:min_length] 
+
+strs = ["pqrefgh", "pqrsfgh"]
+print("Original list of strings:")
+print(strs)
+
+print("Longest common prefix of all said strings:")
+print(longest_Common_Prefix(strs))
+
+strs = ["w3r", "w3world"]
+print("\nOriginal list of strings:")
+print(strs)
+print("Longest common prefix of all said strings:")
+print(longest_Common_Prefix(strs))
+
+strs = ["Python", "PHP", "Perl"]
+print("\nOriginal list of strings:")
+print(strs)
+print("Longest common prefix of all said strings:")
+print(longest_Common_Prefix(strs))
+
+strs = ["Python", "HTML", "PHP"]
+print("\nOriginal list of strings:")
+print(strs)
+print("Longest common prefix of all said strings:")
+print(longest_Common_Prefix(strs))
+
+Maximum product of two numbers among all pairs in a list
+---------------------------------------------------------
+def max_product(nums):
+    nums_set = set(nums)
+    
+    max_product = float('-inf')
+    max_num1 = None
+    max_num2 = None
+    
+    for n1 in nums_set:
+        for n2 in nums_set:
+            if n1 != n2 and n1 * n2 > max_product:
+                max_product = n1 * n2
+                max_num1 = n1
+                max_num2 = n2
+    
+    return (max_num1, max_num2)
+
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print("Original list of integers:")
+print(nums)
+
+print("Maximum product of two numbers among all pairs in the said list:")
+print(max_product(nums))
+
+nums = [1, -2, -3, 4, 5, -6, 7, -8, 9]
+print("\nOriginal list of integers:")
+print(nums)
+print("Maximum product of two numbers among all pairs in the said list:")
+print(max_product(nums)) 
+
+Find the missing numbers between the two sets
+----------------------------------------------
+def missing_numbers(set_nums1, set_nums2):
+    return set(set_nums1) - set(set_nums2), set(set_nums2) - set(set_nums1)
+
+set_nums1 = {1, 2, 3, 4, 5, 6}
+set_nums2 = {3, 4, 5, 6, 7, 8}
+
+result = missing_numbers(set_nums1, set_nums2)
+
+print("Original sets:")
+print(set_nums1)
+print(set_nums2)
+print("Missing numbers in the second set as compared to the first:")
+print(result[0])
+print("Missing numbers in the first set as compared to the second:")
+print(result[1])
+
+set_nums1 = {1, 2, 3, 4, 5}
+set_nums2 = {6, 7, 8}
+result = missing_numbers(set_nums1, set_nums2)
+
+print("\nOriginal sets:")
+print(set_nums1)
+print(set_nums2)
+print("Missing numbers in the second set as compared to the first:")
+print(result[0])
+print("Missing numbers in the first set as compared to the second:")
+print(result[1]) 

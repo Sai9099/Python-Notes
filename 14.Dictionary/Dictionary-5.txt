@@ -1,0 +1,110 @@
+Program to Create Dictionary from an Object
+--------------------------------------------
+class A(object):  
+     def __init__(self):  
+         self.A=1  
+         self.B=2  
+obj=A()  
+print(obj.__dict__)
+
+Program to Check if a Key Exists in a Dictionary or Not
+-------------------------------------------------------
+d={'A':1,'B':2,'C':3}
+key=input("Enter key to check:")
+if key in d.keys():
+      print("Key is present and value of the key is:")
+      print(d[key])
+else:
+      print("Key isn't present!")
+
+Program to Add a Key-Value Pair to the Dictionary
+-------------------------------------------------
+key=int(input("Enter the key (int) to be added:"))
+value=int(input("Enter the value for the key to be added:"))
+d={}
+d.update({key:value})
+print("Updated dictionary is:")
+print(d)
+
+Program to Find the Sum of All the Items in a Dictionary
+---------------------------------------------------------
+d={'A':100,'B':540,'C':239}
+print("Total sum of values in the dictionary:")
+print(sum(d.values()))
+
+Program to Multiply All the Items in a Dictionary
+--------------------------------------------------
+d={'A':10,'B':10,'C':239}
+tot=1
+for i in d:    
+    tot=tot*d[i]
+print(tot)
+
+Program to Remove a Key from a Dictionary
+------------------------------------------
+d = {'a':1,'b':2,'c':3,'d':4}
+print("Initial dictionary")
+print(d)
+key=input("Enter the key to delete(a-d):")
+if key in d: 
+    del d[key]
+else:
+    print("Key not found!")
+    exit(0)
+print("Updated dictionary")
+print(d)
+
+Program to Concatenate Two Dictionaries
+----------------------------------------
+d1={'A':1,'B':2}
+d2={'C':3}
+d1.update(d2)
+print("Concatenated dictionary is:")
+print(d1)
+
+Program to Map Two Lists into a Dictionary
+-------------------------------------------
+keys=[]
+values=[]
+n=int(input("Enter number of elements for dictionary:"))
+print("For keys:")
+for x in range(0,n):
+    element=int(input("Enter element" + str(x+1) + ":"))
+    keys.append(element)
+print("For values:")
+for x in range(0,n):
+    element=int(input("Enter element" + str(x+1) + ":"))
+    values.append(element)
+d=dict(zip(keys,values))
+print("The dictionary is:")
+print(d)
+
+Program to Create a Dictionary with Key as First Character and Value as Words Starting with that Character
+------------------------------------------------------------------------
+test_string=input("Enter string:")
+l=test_string.split()
+d={}
+for word in l:
+    if(word[0] not in d.keys()):
+        d[word[0]]=[]
+        d[word[0]].append(word)
+    else:
+        if(word not in d[word[0]]):
+          d[word[0]].append(word)
+for k,v in d.items():
+        print(k,":",v)
+
+Program to Create Dictionary that Contains Number
+--------------------------------------------------
+n=int(input("Enter a number:"))
+d={x:x*x for x in range(1,n+1)}
+print(d)
+
+Program to Count the Frequency of Each Word in a String using Dictionary
+------------------------------------------------------------------------
+test_string=raw_input("Enter string:")
+l=[]
+l=test_string.split()
+wordfreq=[l.count(p) for p in l]
+print(dict(zip(l,wordfreq)))
+

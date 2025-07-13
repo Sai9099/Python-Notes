@@ -1,0 +1,377 @@
+range(stop)
+numbers = range(4)
+print(list(numbers))    # Output: [0, 1, 2, 3]
+------------------------------------------------
+range(start,stop)
+numbers = range(2, 5)
+print(list(numbers))    # [2, 3, 4]
+------------------------------------------------
+numbers = range(-2, 4)    
+print(list(numbers))    # [-2, -1, 0, 1, 2, 3]
+numbers = range(4, 2) 
+print(list(numbers))    # []
+-------------------------------------------
+range(start,stop,step)
+numbers = range(2, 10, 3)
+print(list(numbers))    # [2, 5, 8]
+numbers = range(4, -1, -1)    
+print(list(numbers))    # [4, 3, 2, 1, 0]
+numbers = range(0, 5, 1) 
+print(list(numbers))    # [0, 1, 2, 3, 4]
+
+range(stop)
+# create a sequence from 0 to 3 (4 is not included)
+numbers = range(4)
+# convert to list and print it
+print(list(numbers))    # Output: [0, 1, 2, 3]
+
+------------------------------------------------
+range(start,stop)
+# create a sequence from 2 to 4 (5 is not included)
+numbers = range(2, 5)
+print(list(numbers))    # [2, 3, 4]
+
+# create a sequence from -2 to 3
+numbers = range(-2, 4)    
+print(list(numbers))    # [-2, -1, 0, 1, 2, 3]
+
+# creates an empty sequence
+numbers = range(4, 2) 
+print(list(numbers))    # []
+-------------------------------------------
+
+range(start,stop,step)
+
+# create a sequence from 2 to 10 with increment of 3
+numbers = range(2, 10, 3)
+print(list(numbers))    # [2, 5, 8]
+
+# create a sequence from 4 to -1 with increment of -1
+numbers = range(4, -1, -1)    
+print(list(numbers))    # [4, 3, 2, 1, 0]
+
+# range(0, 5, 1) is equivalent to range(5)
+numbers = range(0, 5, 1) 
+print(list(numbers))    # [0, 1, 2, 3, 4]
+
+------------------------------------------------------------
+# iterate the loop five times
+for i in range(5):
+    print(f'{i} Hello')
+
+--------------------------------
+for loop with else
+
+digits = [0, 1, 5]
+
+for i in digits:
+    print(i)
+else:
+    print("No items left.")
+
+----------------------------------
+for loop accessing items
+
+languages = ['Swift', 'Python', 'Go']
+
+# looping to repeat an action without using the list elements
+for language in languages:
+    print('Hi')
+
+
+----------------------------------------
+languages = ['Swift', 'Python', 'Go']
+
+# using _ for placeholder variable
+for _ in languages:
+    print('Hi')
+
+--------------------------------------------
+# outer loop 
+for i in range(2):
+    # inner loop
+    for j in range(2): 
+        print('i = {0}, j = {1}'.format(i,j))
+-------------------------------------------------
+# outer loop 
+for i in range(2):
+    # inner loop
+    for j in range(2): 
+        print(f'i = {0}, j = {1}')
+-------------------------------------------------
+
+
+----------------------------------------------
+Print All Integers that Aren’t Divisible by Either 2 or 3
+---------------------------------------------------------
+for i in range(0,51):
+    if(i%2!=0&i%3!=0):
+        print(i)
+
+Find Numbers which are Divisible by 7 and Multiple of 5 in a Given Range
+------------------------------------------------------------------------
+lower=int(input("Enter the lower range:"))
+upper=int(input("Enter the upper range:"))
+for i in range (lower,upper+1):
+    if(i%7==0 and i%5==0):
+        print(i)
+
+Print All Numbers in a Range Divisible by a Given Number
+--------------------------------------------------------
+lower=int(input("Enter lower range limit:"))
+upper=int(input("Enter upper range limit:"))
+n=int(input("Enter the number to be divided by:"))
+for i in range(lower,upper+1):
+    if(i%n==0):
+        print(i)
+
+Python Program to Print All Odd Numbers in a Range
+---------------------------------------------------
+lower=int(input("Enter the lower limit for the range:"))
+upper=int(input("Enter the upper limit for the range:"))
+for i in range(lower,upper+1):
+    if(i%2!=0):
+        print(i)
+--------------------------------------------------------
+
+Calculate sum of all numbers from 1 to a given number
+------------------------------------------------------
+s = 0
+n = int(input("Enter number "))
+for i in range(1, n + 1, 1):
+    s += i
+print("\n")
+print("Sum is: ", s)
+
+Python Program to Print Table of a Given Number
+-----------------------------------------------
+n=int(input("Enter the number to print the tables for:"))
+for i in range(1,11):
+    print(n,"x",i,"=",n*i)
+
+Print list in reverse order using a loop
+------------------------------------------
+list1 = [10, 20, 30, 40, 50]
+# reverse list
+new_list = reversed(list1)
+# iterate reversed list
+for item in new_list:
+    print(item)
+
+list1 = [10, 20, 30, 40, 50]
+size = len(list1) - 1
+for i in range(size, -1, -1):
+    print(list1[i])
+
+Display numbers from -10 to -1 using for loop
+----------------------------------------------
+for num in range(-10, 0, 1):
+    print(num)
+
+Print all prime numbers within a range
+--------------------------------------
+start = 1
+end = 100
+print("Prime numbers between", start, "and", end, "are:")
+
+for num in range(start, end + 1):
+    if num > 1:
+        for i in range(2, num):
+            if (num % i) == 0:
+                break
+        else:
+            print(num)
+
+Display Fibonacci series up to 10 terms
+----------------------------------------
+num1, num2 = 0, 1
+
+print("Fibonacci sequence:")
+for i in range(10):
+    print(num1, end="  ")
+    res = num1 + num2
+    num1 = num2
+    num2 = res
+
+Find the factorial of a given number
+------------------------------------
+num = 5
+factorial = 1
+if num < 0:
+    print("Factorial does not exist for negative numbers")
+elif num == 0:
+    print("The factorial of 0 is 1")
+else:
+    for i in range(1, num + 1):
+        factorial = factorial * i
+    print("The factorial of", num, "is", factorial)
+
+Calculate the cube of all numbers from 1 to a given number
+-----------------------------------------------------------
+input_number = 6
+for i in range(1, input_number + 1):
+    print("Current Number is :", i, " and the cube is", (i * i * i))
+
+
+Print elements from a given list present at odd index positions
+----------------------------------------------------------------
+my_list = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+for i in my_list[1::2]:
+    print(i, end=" ")
+
+Find the sum of the series up to n terms
+-----------------------------------------
+n = 5
+start = 2
+sum_seq = 0
+
+for i in range(0, n):
+    print(start, end="+")
+    sum_seq += start
+    start = start * 10 + 2
+print("\nSum of above series is:", sum_seq)
+
+Program to check if a number is prime or not
+---------------------------------------------
+num = int(input("Enter a number: "))
+flag = False
+if num == 0 or num == 1:
+    print(num, "is not a prime number")
+elif num > 1:
+    for i in range(2, num):
+        if (num % i) == 0:
+            flag = True
+            break
+    if flag:
+        print(num, "is not a prime number")
+    else:
+        print(num, "is a prime number")
+
+
+method 2:
+---------
+num = int(input("Enter a number: "))
+
+if num == 0 or num == 1:
+    print(num, "is not a prime number")
+elif num > 1:
+   # check for factors
+   for i in range(2,num):
+       if (num % i) == 0:
+           print(num,"is not a prime number")
+           print(i,"times",num//i,"is",num)
+           break
+   else:
+       print(num,"is a prime number")
+       
+else:
+   print(num,"is not a prime number")
+
+-------------------------------------------------------------------------
+print numbers divisible by 13
+------------------------------
+print("the numbers divisible by 13 are:")
+
+for i in range(1,100):
+     if i%13 ==0:
+       print(i)
+
+l=[39,48,26,98,33,67,87]
+result=list(filter(lambda x:x%13 ==0,l))
+------------------------------------------------------------------------
+num=int(input("enter a number here:"))
+
+fact=1
+
+if num<0:
+   print("factorial of below 0 doesnt exist")
+if num==0:
+   print("factorial of 0 is",1)
+if num>0:
+    for i in range(1,num+1):
+         fact=fact*i
+  print("the factorial of a given number is",fact)
+
+------------------------------------------------------
+def fact(a):
+   if a==0:
+      return 1
+   else:
+      return ((a)*fact(a-1))
+num = int(input("enter a number here:"))
+
+result =fact(num)
+print("the factorial of the given number is",result)
+---------------------------------------------------------------
+a=0
+b=1
+num=int(input("enter a number to obtain fibanocci sequence:")
+
+if num==1:
+   print(a)
+else:
+   print(a)
+   print(b)
+   for i in range(1,num+1):
+      c=a+b
+      a=b
+      b=c
+      print(c)
+
+---------------------------------------------------------------
+lower=int(input("enter lower limit here:"))
+upper=int(input("enter upper limit here:"))
+
+for num in range(lower,upper+1)
+    if num>1:
+            for i in range(2,num):
+                 if(num%i==0):
+                   break
+            else:
+                 print(num)
+
+Python Program to Find the Smallest Divisor of an Integer
+----------------------------------------------------------
+n=int(input("Enter an integer:"))
+a=[]
+for i in range(2,n+1):
+    if(n%i==0):
+        a.append(i)
+a.sort()
+print("Smallest divisor is:",a[0])
+
+Print Binary Equivalent of a Number without Using Recursion
+------------------------------------------------------------
+n=int(input("Enter a number: "))
+a=[]
+while(n>0):
+    dig=n%2
+    a.append(dig)
+    n=n//2
+a.reverse()
+print("Binary Equivalent is: ")
+for i in a:
+    print(i,end=" ")
+
+Print Binary Equivalent of an Integer using Recursion
+-----------------------------------------------------
+l=[]
+def convert(b):
+    if(b==0):
+        return l
+    dig=b%2
+    l.append(dig)
+    convert(b//2)
+a=int(input("Enter a number: "))
+convert(a)
+l.reverse()
+print("Binary equivalent:")
+for i in l:
+    print i,
+------------------------------------------------------
+# create a sequence from 0 to 3
+numbers = range(4)
+# iterating through the sequence
+for i in numbers:
+    print(i)
+---------------------------------------------

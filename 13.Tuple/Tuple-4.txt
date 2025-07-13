@@ -1,0 +1,69 @@
+Python Lists Vs Tuples
+-----------------------
+Lists and Tuples store one or more objects or values in a specific order. The objects stored in a list or tuple can be of any type including the nothing type defined by the None Keyword.
+
+Lists and Tuples are similar in most context but there are some differences which we are going to find in this article.
+
+The main difference between List and Tuple in Python is Mutability. Lists are changeable, which means you may alter their elements or size after creation, enabling the processing of dynamic data.
+ 
+Tuples, on the other hand, are immutable, which means that once a tuple has been defined, its components or size cannot be changed. Due to their immutability, tuples are appropriate in settings where data stability and integrity are essential, but lists are more adaptable in situations needing frequent updates or revisions.
+
+List
+-----
+Lists are mutable.
+
+Iteration in lists is time consuming.
+
+Lists are better for insertion and deletion operations
+
+Lists consume more memory
+
+Lists have several built-in methods
+
+Lists are more prone to unexpected errors
+
+Creating a list is slower because two memory blocks need to be accessed.
+
+Lists are initialized using square brackets [].
+
+List objects cannot be used as keys for dictionaries because keys should be hashable and immutable.
+
+List have order.
+
+Tuple
+-----
+Tuples are immutable.
+
+Iteration in tuples is faster
+
+Tuples are appropriate for accessing the elements
+
+Tuples consume lesser memory
+
+Tuples have comparatively lesser built-in methods.
+
+Tuples operations are safe and chances of error are very less
+
+Creating a tuple is faster than creating a list.
+
+Tuples are initialized using parentheses ().
+
+Tuple objects can be used as keys for dictionaries because keys should be hashable and mutable.
+
+Tuple have structure.
+
+
+print(dir(list))
+
+print(dir(tuple))
+
+Efficiency
+----------
+The tuples are more memory efficient than the list because tuple has less built-in operations. Lists are suitable for the fewer elements whereas tuples are a bit faster than the list when dealing with huge amount of data.
+
+A = ('Name = Ash Ketchum','Grade = 8','ID = 101','Address = Tokyo')
+B = ['Apples', 'Mangoes', 'Grapes', 'Bananas']
+
+print('Size of tuple :',A.__sizeof__())
+print('Size of list :',B.__sizeof__()) 
+

@@ -1,0 +1,180 @@
+String Operators
+-----------------
+Assignment operator – “=”
+
+Concatenate operator – “+”
+
+String repetition operator – “*”
+
+String slicing operator – “[]”
+
+String comparison operator – “==” & “!=”
+
+Membership operator – “in” & “not in”
+
+Escape sequence operator – “\”
+
+String formatting operator – “%” & “{}”
+
+string formatting specifications
+--------------------------------
+%d – Signed decimal integer
+
+%u – unsigned decimal integer
+
+%c – Character
+
+%s – String
+
+%f – Floating-point real number
+
+eg:
+---
+name = "japan"
+age = 18
+marks = 25.56
+string1 = 'Hey %s' % (name)
+print(string1)
+string2 = 'my age is %d' % (age)
+print(string2)
+string3= 'Hey %s, my age is %d' % (name, age)
+print(string3)
+string3= 'Hey %s, my subject mark is %f' % (name, marks)
+print(string3)
+
+str1 = "Hello"   
+str2 = " World"  
+
+print(str1*3) # prints HelloHelloHello  
+print(str1+str2) # prints Hello world   
+print(str1[4]) # prints o              
+print(str1[2:4]) # prints ll                  
+print('w' in str1) # prints false as w is not present in str1  
+print('Wo' not in str2) # prints false as Wo is present in str2.   
+print(r'Hello\n world') # prints Hello\n world as it is written  
+print("The string str1 : %s"%(str1)) 
+
+☞ len()
+str1="Python Language"
+print(len(str1))
+
+☞ lower ()
+str.lower()
+
+☞ upper ()
+str.upper()
+
+☞ replace()
+str = "Java is Object-Oriented and Java is Portable "  
+# Calling function  
+str2 = str.replace("Java","Python")  # replaces all the occurences
+# Displaying result  
+print("Old String: \n",str)  
+print("New String: \n",str2)  
+
+str3 = str.replace("Java","Python",1) # replaces first occurance only  
+# Displaying result  
+print("\n Old String: \n",str)  
+print("New String: \n",str3)
+
+str4 = str1.replace(str1,"Python is Object-Oriented and Portable")
+print("New String: \n",str4)
+
+☞ join()
+str1 = ":"   # string  
+str2 = "NNRG"    # iterable object 
+str3= str1.join(str2)  
+print(str3)
+
+☞ split()
+
+str1 = "Java is a programming language"  
+str2 = str1.split()  
+# Displaying result  
+print(str1)  
+print(str2)  
+str1 = "Java,is,a,programming,language"  
+str2 = str1.split(sep=',')  
+# Displaying result  
+print(str1)  
+print(str2)
+
+☞ find()
+
+str1 = "python is a programming language"  
+str2 = str1.find("is")  
+str3 = str1.find("java") 
+str4 = str1.find("p",5) 
+str5 = str1.find("i",5,25) 
+print(str2,str3,str4,str5)
+
+☞ index()
+
+str1 = "python is a programming language"  
+str2 = str1.index("is") 
+print(str2)
+str3 = str1.index("p",5) 
+print(str3)
+str4 = str1.index("i",5,25) 
+print(str4)
+str5 = str1.index("java") 
+print(str5)
+
+☞ isalnum()
+
+str1 = "python"
+str2 = "python123"
+str3 = "12345"
+str4 = "python@123"
+str5 = "python 123"
+print(str1. isalnum())
+print(str2. isalnum())
+print(str3. isalnum())
+print(str4. isalnum())
+print(str5. isalnum())
+
+☞ isdigit()
+
+str1 = "12345"
+str2 = "python123"
+str3 = "123-45-78"
+str4 = "IIIV"
+str5 = “/u00B23” # 23
+str6 = “/u00BD”  # 1/2
+print(str1.isdigit())
+print(str2.isdigit())
+print(str3.isdigit())
+print(str4.isdigit())
+print(str5.isdigit())
+print(str6.isdigit())
+
+☞ isnumeric()
+
+str1 = "12345"
+str2 = "python123"
+str3 = "123-45-78"
+str4 = "IIIV"
+str5 = “/u00B23” # 23
+str6 = “/u00BD”  # 1/2
+print(str1.isnumeric())
+print(str2.isnumeric())
+print(str3.isnumeric())
+print(str4.isnumeric())
+print(str5.isnumeric())
+print(str6.isnumeric())
+
+☞ islower()
+str1 = "python" 
+str2="PytHOn"
+str3="python3.7.3"
+print(str1.islower())
+print(str2.islower())
+print(str3.islower())
+
+☞ isupper()
+str1 = "PYTHON" 
+str2="PytHOn"
+str3="PYTHON 3.7.3"
+print(str1.isupper())
+print(str2.isupper())
+print(str3.isupper())

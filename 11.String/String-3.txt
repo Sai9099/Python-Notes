@@ -1,0 +1,81 @@
+Program to Replace All Occurrences of ‘a’ with $ in a String
+-------------------------------------------------------------
+string=input("Enter string:")
+string=string.replace('a','$')
+string=string.replace('A','$')
+print("Modified string:")
+print(string)
+
+Program to Replace Every Blank Space with Hyphen in a String
+-------------------------------------------------------------
+string=raw_input("Enter string:")
+string=string.replace(' ','-')
+print("Modified string:")
+print(string)
+
+How to Reverse a String in Python
+----------------------------------
+Reverse a String using Slicing:
+
+a=str(input("Enter a string: "))
+print("Reverse of the string is: ")
+print(a[::-1])
+
+Calculate the Length of a String Without using Library Functions
+-----------------------------------------------------------------
+string=raw_input("Enter string:")
+count=0
+for i in string:
+      count=count+1
+print("Length of the string is:")
+print(count)
+
+Count the Number of Words and Characters in a String
+-----------------------------------------------------
+string=raw_input("Enter string:")
+char=0
+word=1
+for i in string:
+      char=char+1
+      if(i==' '):
+            word=word+1
+print("Number of words in the string:")
+print(word)
+print("Number of characters in the string:")
+print(char)
+
+Program to Count Number of Lowercase Characters in a String
+-----------------------------------------------------------
+string=raw_input("Enter string:")
+count=0
+for i in string:
+      if(i.islower()):
+            count=count+1
+print("The number of lowercase characters is:")
+print(count)
+
+Program to Count the Number of Vowels in a String
+-------------------------------------------------
+string=raw_input("Enter string:")
+vowels=0
+for i in string:
+      if(i=='a' or i=='e' or i=='i' or i=='o' or i=='u' or i=='A' or i=='E' or i=='I' or i=='O' or i=='U'):
+            vowels=vowels+1
+print("Number of vowels are:")
+print(vowels)
+
+Program to Count Number of Uppercase and Lowercase Letters in a String
+-----------------------------------------------------------------------
+string=raw_input("Enter string:")
+count1=0
+count2=0
+for i in string:
+      if(i.islower()):
+            count1=count1+1
+      elif(i.isupper()):
+            count2=count2+1
+print("The number of lowercase characters is:")
+print(count1)
+print("The number of uppercase characters is:")
+print(count2)
+

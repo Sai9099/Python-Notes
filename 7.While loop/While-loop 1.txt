@@ -1,0 +1,186 @@
+-----------------------------------
+Python Program to Reverse a Number
+-----------------------------------
+n=int(input("Enter number: "))
+rev=0
+while(n>0):
+    dig=n%10
+    rev=rev*10+dig
+    n=n//10
+print("Reverse of the number:",rev)
+
+------------------
+Palindrome Program
+------------------
+n=int(input("Enter number:"))
+temp=n
+rev=0
+while(n>0):
+    dig=n%10
+    rev=rev*10+dig
+    n=n//10
+if(temp==rev):
+    print("The number is a palindrome!")
+else:
+    print("The number isn't a palindrome!")
+
+program : Print first 10 natural numbers
+i = 1
+while i <= 10:
+    print(i)
+    i += 1
+---------------------------------------------------------
+Count the total number of digits in a number
+---------------------------------------------------------
+
+num = 75869
+count = 0
+while num != 0:
+    # floor division
+    # to reduce the last digit from number
+    num = num // 10
+
+    # increment counter by 1
+    count = count + 1
+print("Total digits are:", count)
+-------------------------
+Reverse a integer number
+-------------------------
+num = 76542
+reverse_number = 0
+print("Given Number ", num)
+while num > 0:
+    reminder = num % 10
+    reverse_number = (reverse_number * 10) + reminder
+    num = num // 10
+print("Revere Number ", reverse_number)
+----------------------------------------------
+Display the Fibonacci sequence up to n-th term
+----------------------------------------------
+nterms = int(input("How many terms? "))
+n1, n2 = 0, 1
+count = 0
+if nterms <= 0:
+   print("Please enter a positive integer")
+elif nterms == 1:
+   print("Fibonacci sequence upto",nterms,":")
+   print(n1)
+else:
+   print("Fibonacci sequence:")
+   while count < nterms:
+       print(n1)
+       nth = n1 + n2
+       n1 = n2
+       n2 = nth
+       count += 1
+-------------------------
+display arm strong number
+-------------------------
+lower=int(input("enter the lower limit here:"))
+upper=int(input("enter the upper limit here:"))
+for num in range(lower,upper+1):
+    order=len(str(num))
+    sum=0
+    temp =num
+    while temp>0:
+      digit =temp%10
+      sum+=digit**order
+      temp//=10
+    if(num==sum):
+     print(num) 
+
+------------------
+arm strong number
+------------------
+num=int(input("enter a number here:"))
+sum=0
+temp=num
+while temp>0:
+    digit =temp%10
+    cube =digit**3
+    sum=sum+cube
+    temp=temp/10
+
+if sum==num:
+    print('armstrong number')
+else:
+    print('not a armstrong number')
+-------------------------------
+Sum of Digits Program in Python
+-------------------------------
+n=int(input("Enter a number:"))
+tot=0
+while(n>0):
+    dig=n%10
+    tot=tot+dig
+    n=n//10
+print("The total sum of digits is:",tot)
+
+
+num=int(input('enter a number here:'))
+
+if num<0:
+   print('please enter positive number')
+else:
+   sum=0
+   while num>0:
+       sum+=num
+        num-=1
+  
+     print(sum)
+------------------------------------------------
+n=int(input('enter a number here:))
+for i range(1,11):
+    print(n,"x",i,"=",n*i)
+
+n=int(input('enter a number here:'))
+i=1
+while i<=10:
+  print(n,"x",i,"=",n*i)
+  i=i+1
+
+-------------------------------------------------
+
+(while else)
+counter = 0
+
+while counter  <  2:
+    print('This is inside loop')
+    counter = counter + 1
+else:
+    print('This is inside else block')
+---------
+(infinite while)
+age = 32
+
+# The test condition is always True
+while age > 18:
+    print('You can vote')
+---------
+(while break)
+
+while True:
+    user_input = input('Enter your name: ')
+
+    # terminate the loop when user enters end
+    if user_input == 'end':
+        print(f'The loop is ended')
+        break  
+
+    print(f'Hi {user_input}')
+
+Program to Find the LCM of Two Numbers
+---------------------------------------
+a=int(input("Enter the first number:"))
+b=int(input("Enter the second number:"))
+if(a>b):
+    min1=a
+else:
+    min1=b
+while(1):
+    if(min1%a==0 and min1%b==0):
+        print("LCM is:",min1)
+        break
+    min1=min1+1
+
+

@@ -1,0 +1,376 @@
+Unpack Tuple Items
+------------------
+emp = ("John", 22, "Developer", 45000)
+print(emp)
+
+name, age, profession, sal = emp
+print(name)
+print(age)
+print(profession)
+print(sal)
+
+---
+emp = ("John", "Root", 22, "Developer", 45000)
+print(emp)
+
+name, *age, sal = emp
+print(name)
+print(age)
+print(sal)
+
+print("==========")
+name, age, *sal = emp
+print(name)
+print(age)
+print(sal)
+
+print("==========")
+*name, age, prof, sal = emp
+print(name)
+print(age)
+print(prof)
+print(sal)
+
+Create a Tuple with Numbers
+---------------------------
+nTuple = 22,
+print("Tuple Items = ", nTuple)
+
+numTuple = (10, 20, 40, 60, 80, 100)
+print("Tuple Items = ", numTuple)
+
+--
+intTuple = ()
+number = int(input("Please enter the Total Tuple Items to store = "))
+for i in range(1, number + 1):
+    value = int(input("Please enter %d Tuple Item = " %i))
+    intTuple += (value,)
+
+print("Tuple Items = ", intTuple)
+
+Check Item exists in Tuple
+--------------------------
+numTuple = (4, 6, 8, 11, 22, 43, 58, 99, 16)
+print("Tuple Items = ", numTuple)
+
+number = int(input("Enter Tuple Item to Find = "))
+
+result = number in numTuple
+
+print("Does our numTuple Contains the ", number, "? ", result)
+
+--
+numTuple = (4, 6, 8, 11, 22, 43, 58, 99, 16)
+print("Tuple Items = ", numTuple)
+
+number = int(input("Enter Tuple Item to Find = "))
+
+if number in numTuple:
+    print(number, " is in the numTuple")
+else:
+    print("Sorry! We haven't found ", number, " in numTuple")
+
+---
+numTuple = (4, 6, 8, 11, 22, 43, 58, 99, 16)
+print("Tuple Items = ", numTuple)
+
+number = int(input("Enter Tuple Item to Find = "))
+
+result = False
+
+for val in numTuple:
+    if val == number:
+        result = True
+        break
+
+print("Does our numTuple Contains the ", number, "? ", result)
+
+Sum of Even and Odd Numbers in Tuple
+------------------------------------
+evenOddTuple = (9, 22, 33, 45, 56, 77, 89, 90)
+print("Even and Odd Tuple Items = ", evenOddTuple)
+
+tEvenSum = tOddSum = 0
+
+for i in range(len(evenOddTuple)):
+    if(evenOddTuple[i] % 2 == 0):
+        tEvenSum = tEvenSum + evenOddTuple[i]
+    else:
+        tOddSum = tOddSum + evenOddTuple[i]
+
+print("The Sum of Even Numbers in evenOddTuple = ", tEvenSum)
+print("The Sum of Odd  Numbers in evenOddTuple = ", tOddSum)
+
+---
+evenOddTuple = (11, 22, 33, 44, 55, 66, 77, 88, 99)
+print("Even and Odd Tuple Items = ", evenOddTuple)
+
+tEvenSum = tOddSum = 0
+for eotup in evenOddTuple:
+    if(eotup % 2 == 0):
+        tEvenSum = tEvenSum + eotup
+    else:
+        tOddSum = tOddSum + eotup
+
+print("The Sum of Even Numbers in evenOddTuple = ", tEvenSum)
+print("The Sum of Odd  Numbers in evenOddTuple = ", tOddSum)
+
+----
+evenOddTuple = (16, 25, 42, 35, 56, 55, 37, 95, 122, 205)
+print("Even and Odd Tuple Items = ", evenOddTuple)
+
+tEvenSum = tOddSum = 0
+i = 0
+
+while (i < len(evenOddTuple)):
+    if(evenOddTuple[i] % 2 == 0):
+        tEvenSum = tEvenSum + evenOddTuple[i]
+    else:
+        tOddSum = tOddSum + evenOddTuple[i]
+    i = i + 1
+
+print("The Sum of Even Numbers in evenOddTuple = ", tEvenSum)
+print("The Sum of Odd  Numbers in evenOddTuple = ", tOddSum)
+
+----
+def sumOfEvenOddOddNumbers(evenOddTuple):
+    tEvenSum = tOddSum = 0
+    for eotup in evenOddTuple:
+        if(eotup % 2 == 0):
+            tEvenSum = tEvenSum + eotup
+        else:
+            tOddSum = tOddSum + eotup
+    return tEvenSum, tOddSum
+
+evenOddTuple = (10, 23, 20, 33, 43, 40, 60, 93, 120, 83) 
+print("Even and Odd Tuple Items = ", evenOddTuple)
+
+evenSum, oddSum = sumOfEvenOddOddNumbers(evenOddTuple)
+print("The Sum of Even Numbers in evenOddTuple = ", evenSum)
+print("The Sum of Odd  Numbers in evenOddTuple = ", oddSum)
+
+Find Sum of Tuple Items
+-----------------------
+numTuple = (20, 40, 65, 75, 80, 220)
+print("Tuple Items = ", numTuple)
+
+tupleSum = sum(numTuple)
+print("\nThe Sum of numTuple Tuple Items = ", tupleSum)
+
+--
+numTuple = (11, 22, 33, 44, 55, 66, 77, 88, 99)
+print("Odd Tuple Items = ", numTuple)
+
+tupleSum = 0
+for tup in numTuple:
+    tupleSum = tupleSum + tup
+
+print("\nThe Sum of numTuple Tuple Items = ", tupleSum)
+
+--
+numTuple = (25, 45, 65, 75, 95, 125, 256, 725)
+print("Odd Tuple Items = ", numTuple)
+
+tupleSum = 0
+i = 0
+
+while (i < len(numTuple)):
+    tupleSum = tupleSum + numTuple[i]
+    i = i + 1
+
+print("\nThe Sum of numTuple Tuple Items = ", tupleSum)
+
+--
+def sumOfTupleItems(numTuple):
+    tupleSum = 0
+    for tup in numTuple:
+        tupleSum = tupleSum + tup
+    return tupleSum
+
+numTuple = (16, 31, 24, 98, 123, 78, 56, 67, 22)
+print("Tuple Items = ", numTuple)
+
+tSum = sumOfTupleItems(numTuple)
+print("\nThe Sum of numTuple Tuple Items = ", tSum)
+
+Reverse Tuple
+-------------
+intRTuple = (10, 30, 19, 70, 40, 60)
+print("Original Tuple Items = ", intRTuple)
+
+revIntTuple = intRTuple[::-1]
+print("Tuple Items after Reversing = ", revIntTuple)
+
+strRTuple = ('apple', 'Mango', 'kiwi')
+print("String Tuple Items = ", strRTuple)
+
+revStrTuple = strRTuple[::-1]
+print("String Tuple after Reversing = ", revStrTuple)
+
+mixRTuple = ('Apple', 22, 'Kiwi', 45.6, (1, 3, 7), 16, [1, 2])
+print("Mixed Tuple Items = ", mixRTuple)
+
+revMixTuple = mixRTuple[::-1]
+print("Mixed Tuple after Reversing = ", revMixTuple)
+
+---
+intRTuple = (3, 78, 44, 67, 34, 11, 19)
+print("Original Tuple Items = ", intRTuple)
+
+revTuple = reversed(intRTuple)
+print("Data Type = ", type(revTuple))
+
+revIntTuple = tuple(revTuple)
+print("Tuple Items after Reversing = ", revIntTuple)
+print("Tuple Data Type = ", type(revIntTuple))
+
+---
+intRTuple = (10, 19, 29, 39, 55, 60, 90, 180)
+print("Original = ", intRTuple)
+
+revintTuple = ()
+
+for i in reversed(range(len(intRTuple))):
+    revintTuple += (intRTuple[i],)
+
+print("After = ", revintTuple)
+
+--
+intRTuple = (10, 19, 29, 39, 55, 60, 90, 180)
+print("Original Tuple Items = ", intRTuple)
+
+revintTuple = ()
+
+for i in range(len(intRTuple) - 1, 0, -1):
+    revintTuple += (intRTuple[i],)
+
+print("After Reversing the Tuple = ", revintTuple)
+
+Count Positive and Negative Numbers in Tuple
+--------------------------------------------
+posngTuple = (3, -22, -44, 19, -99, -37, 4, 11, -89)
+print("Positive and Negative Tuple Items = ", posngTuple)
+
+tPositiveCount = tNegativeCount = 0
+
+for i in range(len(posngTuple)):
+    if (posngTuple[i] >= 0):
+        tPositiveCount = tPositiveCount + 1
+    else:
+        tNegativeCount = tNegativeCount + 1
+
+print("The Count of Positive Numbers in posngTuple = ", tPositiveCount)
+print("The Count of Negative Numbers in posngTuple = ", tNegativeCount)
+--
+posngTuple = (55, -99, -88, 0, -78, 22, 4, -66, 21, 33)
+print("Positive and Negative Tuple Items = ", posngTuple)
+
+tPositiveCount = tNegativeCount = 0
+for pntup in posngTuple:
+    if(pntup >= 0):
+        tPositiveCount = tPositiveCount + 1
+    else:
+        tNegativeCount = tNegativeCount + 1
+
+print("The Count of Positive Numbers in posngTuple = ", tPositiveCount)
+print("The Count of Negative Numbers in posngTuple = ", tNegativeCount)
+
+---
+posngTuple = (11, -22, -33, 44, 55, -66, -77, 0, -99)
+print("Positive and Negative Tuple Items = ", posngTuple)
+
+tPositiveCount = tNegativeCount = 0
+i = 0
+
+while (i < len(posngTuple)):
+    if(posngTuple[i] >= 0):
+        tPositiveCount = tPositiveCount + 1
+    else:
+        tNegativeCount = tNegativeCount + 1
+    i = i + 1
+
+print("The Count of Positive Numbers in posngTuple = ", tPositiveCount)
+print("The Count of Negative Numbers in posngTuple = ", tNegativeCount)
+
+--
+def CountOfPositiveNegativeNumbers(evodTuple):
+    tPositiveCount = tNegativeCount = 0
+    for pntup in evodTuple:
+        if(pntup >= 0):
+            tPositiveCount = tPositiveCount + 1
+        else:
+            tNegativeCount = tNegativeCount + 1
+    return tPositiveCount, tNegativeCount
+
+evodTuple = (26, -77, -99, 75, 14, -56, 19, 81, -1, 33) 
+print("Positive and Negative Tuple Items = ", evodTuple)
+
+PositiveCount, NegativeCount = CountOfPositiveNegativeNumbers(evodTuple)
+print("The Count of Positive Numbers in evodTuple = ", PositiveCount)
+print("The Count of Negative Numbers in evodTuple = ", NegativeCount)
+
+
+Count Even and Odd Numbers in Tuple
+-----------------------------------
+evodTuple = (2, 33, 45, 88, 77, 98, 54, 0, 17)
+print("Even and Odd Tuple Items = ", evodTuple)
+
+tEvenCount = tOddCount = 0
+
+for i in range(len(evodTuple)):
+    if(evodTuple[i] % 2 == 0):
+        tEvenCount = tEvenCount + 1
+    else:
+        tOddCount = tOddCount + 1
+
+print("The Count of Even Numbers in evodTuple = ", tEvenCount)
+print("The Count of Odd  Numbers in evodTuple = ", tOddCount)
+
+--
+evodTuple = (11, 34, 17, 44, 66, 19, 89, 64, 90)
+print("Even and Odd Tuple Items = ", evodTuple)
+
+tEvenCount = tOddCount = 0
+for oetup in evodTuple:
+    if(oetup % 2 == 0):
+        tEvenCount = tEvenCount + 1
+    else:
+        tOddCount = tOddCount + 1
+
+print("The Count of Even Numbers in evodTuple = ", tEvenCount)
+print("The Count of Odd  Numbers in evodTuple = ", tOddCount)
+
+--
+evodTuple = (64, 45, 12, 15, 68, 55, 37, 25, 120, 205)
+print("Even and Odd Tuple Items = ", evodTuple)
+
+tEvenCount = tOddCount = 0
+i = 0
+
+while (i < len(evodTuple)):
+    if(evodTuple[i] % 2 == 0):
+        tEvenCount = tEvenCount + 1
+    else:
+        tOddCount = tOddCount + 1
+    i = i + 1
+
+print("The Count of Even Numbers in evodTuple = ", tEvenCount)
+print("The Count of Odd  Numbers in evodTuple = ", tOddCount)
+
+--
+def CountOfEvenOddOddNumbers(evodTuple):
+    tEvenCount = tOddCount = 0
+    for oetup in evodTuple:
+        if(oetup % 2 == 0):
+            tEvenCount = tEvenCount + 1
+        else:
+            tOddCount = tOddCount + 1
+    return tEvenCount, tOddCount
+
+evodTuple = (12, 26, 77, 99, 66, 75, 14, 256, 19, 81, 11, 33) 
+print("Even and Odd Tuple Items = ", evodTuple)
+
+evenCount, oddCount = CountOfEvenOddOddNumbers(evodTuple)
+print("The Count of Even Numbers in evodTuple = ", evenCount)
+print("The Count of Odd  Numbers in evodTuple = ", oddCount)
+

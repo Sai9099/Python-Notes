@@ -1,0 +1,264 @@
+8.Create set difference
+-----------------------
+setc1 = set(["green", "blue"])
+setc2 = set(["blue", "yellow"])
+print("Original sets:")
+print(setc1)
+print(setc2)
+r1 = setc1.difference(setc2)
+print("\nDifference of setc1 - setc2:")
+print(r1)
+r2 = setc2.difference(setc1)
+print("\nDifference of setc2 - setc1:")
+print(r2)
+setn1 = set([1, 1, 2, 3, 4, 5])
+setn2 = set([1, 5, 6, 7, 8, 9])
+print("\nOriginal sets:")
+print(setn1)
+print(setn2)
+r1 = setn1.difference(setn2)
+print("\nDifference of setn1 - setn2:")
+print(r1)
+r2 = setn2.difference(setn1)
+print("\nDifference of setn2 - setn1:")
+print(r2)
+setc1 = set(["green", "blue"])
+setc2 = set(["blue", "yellow"])
+print("Original sets:")
+print(setc1)
+print(setc2)
+r1 = setc1 - setc2
+print("\nDifference of setc1 - setc2:")
+print(r1)
+r2 = setc2 - setc1
+print("\nDifference of setc2 - setc1:")
+print(r2)
+setn1 = set([1, 1, 2, 3, 4, 5])
+setn2 = set([1, 5, 6, 7, 8, 9])
+print("\nOriginal sets:")
+print(setn1)
+print(setn2)
+r1 = setn1 - setn2
+print("\nDifference of setn1 - setn2:")
+print(r1)
+r2 = setn2 - setn1
+print("\nDifference of setn2 - setn1:")
+print(r2) 
+
+Create a symmetric difference
+------------------------------
+setc1 = set(["green", "blue"])
+setc2 = set(["blue", "yellow"])
+print("Original sets:")
+print(setc1)
+print(setc2)
+r1 = setc1.symmetric_difference(setc2)
+print("\nSymmetric difference of setc1 - setc2:")
+print(r1)
+r2 = setc2.symmetric_difference(setc1)
+print("\nSymmetric difference of setc2 - setc1:")
+print(r2)
+setn1 = set([1, 1, 2, 3, 4, 5])
+setn2 = set([1, 5, 6, 7, 8, 9])
+print("\nOriginal sets:")
+print(setn1)
+print(setn2)
+r1 = setn1.symmetric_difference(setn2)
+print("\nSymmetric difference of setn1 - setn2:")
+print(r1)
+r2 = setn2.symmetric_difference(setn1)
+print("\nSymmetric difference of setn2 - setn1:")
+print(r2) 
+--
+setc1 = set(["green", "blue"])
+setc2 = set(["blue", "yellow"])
+print("Original sets:")
+print(setc1)
+print(setc2)
+r1 = setc1 ^ setc2
+print("\nSymmetric difference of setc1 - setc2:")
+print(r1)
+r2 = setc2 ^ setc1
+print("\nSymmetric difference of setc2 - setc1:")
+print(r2)
+setn1 = set([1, 1, 2, 3, 4, 5])
+setn2 = set([1, 5, 6, 7, 8, 9])
+print("\nOriginal sets:")
+print(setn1)
+print(setn2)
+r1 = setn1 ^ setn2
+print("\nSymmetric difference of setn1 - setn2:")
+print(r1)
+r2 = setn2 ^ setn1
+print("\nSymmetric difference of setn2 - setn1:")
+print(r2) 
+
+if a set is a subset of another set
+------------------------------------
+print("Check if a set is a subset of another set, using comparison operators and issubset():\n")
+setx = set(["apple", "mango"])
+sety = set(["mango", "orange"])
+setz = set(["mango"])
+print("x: ", setx)
+print("y: ", sety)
+print("z: ", setz, "\n")
+print("If x is a subset of y")
+print(setx <= sety)
+print(setx.issubset(sety))
+print("If y is a subset of x")
+print(sety <= setx)
+print(sety.issubset(setx))
+print("\nIf y is a subset of z")
+print(sety <= setz)
+print(sety.issubset(setz))
+print("If z is a subset of y")
+print(setz <= sety)
+print(setz.issubset(sety))
+
+Shallow copy of sets
+--------------------
+setp = set(["Red", "Green"])
+setq = set(["Green", "Red"])
+setr = setp.copy()
+print(setr)  
+
+Remove all elements from a given set
+-------------------------------------
+setc = {"Red", "Green", "Black", "White"}
+print("Original set elements:")
+print(setc)
+print("\nAfter removing all elements of the said set.")
+setc.clear()
+print(setc) 
+
+
+Frozensets
+----------
+x = frozenset([1, 2, 3, 4, 5])
+y = frozenset([3, 4, 5, 6, 7])
+print(x.isdisjoint(y))
+print(x.difference(y))
+print(x | y) 
+
+Note: Frozensets behave just like sets except they are immutable.
+
+
+Find maximum and the minimum value in a set
+-------------------------------------------
+setn = {5, 10, 3, 15, 2, 20}
+print("Original set elements:")
+print(setn)
+print(type(setn))
+print("\nMaximum value of the said set:")
+print(max(setn))
+print("\nMinimum value of the said set:")
+print(min(setn)) 
+
+Find the length of a set
+-------------------------
+setn = {5, 10, 3, 15, 2, 20}
+print("Original set elements:")
+print(setn)
+print(type(setn))
+print("\nLength of the said set:")
+print(len(setn))
+setn = {5, 5, 5, 5, 5, 5}
+print("Original set elements:")
+print(setn)
+print(type(setn))
+print("\nLength of the said set:")
+print(len(setn))
+setn = {5, 5, 5, 5, 5, 5, 7}
+print("Original set elements:")
+print(setn)
+print(type(setn))
+print("\nLength of the said set:")
+print(len(setn))
+
+Find the length of a set
+-------------------------
+setn = {5, 10, 3, 15, 2, 20}
+print("Original set elements:")
+print(setn)
+print(type(setn))
+print("\nLength of the said set:")
+print(len(setn))
+setn = {5, 5, 5, 5, 5, 5}
+print("Original set elements:")
+print(setn)
+print(type(setn))
+print("\nLength of the said set:")
+print(len(setn))
+setn = {5, 5, 5, 5, 5, 5, 7}
+print("Original set elements:")
+print(setn)
+print(type(setn))
+print("\nLength of the said set:")
+print(len(setn))
+
+Check if a given value is present in a set or not
+--------------------------------------------------
+nums = {1, 3, 5, 7, 9, 11}
+print("Original set (nums): ", nums, "\n")
+print("Test if 6 exists in nums:")
+print(6 in nums)
+print("\nTest if 6 is not in nums")
+print(6 not in nums)
+
+if two given sets have no elements in common
+--------------------------------------------
+x = {1, 2, 3, 4}
+y = {4, 5, 6, 7}
+z = {8}
+print("Original set elements:")
+print(x)
+print(y)
+print(z)
+print("\nConfirm two given sets have no element(s) in common:")
+print("\nCompare x and y:")
+print(x.isdisjoint(y))
+print("\nCompare x and z:")
+print(z.isdisjoint(x))
+print("\nCompare y and z:")
+print(y.isdisjoint(z)) 
+
+--
+def compare_sets(s1, s2):
+    for i in s1:
+        if i in s2:
+            return False
+    return True
+x = {1, 2, 3, 4}
+y = {4, 5, 6, 7}
+z = {8}
+print("Original set elements:")
+print(x)
+print(y)
+print(z)
+print("\nConfirm two given sets have no element(s) in common:")
+print("\nCompare x and y:")
+print(compare_sets(x, y))
+print("\nCompare x and z:")
+print(compare_sets(x, z))
+print("\nCompare y and z:")
+print(compare_sets(y, z)) 
+
+Check if a given set is superset of itself and superset
+--------------------------------------------------------
+nums = {10, 20, 30, 40, 50}
+print("Original set: ", nums)
+print("If nums is superset of itself?")
+print(nums.issuperset(nums))
+num1 = {1, 2, 3, 4, 5, 7}
+num2 = {2, 4}
+num3 = {2, 4}
+print("\nnum1 = ", num1)
+print("num2 = ", num2)
+print("num3 = ", num3)
+print("If num1 is superset of num2:")
+print(num1 > num2)
+print("Compare num2 and num3:")
+print("If num2 is superset of num3:")
+print(num2 > num3)
+print("If num3 is superset of num2:")
+print(num3 > num2) 

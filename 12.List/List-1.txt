@@ -1,0 +1,107 @@
+List datatype:
+--------------
+Sequences are the most basic type of data structures in Python. The data structure provides us with a style to store multiple data or values in the memory.
+
+A sequence is a data type that represents a group or collection of elements or items. It allows us to store multiple items in an organized and efficient fashion.
+
+A Python list is basically an ordered sequence or collection of elements. In other words, a list is a container that holds several elements.
+
+Characteristics of Python Lists :
+--------------------------------
+1. Linear data structure: A list is a linear data structure in which Python store elements in the contiguous memory locations in a linear order one after the other.
+
+2. Ordered: A list is an order collection of elements. It preserves our insertion order in which we have placed elements in the order.
+
+3. Duplicate elements: A list allows any number of duplicate elements.
+
+4. Mutable: In Python, list is a mutable data type, meaning we can make an update or change in the existing list object. We do not need to create a new list object every time while updating the existing list object.
+
+5. Flexibility: In Python, lists offer flexibility or scalability to the user because we can modify or update its elements according to our requirement. We can easily add, remove, or alter the list element at runtime. A list expands or shrinks in the computer memory as per requirement.
+
+6. Declaration: Declaration of lists in Python is quite easy because we do not need to declare the list object before using it. When we assign values in the square brackets ([ ]), the list automatically declared.
+
+7. Heterogeneous elements: One of the biggest advantages of using a list in Python is that we can construct a list of heterogeneous elements. We can insert elements or values of different data types, such as string, numbers, object, or even another list as an element, etc. in a single list.
+
+The elements of different data types take the space in the computer memory in accordance with the value of a particular type stored in the list.
+
+
+8. Functionality: Python list date type provides many functions that allow us easily to perform different set of operations instead of writing long code. We can use dir(list_name) to gain a list of functions provided by a list.
+
+9. Dynamic: List data type in Python is dynamic in nature, meaning that we do not declare the size of a list while creating a list. The list consumes memory space in accordance with the requirement.
+
+The list automatically expands when we insert an element or data at runtime. It shrinks automatically when we remove or delete an element from the list at runtime.
+
+10. Multidimensional: List can also be used as a multidimensional data structure. With a multidimensional list, we can easily construct a matrix and we can perform different matrix operations on the list.
+
+11. Easy to add elements: We can easily insert values or data in the list. Lists in Python provide different methods, like append, insert, and extend to insert values to the list.
+
+Using input() method, we can take input value from the user and can add the entered input value to the list using one of these methods.
+
+
+12. Easy to display elements: We can easily display different values stored on the list. Even we can display values of list without iterating over the list.
+
+To display in the simple style, we simply need to write print statement and to pass the list object to the print() function, which we want to print on the console.
+
+13. Easy to use: The use of list data type is a very easy as compared to other data types. It consumes memory dynamically as well as provides various methods to provide an easy way to write the program code.
+
+14. Availability of various methods: Python list provides a unique set of inbuilt methods. Using them, we can easily perform various tasks or operations by just calling these methods with the list object.
+
+Eg:
+
+L0 = []		#creates empty list
+
+L1 = [123,"python", 3.7]  
+
+L2 = [1, 2, 3, 4, 5, 6]  
+
+L3 = ["C Programing","Java","Python"] 
+
+print(L0)
+print(L1)
+print(L2)
+print(L3)
+
+
+nested_list = ["John", 25, 30, 30.45, [1, 2, 3]]
+print(nested_list)
+
+
+matrix = [[2, 4, 6], [8, 10, 12], [14, 16, 18]]
+print(matrix)
+
+
+Unpacking List Values
+----------------------
+n1, n2 = [10, 20]
+print(n1)
+print(n2)
+
+n1, n2 = [10, 20, 30]
+print(n1)
+
+
+n1, n2, n3 = [10, 20]
+print(n1)
+
+
+Concept of Mutable Lists
+------------------------
+num = [20, 30, 35.5, 50, 60]
+print("Original list: ",num)
+num[2] = 40
+print("Modified list:",num)
+
+
+Advantages of Lists in Python
+-----------------------------
+There are the following advantages of using lists in Python. They are:
+
+Lists store elements in ordered in which we have provided. They preserve our insertion order.
+Lists allow to add any number of duplicate elements.
+One of the outstanding advantages of using lists is that we can store elements of different data types on a single list.
+Python does not need to create a new list object every time while updating the existing list.
+Lists provide the flexibility to the user. We can easily add or remove an element in the list at runtime.
+They provide various useful functions to perform a different set of operations.
+List is easy to use as compared to other data types.
+
+

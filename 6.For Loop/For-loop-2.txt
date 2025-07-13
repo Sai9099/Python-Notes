@@ -1,0 +1,265 @@
+Python Program to Find Prime Numbers in a Given Range
+-----------------------------------------------------
+r=int(input("Enter upper limit: "))
+for a in range(2,r+1):
+    k=0
+    for i in range(2,a//2+1):
+        if(a%i==0):
+            k=k+1
+    if(k<=0):
+        print(a)
+
+Python Program to Find Prime Numbers in a Range using Sieve of Eratosthenes
+--------------------------------------------------------------
+n=int(input("Enter upper limit of range: "))
+sieve=set(range(2,n+1))
+while sieve:
+    prime=min(sieve)
+    print(prime,end="\t")
+    sieve-=set(range(prime,n+1,prime))
+ 
+print()
+
+Python Program to Check Prime Number
+------------------------------------
+a=int(input("Enter number: "))
+k=0
+for i in range(2,a//2+1):
+    if(a%i==0):
+        k=k+1
+if(k<=0):
+    print("Number is prime")
+else:
+    print("Number isn't prime")
+
+Prime Number Program in Python using Recursion
+-----------------------------------------------
+def check(n, div = None):
+    if div is None:
+        div = n - 1
+    while div >= 2:
+        if n % div == 0:
+            print("Number not prime")
+            return False
+        else:
+            return check(n, div-1)
+    else:
+        print("Number is prime")
+        return 'True'
+n=int(input("Enter number: "))
+check(n)
+
+Prime Number Program in Python using Recursion
+----------------------------------------------
+r=int(input("Enter upper limit: "))
+for a in range(2,r+1):
+    k=0
+    for i in range(2,a//2+1):
+        if(a%i==0):
+            k=k+1
+    if(k<=0):
+        print(a)
+
+Prime Number Program in Python using Sieve of Eratosthenes
+----------------------------------------------------------
+n=int(input("Enter upper limit of range: "))
+sieve=set(range(2,n+1))
+while sieve:
+    prime=min(sieve)
+    print(prime,end="\t")
+    sieve-=set(range(prime,n+1,prime))
+ 
+print()
+
+Check whether a Number is Prime or Not using Recursion
+-------------------------------------------------------
+def check(n, div = None):
+    if div is None:
+        div = n - 1
+    while div >= 2:
+        if n % div == 0:
+            print("Number not prime")
+            return False
+        else:
+            return check(n, div-1)
+    else:
+        print("Number is prime")
+        return 'True'
+n=int(input("Enter number: "))
+check(n)
+
+Check Whether a Given Number is Perfect Number
+-----------------------------------------------
+n = int(input("Enter any number: "))
+sum1 = 0
+for i in range(1, n):
+    if(n % i == 0):
+        sum1 = sum1 + i
+if (sum1 == n):
+    print("The number is a Perfect number!")
+else:
+    print("The number is not a Perfect number!")
+
+
+Program to Check Armstrong Number (0, 1, 153, 370, 371, 407, etc.)
+---------------------------------
+n=int(input("Enter any number: "))
+a=list(map(int,str(n)))
+b=list(map(lambda x:x**3,a))
+if(sum(b)==n):
+    print("The number is an armstrong number. ")
+else:
+    print("The number is not an arsmtrong number. ")
+
+
+Python Program to Find the Sum of Natural Numbers
+--------------------------------------------------
+n=int(input("Enter a number: "))
+sum1 = 0
+while(n > 0):
+    sum1=sum1+n
+    n=n-1
+print("The sum of first n natural numbers is",sum1)
+
+
+Program to Check if a Number is a Strong Number
+------------------------------------------------
+sum1=0
+num=int(input("Enter a number:"))
+temp=num
+while(num):
+    i=1
+    f=1
+    r=num%10
+    while(i<=r):
+        f=f*i
+        i=i+1
+    sum1=sum1+f
+    num=num//10
+if(sum1==temp):
+    print("The number is a strong number")
+else:
+    print("The number is not a strong number")
+
+Program to Print Numbers in a Range Without using Loops
+--------------------------------------------------------
+def printno(upper):
+    if(upper>0):
+        printno(upper-1)
+        print(upper)
+upper=int(input("Enter upper limit: "))
+printno(upper)
+
+Program to Print the Natural Numbers Summation Pattern
+-------------------------------------------------------
+n=int(input("Enter a number: "))
+for j in range(1,n+1):
+    a=[]
+    for i in range(1,j+1):
+        print(i,sep=" ",end=" ")
+        if(i<j):
+            print("+",sep=" ",end=" ")
+        a.append(i)
+    print("=",sum(a))
+ 
+print()
+
+
+Program to Find the Prime Factors of a Number
+---------------------------------------------
+n=int(input("Enter an integer:"))
+print("Factors are:")
+i=1
+while(i<=n):
+    k=0
+    if(n%i==0):
+        j=1
+        while(j<=i):
+            if(i%j==0):
+                k=k+1
+            j=j+1
+        if(k==2):
+            print(i)
+    i=i+1
+Program to Check If Two Numbers are Amicable Numbers or Not(220,284)
+------------------------------------------------------------
+x=int(input('Enter number 1: '))
+y=int(input('Enter number 2: '))
+sum1=0
+sum2=0
+for i in range(1,x):
+    if x%i==0:
+        sum1+=i
+for j in range(1,y):
+    if y%j==0:
+        sum2+=j
+if(sum1==y and sum2==x):
+    print('Amicable!')
+else:
+    print('Not Amicable!')
+
+Program to Find Whether a Number is a Power of Two
+---------------------------------------------------
+def is_power_of_two(n):
+    """Return True if n is a power of two."""
+    if n <= 0:
+        return False
+    else:
+        return n & (n - 1) == 0
+ 
+ 
+n = int(input('Enter a number: '))
+ 
+if is_power_of_two(n):
+    print('{} is a power of two.'.format(n))
+else:
+    print('{} is not a power of two.'.format(n))
+
+
+Program to Calculate the Power using Recursion
+-----------------------------------------------
+def power(base,exp):
+    if(exp==1):
+        return(base)
+    if(exp!=1):
+        return(base*power(base,exp-1))
+base=int(input("Enter base: "))
+exp=int(input("Enter exponential value: "))
+print("Result:",power(base,exp))
+
+Program to Find Product of Two Numbers using Recursion
+-------------------------------------------------------
+def product(a,b):
+    if(a<b):
+        return product(b,a)
+    elif(b!=0):
+        return(a+product(a,b-1))
+    else:
+        return 0
+a=int(input("Enter first number: "))
+b=int(input("Enter second number: "))
+print("Product is: ",product(a,b))
+
+Python Program to Find All Perfect Squares in the Given Range
+--------------------------------------------------------------
+l=int(input("Enter lower range: "))
+u=int(input("Enter upper range: "))
+a=[]
+a=[x for x in range(l,u+1) if (int(x**0.5))**2==x and sum(list(map(int,str(x))))<10]
+print(a)
+
+Python Program to Print All Possible Combinations of Three Digits
+------------------------------------------------------------------
+a=int(input("Enter first number:"))
+b=int(input("Enter second number:"))
+c=int(input("Enter third number:"))
+d=[]
+d.append(a)
+d.append(b)
+d.append(c)
+for i in range(0,3):
+    for j in range(0,3):
+        for k in range(0,3):
+            if(i!=j&j!=k&k!=i):
+                print(d[i],d[j],d[k])
+
