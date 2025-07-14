@@ -1,0 +1,52 @@
+lambda Functions:
+-----------------
+Python Lambda Functions are anonymous functions means that the function is without a name. As we already know the def keyword is used to define a normal function in Python. Similarly, the lambda keyword is used to define an anonymous function in Python. 
+
+Python Lambda Function Syntax
+------------------------------
+Syntax: lambda arguments : expression
+
+lambda: The keyword to define the function.
+arguments: A comma-separated list of input parameters (like in a regular function).
+expression: A single expression that is evaluated and returned.
+
+Write a program to create a lambda function to find square of given number? 
+
+s = lambda n: n * n
+print("The Square of 4 is :", s(4))
+print("The Square of 5 is :", s(5))
+
+Lambda function to find sum of 2 given numbers 
+
+s=lambda a,b:a+b
+print("The Sum of 10,20 is:",s(10,20))
+print("The Sum of 100,200 is:",s(100,200))
+ 
+
+Lambda Function to find biggest of given values. 
+
+s=lambda a,b:a if a>b else b   
+print("The Biggest of 10,20 is:",s(10,20))   
+print("The Biggest of 100,200 is:",s(100,200))
+
+--------------------
+
+Pros and Cons of a Lambda Function in Python
+Pros
+----
+It's an ideal choice for evaluating a single expression that is
+supposed to be evaluated only once.
+It can be invoked as soon as it is defined.
+Its syntax is more compact in comparison to a corresponding normal
+function.
+It can be passed as a parameter to a higher-order function, like
+filter(), map(), and reduce().
+
+Cons
+----
+It can't perform multiple expressions.
+It can easily become cumbersome, for example when it
+includes an if-elif-...-else cycle.
+It can't contain any variable assignements (e.g., lambda x: x=0
+will throw a SyntaxError).
+We can't provide a docstring to a lambda function.        

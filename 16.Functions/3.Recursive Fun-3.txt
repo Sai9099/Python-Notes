@@ -1,0 +1,62 @@
+Program to Find the Sum of Elements in a List using Recursion
+--------------------------------------------------------------
+def sum_arr(arr,size):
+   if (size == 0):
+     return 0
+   else:
+     return arr[size-1] + sum_arr(arr,size-1)
+n=int(input("Enter the number of elements for list:"))
+a=[]
+for i in range(0,n):
+    element=int(input("Enter element:"))
+    a.append(element)
+print("The list is:")
+print(a)
+print("Sum of items in list:")
+b=sum_arr(a,n)
+print(b)
+
+Program to Find the Length of a List using Recursion
+-----------------------------------------------------
+def length(lst):
+    if not lst:
+        return 0
+    return 1 + length(lst[1::2]) + length(lst[2::2])
+a=[1,2,3]
+print("Length of the string is: ")
+print(length(a))
+
+Program to Find the Total Sum of a Nested List Using Recursion
+---------------------------------------------------------------
+def sum1(lst):
+    total = 0
+    for element in lst:
+        if (type(element) == type([])):
+            total = total + sum1(element)
+        else:
+            total = total + element
+    return total
+print( "Sum is:",sum1([[1,2],[3,4]]))
+
+
+Python Program to Check if a Number is Odd or Even using lamda function
+----------------------------------------------------------------
+check_number = lambda num: "even" if num % 2 == 0 else "odd"
+ 
+number = int(input("Enter a number: "))
+result = check_number(number)
+ 
+print(number, "is an", result, "number.")
+
+-------------
+Reverse a String using Loops:
+
+def reverse_string_loop(string):
+    reversed_string = ''
+    for char in string:
+        reversed_string = char + reversed_string
+    return reversed_string
+ 
+string = input("Enter the string to be reversed: ")
+print(reverse_string_loop(string))
+

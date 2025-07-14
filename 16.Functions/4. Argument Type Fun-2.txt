@@ -1,0 +1,134 @@
+3.Positional Only Arguments:
+--------------------------
+It is possible in Python to define a function in which one or more arguments can not accept their value with keywords. Such arguments are called positional-only arguments.
+
+To make an argument positional-only, use the forward slash (/) symbol. All the arguments before this symbol will be treated as positional-only.
+
+def intr(amt, rate, /):
+   val = amt * rate / 100
+   return val
+   
+print(intr(316200, 4))
+-------------------------------
+
+def intr(amt, rate, /):
+   val = amt * rate / 100
+   return val
+   
+print(intr(amt=1000, rate=10))
+--------------------------------
+
+def myfunction(x, /, y, *, z):
+   print (x, y, z)
+   
+myfunction(10, y=20, z=30)
+myfunction(10, 20, z=30)
+
+
+
+Keyword Arguments
+-----------------
+Python allows to pass function arguments in the form of keywords which are also called named arguments. Variables in the function definition are used as keywords. When the function is called, you can explicitly mention the name and its value.
+
+Calling Function With Keyword Arguments
+
+# Function definition is here
+def printinfo( name, age ):
+   "This prints a passed info into this function"
+   print ("Name: ", name)
+   print ("Age ", age)
+   return
+
+# by positional arguments
+printinfo ("Naveen", 29)
+
+# by keyword arguments
+printinfo(name="miki", age = 30)
+
+
+Order of Keyword Arguments
+---------------------------
+By default, the function assigns the values to arguments in the order of appearance. However, while using keyword arguments, it is not necessary to follow the order of formal arguments in function definition. Use of keyword arguments is optional. You can use mixed calling. You can pass values to some arguments without keywords, and for others with keyword.
+
+def division(num, den):
+   quotient = num/den
+   print ("num:{} den:{} quotient:{}".format(num, den, quotient))
+
+division(10,5)
+division(5,10)
+
+----------------------------------------------------------------
+def division(num, den):
+   quotient = num/den
+   print ("num:{} den:{} quotient:{}".format(num, den, quotient))
+   
+division(num=10, den=5)
+division(den=5, num=10)
+
+-----------------------------------------------------------------
+def division(num, den):
+   quotient = num/den
+   print ("num:{} den:{} quotient:{}".format(num, den, quotient))
+
+division(num = 5, 10)
+
+
+Keyword-Only Arguments
+------------------------------------
+You can use the variables in formal argument list as keywords to pass value. Use of keyword arguments is optional. But, you can force the function to accept arguments by keyword only. You should put an astreisk (*) before the keyword-only arguments list.
+
+Let us say we have a function with three arguments, out of which we want second and third arguments to be keyword-only. For that, put * after the first argument.
+------------------------------------
+def intr(amt,*, rate):
+   val = amt*rate/100
+   return val
+   
+interest = intr(1000, rate=10)
+print(interest)
+
+--------------------------------
+def intr(amt, *, rate):
+   val = amt * rate / 100
+   return val
+   
+interest = intr(1000, 10)
+print(interest)
+------------------------------------------
+Calling Function Without Keyword Arguments
+------------------------------------------
+# function definition 
+def percent(phy, maths, maxmarks=200):
+   val = (phy + maths) * 100/maxmarks
+   return val
+
+phy = 60
+maths = 70
+# function calling with default argument
+result = percent(phy, maths)
+print ("percentage:", result)
+
+phy = 40
+maths = 46
+result = percent(phy, maths, 100)
+print ("percentage:", result)
+
+Difference between Positional and Keyword argument
+-----------------------------------------------------
+Positional Argument:
+
+Only the names of arguments are used to pass data to the given function.
+
+Arguments are passed in the order defined in function declaration.
+
+Syntax: function(param1, param2,...)
+
+
+Keyword Argument:
+
+Keyword arguments are passed to a function in name=value form.
+
+While passing arguments, their order can be changed.
+
+Syntax: function(param1 = value1,...)
+
+

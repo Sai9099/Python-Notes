@@ -1,0 +1,64 @@
+Python argument type functions :
+--------------------------------
+1.Default argument functions
+2.Required(Positional) arguments function
+3.Keyword arguments function
+4.arbitary(Variable *args and **kwargs) arguments functions
+
+‘pass’ keyword in functions
+
+1.Default Arguments
+-----------------
+Python allows to define a function with default value assigned to one or more formal arguments. Python uses the default value for such an argument if no value is passed to it. If any value is passed, the default value is overridden with the actual value passed.
+
+def showinfo( name, city = "vizag" ):
+   "This prints a passed info into this function"
+   print ("Name:", name)
+   print ("City:", city)
+   return
+
+showinfo(name = "Ansh", city = "Delhi")
+showinfo(name = "Shrey")
+
+2.Required(Positional) Arguments
+--------------------
+The list of variables declared in the parentheses at the time of defining a function are the formal arguments. And, these arguments are also known as positional arguments. A function may be defined with any number of formal arguments.
+
+All the arguments are required.
+
+The number of actual arguments must be equal to the number of formal arguments.
+
+They Pick up values in the order of definition.
+
+The type of arguments must match.
+
+Names of formal and actual arguments need not be same.
+
+def add(x,y):
+   z = x+y
+   print ("x={} y={} x+y={}".format(x,y,z))
+a = 10
+b = 20
+add(a, b)
+
+
+def add(x,y):
+   z=x+y
+   print (z)
+a=10;
+add(a)
+
+def add(x,y):
+   z=x+y
+   print ("x={} y={} x+y={}".format(x,y,z))
+add(10, 20, 30)
+
+def add(x,y):
+   z=x+y
+   print (z)
+a="Hello"
+b=20
+add(a,b)
+
+
+

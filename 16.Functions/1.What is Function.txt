@@ -1,0 +1,128 @@
+Function
+---------
+A function is a logical block of code that does a specific task. Optionally, a function takes one or more arguments, and can return a value.
+
+A function can also be defined as something that transforms given arguments.
+
+
+Syntax to Define a Python Function
+----------------------------------
+def FName (Parameters):
+        Local Variable Declaration
+        Programming Logic
+        Executable Statement 1
+        ……
+        return
+
+eg:
+----
+def wish():
+    print("Hello Good Morning")
+
+wish()
+
+eg:
+---
+def add(a, b, c):
+    sum = a + b + c
+    return sum
+
+add(3,4,5)
+eg:
+----
+def add(a, b, c):
+    sum = a + b + c
+    return sum
+
+result = add(4, 8, 2)
+print('Result :', result)
+
+
+
+
+Python Function with Return Value
+----------------------------------
+The return keyword as the last statement in function definition indicates end of function block, and the program flow goes back to the calling function. Although reduced indent after the last statement in the block also implies return but using explicit return is a good practice.
+
+Along with the flow control, the function can also return value of an expression to the calling function. The value of returned expression can be stored in a variable for further processing.
+
+def add(x, y):
+    return x + y
+
+result = add(10, 20)
+print("The sum is", result)
+print("The sum is", add(100, 200))
+
+----
+note:If we are not writing return statement then default return value is None
+----
+
+def f1():
+    print("Hello")
+
+#f1()
+print(f1())
+
+--------------
+def even_odd(num):
+    if num % 2 == 0:
+        print(num, "is Even Number")
+    else:
+        print(num, "is Odd Number")
+even_odd(10)
+even_odd(15)   
+
+-----
+
+def fact(num):
+    result = 1
+    while num >= 1:
+        result = result * num
+        num = num - 1
+    return result
+print(fact(6))
+
+----
+def fact(num):
+    result = 1
+    while num >= 1:
+        result = result * num
+        num = num - 1
+    return result
+for i in range(1,11):
+     print("The Factorial of",i,"is :",fact(i)) 
+
+
+Returning multiple values from a function:
+------------------------------------------
+Note:In other languages like C,C++ and Java, function can return atmost one value. But in 
+Python, a function can return any number of values. 
+
+
+def sum_sub(a, b):
+    sum = a + b
+    sub = a - b
+    return sum, sub
+
+
+x, y = sum_sub(100, 50)
+print("The Sum is :", x)
+print("The Subtraction is :", y)
+
+---
+
+def calc(a, b):
+    sum = a + b
+    sub = a - b
+    mul = a * b
+    div = a / b
+    return sum, sub, mul, div
+
+
+t = calc(100, 50)
+print("The Results are")
+for i in t:
+    print(i)
+
+
+  

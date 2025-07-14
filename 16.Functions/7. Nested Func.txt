@@ -1,0 +1,34 @@
+Python Inner Functions
+-----------------------
+In Python, you can define one or more functions inside a function. Functions inside a function are called inner functions.
+
+def function():
+    print('Inside function.')
+
+    def innerFunction1():
+        print('Inner function 1.')
+
+    def innerFunction2():
+        print('Inner function 2.')
+
+    innerFunction1()
+    innerFunction2()
+
+function()
+
+
+outside scope
+-------------
+def function():
+    print('Inside function.')
+
+    def innerFunction1():
+        print('Inner function 1.')
+
+    def innerFunction2():
+        print('Inner function 2.')
+
+    innerFunction1()
+    innerFunction2()
+
+innerFunction1()

@@ -1,0 +1,75 @@
+Python *args
+-------------
+Python *args parameter in a function definition allows the function to accept multiple arguments without knowing how many arguments. In other words it lets the function accept a variable number of arguments.
+
+Datatype of args is tuple. Inside the function, you can access all the arguments passed as *args using a for loop. Or, you can use index to access the individual arguments. 
+
+eg:
+---
+def addition(*args):
+    result = 0
+    for arg in args:
+        result += arg
+    return result
+
+if __name__ == "__main__":
+    sum = addition(2, 5, 1, 9)
+    print(sum)
+
+    sum = addition(5)
+    print(sum)
+
+    sum = addition(5, 4, 0.5, 1.5, 9, 2)
+    print(sum)
+
+
+note:
+-----
+args is just the parameter name. You can provide any name, instead of args, just like any other parameter in function definition. Asterisk symbol (*) before the parameter name is the important part. It tells Python that this parameter is going to accept a variable number of arguments. Because of its functionality, the asterisk symbol is called unpacking operator.
+
+
+def addition(*numbers):
+    result = 0
+    for number in numbers:
+        result += number
+    return result
+
+if __name__ == "__main__":
+    sum = addition(2, 5, 1, 9)
+    print(sum)
+
+--
+def addition(*numbers):
+    print(type(numbers))
+
+if __name__ == "__main__":
+    addition(2, 5, 1, 9)
+
+--
+def calculator(operation, *numbers):
+    if operation == "add":
+        result = 0
+        for num in numbers:
+            result += num
+        return result
+    
+    if operation == "product":
+        result = 1
+        for num in numbers:
+            result *= num
+        return result
+
+if __name__ == "__main__":
+    x = calculator("add", 2, 5, 1, 9)
+    print(x)
+    x = calculator("product", 3, 5, 2)
+    print(x)
+
+--
+def myFunction(*args, **kwargs):
+    print(args)
+    print(kwargs)
+
+if __name__ == "__main__":
+    myFunction("hello", "mars", a = 24, b = 87, c = 3, d = 46)
+

@@ -1,0 +1,47 @@
+Types of Python Functions:
+--------------------------
+1.Built-in functions
+
+Python's standard library includes number of built-in functions. Some of Python's built-in functions are print(), int(), len(), sum(), etc. These functions are always available, as they are loaded into computer's memory as soon as you start Python interpreter.
+
+2.Functions defined in built-in modules
+
+The standard library also bundles a number of modules. Each module defines a group of functions. These functions are not readily available. You need to import them into the memory from their respective modules.
+
+3.User-defined functions
+
+In addition to the built-in functions and functions in the built-in modules, you can also create your own functions. These functions are called user-defined functions.
+
+
+Classification of Functions
+----------------------------
+# With No Arguments, and No Return Value
+def Adding():
+    a = 20
+    b = 30
+    Sum = a + b
+    print("After Calling :", Sum)
+Adding()
+
+# With No Arguments, and with Return Value
+def Multiplication():
+    a = 10
+    b = 25
+    Multi = a * b
+    return Multi
+print("After Calling the Multiplication : ", Multiplication())
+
+# With Arguments, and NO Return Value
+def Multiplications(a, b):
+    Multi = a * b
+    print("After Calling the Function:", Multi)
+
+Multiplications(10, 20)
+
+
+# with Arguments, and Return Value
+def Addition(a, b):
+    Sum = a + b
+    return Sum
+# We are calling it Outside the Definition
+print("After Calling :", Addition(25, 45))

@@ -1,0 +1,30 @@
+def DecimalToBinary(num):
+      if num >= 1:
+         DecimalToBinary(num // 2)
+         print(num % 2, end = '')
+if __name__ == '__main__':
+    dec_val = 24
+    DecimalToBinary(dec_val)
+------------------------------------
+def decimalToBinary(n): 
+    return bin(n).replace("0b", "") 
+if __name__ == '__main__': 
+    print(decimalToBinary(8)) 
+    print(decimalToBinary(18)) 
+------------------------------------
+def dec2bin(number: int):
+    ans = ""
+    if ( number == 0 ):
+        return 0
+    while ( number ):
+        ans += str(number&1)
+        number = number >> 1
+       ans = ans[::-1]
+    return ans 
+def main():
+    number = 60
+    print(f"The binary of the number {number} is {dec2bin(number)}")
+
+if __name__ == "__main__":
+    main()
+

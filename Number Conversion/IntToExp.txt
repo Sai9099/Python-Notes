@@ -1,0 +1,9 @@
+program to convert int to exponential
+-------------------------------------
+int_number = 110102
+exp_number = "{:e}".format(int_number)
+ 
+print("Integer Number:",int_number)
+print("Exponent Number:",exp_number)
+
+

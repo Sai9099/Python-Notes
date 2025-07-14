@@ -1,0 +1,24 @@
+Iteration in Python
+-------------------
+Iteration is defined in programming as the repetition of a block of code a given number of times. In layman’s terms, iteration means repeating steps. We can utilize loops like for loop, etc. to achieve iterations.
+
+Iterable – Iterable is a type of object that can be iterated over. When provided to the iter() method, it generates an Iterator. Iterable objects include lists, tuples, dictionaries, strings, and sets. They are iterable containers that can be turned into iterators.
+
+Iterator – An iterator is an object that implements the iterator protocol, which is a Python class with the __next()__ That is, an iterator understands how to compute the next value whenever you ask for it. The function iter() can be used to build an iterator from an iterable. It is worth noting that every iterator is also an iterable.
+
+The __iter__() method – returns an iterator object. This is required in order to use containers and iterators with the for and in statements.
+
+The __next__() method – This function returns the sequence’s next item. If no more items are found, throw the StopIteration exception.
+
+
+eg:
+
+my_list = [1, 2, 3, 'Numbers']
+my_iter = iter(my_list)
+
+print(next(my_iter))   
+print(next(my_iter))   
+
+print(my_iter.__next__())   
+print(my_iter.__next__())   
+

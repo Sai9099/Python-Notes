@@ -1,0 +1,42 @@
+Recursive functions
+--------------------
+Python Recursion is a technique in which a function calls itself. In other words, a function is defined in such a way that, in its body, a call is made to itself.
+
+Advantages of Recursion:
+------------------------
+Recursive functions make the code look clean and elegant.
+A complex task can be broken down into simpler sub-problems using recursion.
+Sequence generation is easier with recursion than using some nested iteration.
+
+Disadvantages of Recursion:
+--------------------------
+Sometimes the logic behind recursion is hard to follow through.
+Recursive calls are expensive (inefficient) as they take up a lot of memory and time.
+Recursive functions are hard to debug.
+
+
+eg:
+---
+def factorial(x):
+    if x < 1:
+        return 1
+    else:
+        return x*factorial(x-1)
+
+print(factorial(4))
+
+eg:
+---
+def fibonacci(n):
+	if n<=1:
+		return n
+	else:
+		return(fibonacci(n-1) + fibonacci(n-2))
+
+n = 10
+fibo_series = []
+
+for i in range(0,n):
+	fibo_series.append(fibonacci(i))
+	
+print(fibo_series)

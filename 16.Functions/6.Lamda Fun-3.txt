@@ -1,0 +1,209 @@
+Python map() function
+---------------------
+It is a function that apply on the iterable items. It takes two argument first a function and second an iterable item and return an object and we store that object in a list.
+
+In map() function we can use both a (normal and lambda/Anonymous) function. To look more pythonic we generally use (lambda function) with map().
+
+Syntax :- map(function, iterable or (list))
+
+eg:
+
+s = ['1', '2', '3', '4']
+res = map(int, s)
+print(list(res))
+
+eg:
+a = [1, 2, 3, 4]
+res = list(map(lambda x: x * 2, a))
+print(res)
+
+eg:
+a = [1, 2, 3]
+b = [4, 5, 6]
+res = map(lambda x, y: x + y, a, b)
+print(list(res))
+
+eg:
+
+fruits = ['apple', 'banana', 'cherry']
+res = map(str.upper, fruits)
+print(list(res))
+
+eg:
+words = ['apple', 'banana', 'cherry']
+res = map(lambda s: s[0], words)
+print(list(res))
+
+eg:
+s = ['hello', 'world', 'python']
+res = map(str.strip, s)
+print(list(res))
+
+eg:
+celsius = [0, 20, 37, 100]
+fahrenheit = map(lambda c: (c * 9/5) + 32, celsius)
+print(list(fahrenheit))
+
+
+
+with Regular Function 
+---------------------
+def sqr(x):
+    c = x*x
+    return c
+ 
+lst_of_digit = [1,2,3,4,5]
+ 
+sqr_lst= list(map(sqr, lst_of_digit))
+ 
+print(sqr_lst)
+
+lamda function
+--------------
+sqr_lst = [1,2,3,4,5]
+sqr_lst= list(map(lambda item: item*item, sqr_lst))
+print(sqr_lst)
+
+
+l = [1, 2, 3, 4, 5]
+
+def doubleIt(x):
+    return 2 * x
+l1 = list(map(doubleIt, l))
+print(l1)  
+
+-----------------
+l=[1,2,3,4,5]
+l1=list(map(lambda x:2*x,l))
+print(l1)    
+-----------------
+l=[1,2,3,4,5]
+l1=list(map(lambda x:x*x,l))
+print(l1)
+
+
+note:
+-----
+We can apply map() function on multiple lists also.But make sure all list should have same length. 
+ 
+Syntax:  
+-------
+map(lambda x,y:x*y,l1,l2)) 
+                  x is from l1 and y is from l2 
+
+
+l1=[1,2,3,4]
+l2=[2,3,4,5]
+l3=list(map(lambda x,y:x*y,l1,l2))
+print(l3)   
+
+    
+map() function with two parameters
+-----------------------------------
+def multiple3(num):
+    return num *3
+
+my_list = [1,2,3,4,5,6,7]
+
+map_instance = map(multiple3, my_list)
+
+print("map_instance value is:", map_instance)
+
+print("Convert map_instance to list:", list(map_instance) )
+
+
+map function with more than 2 parameters
+----------------------------------------
+def multiply(num1, num2):
+    return num1* num2
+
+my_list1 = [1,2,3,4,5,6,7]
+
+my_list2 = [1,2,3,4,5,6,7]
+
+map_instance = map(multiply, my_list1, my_list2)
+
+print("The result is: ", list(map_instance) )
+
+
+iterate over map object
+------------------------
+def multiply(num1, num2):
+    return num1* num2
+
+my_list1 = [1,2,3,4,5,6,7]
+
+my_list2 = [1,2,3,4,5,6,7]
+
+map_instance = map(multiply, my_list1, my_list2)
+
+for value in map_instance:
+    print(value)
+
+
+convert map() object to string
+------------------------------
+def vowelUpper(char):
+    if char in "aeiou":
+        return char.upper()
+    else:
+        return char
+
+string = "Welcome to Techgeekbuzz.com"
+
+map_obj = map(vowelUpper, string)
+
+caps_vowel =  "".join(list(map_obj))
+
+print(caps_vowel) 
+
+
+convert map() object to tuple
+------------------------------
+num_tup = (1, 1.34, 3, 4.34, 7, 8.9)
+
+map_obj = map(str, num_tup)
+
+str_tuple =  tuple(map_obj)
+
+print(str_tuple)
+
+convert map object to list
+---------------------------
+def add10(key):
+    return key+10
+my_dict = {1:100, 2:200, 3:300, 4:400, 5:500}
+map_obj = map(add10, my_dict)
+key_list =list(map_obj)
+print(key_list)
+
+
+def add10(value):
+    return value+10
+my_dict = {1:100, 2:200, 3:300, 4:400, 5:500
+map_obj = map(add10, my_dict.values())
+value_list =list(map_obj)
+print(value_list)
+
+
+convert map object to dict
+---------------------------
+def add10(item):
+    key= item[0]
+    value = item[1]
+    return key+10, value+10
+
+my_dict = {1:100, 2:200, 3:300, 4:400, 5:500}
+map_obj = map(add10, my_dict.items())
+new_dict =dict(map_obj)
+print(new_dict)
+
+convert map object to set
+-------------------------
+def add1(value):
+    return value+1
+my_set = {20, 40, 50, 60, 80}
+map_obj = map(add1, my_set)
+new_set =set(map_obj)
+print(new_set)
+

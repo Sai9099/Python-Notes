@@ -1,0 +1,101 @@
+Decorators allow us to wrap another function around another function in order to extend the behavior of the wrapped function without permanently changing it. In Python, a decorator is a function that takes another function as an argument and extends its functionality without explicitly modifying the original function.
+
+
+we must first understand a few fundamental Python concepts. We must accept the fact that everything in Python is an object. Functions are not exceptions; they are also objects (with attributes). As a result, a function can be assigned to a variable. That variable can be used to access the function.
+
+def myfunc():
+    print('Python Programming')
+    return ""
+print(myfunc())
+x = myfunc
+print(x())
+-------------------------------------------
+def myself(func):
+    func()
+    print('I also love to code in Python')
+
+def hobby():
+    print('My hobby is to Read Books')
+
+print(myself(hobby))
+
+---------------------------------------------
+def outer_func():
+    def inner_func():
+        print('Inner function called by outer function')
+    return inner_func
+
+x = outer_func()
+print(x())
+
+-----------------------------------------------
+
+
+def my_decorator_func(func):
+    def wrapper_func():
+        # Do something before the function.
+        print("I got decorated")
+        func()
+        # Do something after the function.
+    return wrapper_func
+
+def ordinary():
+    print("I am ordinary")
+
+# let's decorate this ordinary function
+d = my_decorator_func(ordinary)
+print(d())
+
+
+note:
+-----
+@my_decorator_func
+def ordinary():
+    print("I am ordinary")
+
+Is equivalent to
+
+def ordinary():
+    print("I am ordinary")
+d = my_decorator_func(ordinary)
+
+
+Decorating Functions with Parameters:
+
+def divide(func):
+    def inner(a, b):
+        print('Dividing', a, 'and', b)
+        if b == 0:
+            print('Whoops! Not Divisible')
+            return
+
+        return func(a, b)
+    return inner
+
+@divide
+def div(a, b):
+    print(a/b)
+
+print(div(10, 5))
+print(div(4, 0))
+
+
+Chaining Decorators in Python:
+
+def square(func):
+            def inner():
+                        x = func()
+                        return x * x
+            return inner
+
+def multiply(func):
+            def inner():
+                        x = func()
+                        return 2 * x
+            return inner
+
+@square
+@multiply
+def num():
+            return 10
+print(num())

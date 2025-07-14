@@ -1,0 +1,92 @@
+Python yield
+------------
+Before understanding the concept of Python generators, let us look at what exactly does Python yield means.
+
+The yield keyword in Python functions similarly to the return keyword, with the exception that instead of returning a value, it returns a generator object to the caller. When a function is called and the thread of execution encounters a yield keyword in the function, the function execution is terminated at that line and a generator object is returned to the caller.
+
+Why use Generators?
+Building an iterator in Python requires a significant amount of effort. We must create a class containing __iter__() and __next__() methods, as well as keep track of internal states and raise StopIteration when no values are to be returned. This is both long and contradictory. In such cases, the Python generator comes to the rescue.
+
+What are Python Generators?
+
+Python Generators are a quick and easy technique to create iterators. A Python generator is a particular function by using a yield statement instead of a return statement that returns an object (iterator) over which we can loop (one value at a time). One significant advantage of the generator is that it consumes far less memory.
+
+In Python, a generator function resembles a normal function except that it contains a yield statement rather than a return statement (it may contain a return too but the yield statement must be qualified as a generator function). Any function with the yield keyword becomes a generator and returns an iterator object that can be iterated through using a for loop.
+
+eg:
+
+def testyield():
+    print('Hello')
+    yield 'Welcome to Python Programming'
+
+output = testyield()
+print(output)
+print(next(output))
+
+
+eg:
+#Python program to illustrate simple generator function
+
+def py_gen():
+    n = 10
+    print('Printed First')
+    yield n
+
+    n = n * 2
+    print('Printed Second')
+    yield n
+
+    n = n * 2
+    print('Printed Last')
+    yield n
+
+a = py_gen()
+print(a)
+
+print(next(a))
+print(next(a))
+print(next(a))
+
+
+generator with loop:
+
+def Squares():
+    i = 1
+    while True:
+        yield i*i               
+        i += 1  
+
+print('Squares of numbers are:')
+for num in Squares():
+    if num > 50:
+         break   
+    print(num)
+
+
+generator expression:
+
+even_list = [num**3 for num in range(1, 5)]
+print(even_list)
+
+even_gen = (num**3 for num in range(1, 5))
+print(even_gen)
+
+print(next(even_gen))
+print(next(even_gen))
+print(next(even_gen))
+print(next(even_gen))
+
+eg:
+
+def fibonacci_numbers(nums):
+    x, y = 0, 1
+    for _ in range(nums):
+        x, y = y, x+y
+        yield x
+
+def square(nums):
+    for num in nums:
+        yield num**2
+
+print(sum(square(fibonacci_numbers(8))))
+

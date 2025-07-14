@@ -1,0 +1,62 @@
+reduce() : It is also same like map() and filter() but its return only a single value or item, but to use reduce() function you have to import first from functools import reduce
+
+Syntax : - reduce(function, iterable )
+
+from functools import reduce
+def add(x,y):
+    return x+y
+c = [1,2,3,4,5,6]
+total = reduce(add, c)
+print(total)
+
+
+
+from functools import reduce
+numbers = [1, 2, 3, 4, 5]
+result = reduce(lambda x, y: x+y, numbers)
+print(result)
+
+
+from functools import reduce
+numbers = [1, 2, 3, 4, 5]
+product = reduce((lambda x, y: x * y), numbers)
+print(product)
+
+
+from functools import reduce
+words = ['Python', 'Reduce', 'Function', 'Tutorial']
+sentence = reduce((lambda x, y: x + ' ' + y), words)
+print(sentence)
+
+from functools import reduce
+def complex_operation(x, y):
+    return x * y
+numbers = [1, 2, 3, 4, 5]
+result = reduce(complex_operation, numbers)
+print(result)
+
+
+numbers = [1, 2, 3, 4, 5]
+product = 1
+for num in numbers:
+    product *= num
+print(product)
+
+
+numbers = [1, 2, 3, 4, 5]
+squares = [num ** 2 for num in numbers]
+print(squares)
+
+
+from functools import reduce
+words = ['Python', 'Reduce', 'Function', 'Tutorial']
+try:
+    result = reduce((lambda x, y: x * y), words)
+except TypeError as e:
+    print(e)
+
+
+from functools import reduce
+numbers = [1, 2, 3, 4, 5]
+sum = reduce((lambda x, y: x + y), numbers)
+print(sum)

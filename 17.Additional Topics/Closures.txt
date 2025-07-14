@@ -1,0 +1,35 @@
+A closure is created when a function (the inner function) is defined within another function (the outer function) and the inner function references variables from the outer function. Closures are useful when you need a function to retain state across multiple calls, without using global variables.
+eg:
+
+def fun1(x):
+  
+    # This is the outer function that takes an argument 'x'
+    def fun2(y):
+      
+        # This is the inner function that takes an argument 'y'
+        return x + y  # 'x' is captured from the outer function
+    
+    return fun2  # Returning the inner function as a closure
+
+# Create a closure by calling outer_function
+closure = fun1(10)
+
+# Now, we can use the closure, which "remembers" the value of 'x' as 10
+print(closure(5))
+
+
+
+eg:
+def fun(a):
+    # Outer function that remembers the value of 'a'
+    def adder(b):
+        # Inner function that adds 'b' to 'a'
+        return a + b
+    return adder  # Returns the closure
+
+# Create a closure that adds 10 to any number
+val = fun(10)
+
+# Use the closure
+print(val(5))  
+print(val(20))
